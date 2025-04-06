@@ -1,0 +1,719 @@
+company_name,post_date,id,parent_id,comment_text,comment_date,comment_type,reaction_count
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTk4NjMyMjI3NjU3Mzk=,,You said inclusivity was a core belief at Target.,2025-01-24,initial,1100
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4OTM4MjkwMzg5MjgyMw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTk4NjMyMjI3NjU3Mzk=,maybe when it was profitable but now they gotta make Spot roll over. Can’t stand all these companies bowing down to orange monsters.,2025-01-24,reply,116
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDM3MzE3MDAwMTEyMTI=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4OTM4MjkwMzg5MjgyMw==,we won’t forget.,2025-01-24,reply,28
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI3MjY1MzYwNzEwNjg2MDY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTk4NjMyMjI3NjU3Mzk=,they sure did.,2025-01-24,reply,15
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkwMTMxNjc0NzU0MTkxOTk=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTk4NjMyMjI3NjU3Mzk=,They lied.,2025-01-31,reply,17
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2MjIxMjkyOTEyNTMxNg==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTk4NjMyMjI3NjU3Mzk=,they lied.,2025-01-31,reply,13
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNzAzNDU0MzA5OTY5MTc=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTk4NjMyMjI3NjU3Mzk=,they lied,2025-01-31,reply,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5NjUwNjU3MzE1MzI1Mg==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTk4NjMyMjI3NjU3Mzk=,they lied,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzc4OTA2MDg4MzQ0MjU4Mw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTk4NjMyMjI3NjU3Mzk=,money is the core belief.,2025-02-07,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY1ODkyMTIwMDAzNjUxNg==,,No DEI? Bye Target.,2025-01-24,initial,819
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NzMyNTE0MTQ2MjU0Ng==,,Is that what you call selling out and kissing the ring?,2025-01-24,initial,824
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk5MTQ1NzY5MzAxMjQyOA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NzMyNTE0MTQ2MjU0Ng==,", they are engaged in what authoritarianism expert Timothy Snyder refers to as “obeying in advance”.",2025-01-24,reply,39
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE0OTkwOTQxNTc2NzczNDc=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NzMyNTE0MTQ2MjU0Ng==,"yes, that's exactly what you call it.",2025-01-24,reply,19
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMjcyNTI0ODE2MjAyNTY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NzMyNTE0MTQ2MjU0Ng==,yes,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwMDgwMjQyNjAzMjc0OA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NzMyNTE0MTQ2MjU0Ng==,Collaborating.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjQ1NzQxOTg4MDQ4NDY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NzMyNTE0MTQ2MjU0Ng==,Absolutely,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxMjAwMTA2MTU2NzIyOA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NzMyNTE0MTQ2MjU0Ng==,kissing the ring is a polite way of saying it.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2ODczNTM3MDIxMjQ0NzQ=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NzMyNTE0MTQ2MjU0Ng==,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI4NjgxMTUyMzAwMjkxNzE=,,Way to cave in to the Orange.,2025-01-24,initial,460
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDA3OTk5MDEwOTI3OTc=,,You caved. You should change your logo to orange lips and an orange tongue.,2025-01-24,initial,487
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE5ODc4MDgyNjE3MzkzMjI=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDA3OTk5MDEwOTI3OTc=,that is right,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMDM4NzIxMjgxNDA5NDE=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDA3OTk5MDEwOTI3OTc=,Yup,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4NjI0MjczMDg3ODYwMg==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDA3OTk5MDEwOTI3OTc=,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwNzQxOTMzNDYzNjg2MTI=,,Bye-bye Target! Going to shop my local owned stores now!,2025-01-24,initial,518
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMDAxMzI3NTc5MjAzNDg=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwNzQxOTMzNDYzNjg2MTI=,thank u,2025-01-24,reply,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2OTM2Mzk5NDYzMjg5NA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwNzQxOTMzNDYzNjg2MTI=,thank you.,2025-01-24,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjQ1ODIyNzIxODc2OTU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwNzQxOTMzNDYzNjg2MTI=,same,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjMyMDYyMjkzNDkzMzE=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwNzQxOTMzNDYzNjg2MTI=,Why didn't you do that before? Same reason why you're not gonna now. Cost and convenience.,2025-01-31,reply,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQwMDkyNjYzMzI2NjMzMTg=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwNzQxOTMzNDYzNjg2MTI=,oh ok sure they care ha ha ha,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyNzUyMDU0Mjg5ODQ5Ng==,,This is my worse breakup ever!!!! I didn’t even see it coming. Target you really hurt me.,2025-01-31,initial,445
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ4NDQ1NjkwMTA2MzA0Mw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyNzUyMDU0Mjg5ODQ5Ng==,same!,2025-01-31,reply,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTU5ODc0Mjk4MjE5MDM=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyNzUyMDU0Mjg5ODQ5Ng==,"And, I'm not surprised.",2025-01-31,reply,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkwODczMDc4MTQ2ODY4NjU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyNzUyMDU0Mjg5ODQ5Ng==,This and Diet Coke,2025-01-31,reply,6
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY0MDQ2NDY1ODQzMTEyNg==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyNzUyMDU0Mjg5ODQ5Ng==,"as mama would say y’all find a greater love 
+ ￼",2025-01-31,reply,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNzQyMTM4NzM4NzYxMTk=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyNzUyMDU0Mjg5ODQ5Ng==,"Same! Target - it's not me, it's you",2025-01-31,reply,14
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk4MjYzNzc4MDQxNjk0Nw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyNzUyMDU0Mjg5ODQ5Ng==,Imposter syndrome. We thought they were someone else.,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5NzAzOTAyNjQ1MDYxNQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyNzUyMDU0Mjg5ODQ5Ng==,same that was my only store,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNjgxODk2MjEzMzQ5Ng==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyNzUyMDU0Mjg5ODQ5Ng==,we deserve better anyways,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMTg5OTQ5ODAwNDExMTQ=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyNzUyMDU0Mjg5ODQ5Ng==,same,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM5ODgwNDk5ODE0ODA3NjU=,,Rolled back DEI initiatives. I'm out.,2025-01-24,initial,420
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5ODU0NDY3MzA5MzM3NA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM5ODgwNDk5ODE0ODA3NjU=,bye,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkzMTk4ODUxOTA3NDU1MA==,,"I hope everyone is shutting down those credit cards and the diverse companies are ending their contract/relationship with them
+.. We need to stop being ""all bark and no bite"".",2025-01-24,initial,338
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMzg1MzEyMTQ5NzM1MjY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkzMTk4ODUxOTA3NDU1MA==,Already in the works!,2025-01-31,reply,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNjc3NDc0OTgwMjI2MzM=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkzMTk4ODUxOTA3NDU1MA==,I'm leaving mine open and turning on paper statements so they can spend money sending them to me while I give them no sales.,2025-01-31,reply,31
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNTUzNjE0Nzg5MDA2ODA=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNjc3NDc0OTgwMjI2MzM=,same,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwMTYyNDkwNTgzMjU3MA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNjc3NDc0OTgwMjI2MzM=,Good Idea!,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE0NDc5MDcwMjI4NDUwNjU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNjc3NDc0OTgwMjI2MzM=,"Jessica Holbrook that will increase postal revenue too 
+Just please recycle the paper.",2025-02-07,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUyMTA5MDYwNzA0OTMwOQ==,,"I just paid off my Target card. I shopped there because Target employees who share a common identity or interest, and who come together to support each other and advocate for their needs within the organization. But not anymore.",2025-01-24,initial,404
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2NDkzMDgxMjIzNTg2OTU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUyMTA5MDYwNzA0OTMwOQ==,me too,2025-01-31,reply,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzE3MTUwNjUwODkwMTg=,,"Just so you know, you just earned a collective, “aight bet”! Good luck with your earnings this year!",2025-01-24,initial,222
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY0NDAzMjUyNzk2NjMzNQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzE3MTUwNjUwODkwMTg=,this!,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzMDM4MjYwNjAzMjY2Ng==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzE3MTUwNjUwODkwMTg=,"uninstalled the app , 
+ and I used it a ton. Disappointed is an understatement!!!!",2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM4NDkxNjIwNzUzODY3Nzg=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzE3MTUwNjUwODkwMTg=,good one!,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExODc3MTYzOTk0MzY0MTE=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzE3MTUwNjUwODkwMTg=,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxMDU0NDI2MTg0MDA0MA==,,Bye. Enjoy the boot leather.,2025-01-24,initial,235
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2MzYzMTIzNzY5NTgyNDQ=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxMDU0NDI2MTg0MDA0MA==,but not Doc Martens. Those are for us in the resistance!,2025-01-31,reply,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzNjkxNjUyODczMjU1MQ==,,Companies that bow down to facism deserve to fail. May it be swift.,2025-01-31,initial,196
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzgzNDU0NTI4MTIyMjQyMTc=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzNjkxNjUyODczMjU1MQ==,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTI5ODIyODY0MTU2NTE=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzNjkxNjUyODczMjU1MQ==,and painful,2025-02-07,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1OTg4NjMyOTQwNjkyODI=,,"Hey Target, as a longtime customer, I’m concerned about any rollback of your DEI efforts. We love discovering diverse products and new designers and seeing ourselves represented in both staff and offerings. Please keep investing in inclusivity—it matters to all of us.",2025-01-24,initial,293
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ3MjQzODMyNTcyMDM2Mw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1OTg4NjMyOTQwNjkyODI=,Yes it does!,2025-01-31,reply,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI4OTg0ODM0MjcwMjI4NjE=,,I'm so proud of the people on this thread.Your comments give me hope.,2025-01-31,initial,299
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk5Mzk2Nzg4NTkxNTQ2Mg==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI4OTg0ODM0MjcwMjI4NjE=,Me too !!,2025-01-31,reply,6
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MDE5OTc1MDM0ODY2MjY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI4OTg0ODM0MjcwMjI4NjE=,same here,2025-01-31,reply,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyNTcwOTE3NjM0MTI0OA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI4OTg0ODM0MjcwMjI4NjE=,Same! thanks for saying that!,2025-01-31,reply,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2Njc4MzAxNjQxMTc4Mzc=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI4OTg0ODM0MjcwMjI4NjE=,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5Mjg2MjgzNjkzMDgyNw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI4OTg0ODM0MjcwMjI4NjE=,same,2025-01-31,reply,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5Njc5NDI4Mjk4Nzc3Mg==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI4OTg0ODM0MjcwMjI4NjE=,- same!!!!,2025-01-31,reply,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI4OTA3OTEyNTc3NTc1MTU=,,Target how could you!!!!,2025-01-24,initial,212
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1OTg1NzA1NDc0NTkwMzU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI4OTA3OTEyNTc3NTc1MTU=,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5MzczNTk2MDAyMzI5OA==,,Why Target?,2025-01-24,initial,190
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU1MDgxNzkxNDc3NzcwNw==,,So disappointing,2025-01-24,initial,230
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyODMzNzYxNzYyMTQyMTM=,,You all need to release a statement regarding your decision to end DEI policies at Target. I’ve always loved how inclusive you guys were and I’m shocked and deeply saddened by your decision.,2025-01-31,initial,263
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNjcyMTg2NTQzMTU0MA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyODMzNzYxNzYyMTQyMTM=,Target why are you absent here ?? Thousands showed up and where are you ?,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ4NDc2NDUyMTAzMjQ5MA==,,"We all make choices, target made theirs, I’ll make mine with wallet!",2025-01-31,initial,167
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI5MzcxOTY5NzMwOTQ1NjQ=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ4NDc2NDUyMTAzMjQ5MA==,it is ok we will now support them once again so bye,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2MDU4MTUyOTAxNDA2MTc=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ4NDc2NDUyMTAzMjQ5MA==,"so, racist? Ok.",2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNzc3NDU5NTY3Mjg5NzE=,,Remember to post a review with your comments here. Ratings and reviews matter.,2025-01-24,initial,119
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NDk0ODIwNTA1ODMzMA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNzc3NDU5NTY3Mjg5NzE=,no they don’t,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTcxMjMxMTkzMjc0OTY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNzc3NDU5NTY3Mjg5NzE=,nit to you maybe.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxMDkwNjI0ODIxOTIzOA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTcxMjMxMTkzMjc0OTY=,good point!,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNjgwMzYxMTQzNjA5OTI=,,I thought inclusivity was a core belief of Target?,2025-01-31,initial,135
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkzNDUzNjg2ODcxNTIwNg==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNjgwMzYxMTQzNjA5OTI=,“was” being the keyword.,2025-01-31,reply,10
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwNTA0NzAxOTIwNDk5MDQ=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNjgwMzYxMTQzNjA5OTI=,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyMDM0MTE1MzExNDcxOTA=,,SELL OUTS!!,2025-01-31,initial,124
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxMTMwNDc0NDUwNzc2OQ==,,As an employee I’m honestly mad at you guys.,2025-01-24,initial,111
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxNTU1NDU0MDc2ODk2OA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxMTMwNDc0NDUwNzc2OQ==,I don’t blame you.,2025-01-24,reply,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk3NzMwMzI0NDI4OTMxMg==,,Welp time to shop small businesses,2025-01-24,initial,92
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMTkyNTI5MDYxMTQ1MzU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk3NzMwMzI0NDI4OTMxMg==,small business need us,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5OTU5MDExOTQ0NDI3NA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk3NzMwMzI0NDI4OTMxMg==,and Costco!,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4MDM1MzE4NTA0NDYyMTU=,,Target caves to pressure as always.,2025-01-24,initial,72
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE0MDExODQ0ODc1MTY0MjI=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4MDM1MzE4NTA0NDYyMTU=,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwODAxODYwODU5OTgyMg==,,"Bad move, target. Bad move.",2025-01-24,initial,81
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzMTA5MzkzMjkzOTQ5MQ==,,Another dissatisfied customer here! My guess is you'll be losing lots of employees soon too.,2025-01-24,initial,77
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM1NDU5NTc0NDIzNjQ4NzA=,,The only thing target could ever really sell me is 00 flour for when I make my homemade pasta. But I’ll be getting that somewhere else from now on.,2025-01-24,initial,65
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2Nzc2ODU0MDY0NDUzODM=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM1NDU5NTc0NDIzNjQ4NzA=,I find it in my local grocery store or you can give your business to King Arthur Baking Company.,2025-01-31,reply,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUzMDc3NjE0MDAxMjQ2OA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2Nzc2ODU0MDY0NDUzODM=,I usually have had to order it from Amazon. There’s never been any at our Kroger (fry’s) or Walmarts.,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ5NjIyNjM1Njg1ODY2Nw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUzMDc3NjE0MDAxMjQ2OA==,King Arthur is also online and the prices are reasonable for 00 Flour. I’m working to extract myself from Amazon too.,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTM0Nzc1OTk5ODM0ODQ=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ5NjIyNjM1Njg1ODY2Nw==,them too huh? King Arthur it is,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk3ODI4MDI1NzQ5NDQ2OQ==,,"I’m am heartbroken Target, this is sad.",2025-01-24,initial,99
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjI4NzI2MzkzMTAxNTc=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk3ODI4MDI1NzQ5NDQ2OQ==,super heart broken,2025-01-31,reply,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg5OTMzNTU5NTQxNTM1NA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk3ODI4MDI1NzQ5NDQ2OQ==,it was a good relationship while it lasted!!,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNDQ3MTY2NTAzMTI0MDk=,,So much for my home town store…so disappointing!,2025-01-24,initial,82
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwOTIyMjgwMTU5MTkzMzY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNDQ3MTY2NTAzMTI0MDk=,same in from Minnesota too,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1OTUyNjQxMDQ2ODg1MTY=,,"Yeah, I’ll be spending my money elsewhere now.",2025-01-24,initial,71
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1NTY1MTg1MTgzODgwMDg=,,Please explain why you suddenly dropped your DEI policies.,2025-01-24,initial,86
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQwMDY4NzM0MzEwMDg4OQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1NTY1MTg1MTgzODgwMDg=,profits and fairness,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2MTkwMzQ0MjU0ODUzODI=,,"Next time I’m out of anything, I will absolutely go to Costco.",2025-01-31,initial,82
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQyNTUyMDAzNzIyMjgxOQ==,,Dang Target! I thought ya'll cared. I guess it was just to fit in when yall needed to!,2025-01-31,initial,61
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4OTIwMTkyMTc5OTY5NTc=,,"Expect more, huh?",2025-01-24,initial,53
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNzIzMzkyMjcyNzc3MjY=,,I expected more from Target .,2025-01-31,initial,105
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMDAwMDA1MjQ0ODQyNjY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNzIzMzkyMjcyNzc3MjY=,"me, too.",2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwMTQ1OTA4OTMzMzMwNg==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNzIzMzkyMjcyNzc3MjY=,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMTE1MzI2MDA0Mzg2MDM=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNzIzMzkyMjcyNzc3MjY=,me too,2025-02-07,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNDUyMjE4MzM1ODI3OTc=,,falling in step? you were my go to… sad.,2025-01-31,initial,66
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1MDcyODAwNTY2MDgzOTA=,,"Hi, Target. Please explain your decision to roll back your DEIA practices.",2025-01-24,initial,67
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1MjAyMjQzMjg2NjkxMzg=,,"bye Target, you were my fave but I guess I have to move on.",2025-01-24,initial,64
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDE5MDQ5MjQwMDU4MDY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1MjAyMjQzMjg2NjkxMzg=,that’s OK me and millions of others will take your place 70+ million,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1NjQ5MDIxNTc1MDAyNDg=,,We want answers target!!!,2025-01-31,initial,54
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwOTg5MDI1Nzg1ODg3Mzc=,,I’m done with y’all.,2025-01-31,initial,59
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,,"2016: ""Inclusivity is a core belief at Target""",2025-01-24,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2OTg2MzU5NDQ3NzgzOA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,exactly.,2025-01-24,reply,16
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MjQ0NzA2NTUxMzMyNzk=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,Costco here I come!!,2025-01-31,reply,132
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQxMjE3OTg2MjQ3MTE2OTc=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MjQ0NzA2NTUxMzMyNzk=,same.,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ5NzQwMDU4OTY1MDI3OQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MjQ0NzA2NTUxMzMyNzk=,they'll be next and then what?,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMjM3MzY5MDYyNjEzNzE=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MjQ0NzA2NTUxMzMyNzk=,already there!,2025-01-31,reply,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDU5MDMzNjM1NDMwNzM=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMjM3MzY5MDYyNjEzNzE=,one step at a time.,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwNDIyMjMwMzI4Njg5OTg=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDU5MDMzNjM1NDMwNzM=,that’s true. I just have to buy in inconvenient quantities.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1NjM2NTI4NzUwMjgyNjQ=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MjQ0NzA2NTUxMzMyNzk=,just bought my membership today,2025-01-31,reply,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5ODE2NDIwOTczNTk5OQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MjQ0NzA2NTUxMzMyNzk=,same,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5MjI3OTk5Njg2NjE1NQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MjQ0NzA2NTUxMzMyNzk=,exactly!,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI5MTU1NTk1ODg2MDQ1NzI=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MjQ0NzA2NTUxMzMyNzk=,John Ievy is sure full of giggles.... what's so funny John?,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM1ODUwNjM0NDE3OTcyODU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,"Yes, this change will make us change our shopping habits. I want to shop where all are welcome.",2025-01-31,reply,106
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMTUwNTQwMjM5ODY5ODA=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM1ODUwNjM0NDE3OTcyODU=,same here,2025-01-31,reply,9
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM0MjYwMDI3NjQzNzU4MjM=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM1ODUwNjM0NDE3OTcyODU=,"Same for me too. I was going to email them some thoughts, but conveniently, there is no email contact info on their website.",2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMTU2MDM1NjAwNTUzMDY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,precisely.,2025-01-31,reply,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQwODA1NTkyNDU1MTI3MzU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,anyone can fill out an application as long as they can read. All are welcome if they was to apply to a zero skilled job.,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMzYxNzE3NjczMDA1MDA=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQwODA1NTkyNDU1MTI3MzU=,"""were""",2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU0MTQ5OTU1NTYwMTkzOA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,yep. So shameful.,2025-01-31,reply,24
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5MjA4MjgxNzA0Mjc4MQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,They’re a sheet in the wind,2025-01-31,reply,14
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNjQ0NDY2MjEwODI3MQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,thee best comment!,2025-01-31,reply,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNTcwNTA3MjQwOTYwNQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,4 days into the new administration.. they couldn’t wait to get rid of it.,2025-01-31,reply,18
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzY2MzIwODgwNDc4Mjg=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,this,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk3NTA4MDEzNzg1MDIzOQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,Costco it is!!,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDU1NDgwNDQyNDI4OTA=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,"sad, isn’t it?",2025-01-31,reply,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkwNjczNjI0ODI3NDMxOA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,"and notice they haven't even addressed it. ""maybe no one will notice""! ha ha!",2025-01-31,reply,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMDQ4NDYzNTcyMjc5Njg=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkwNjczNjI0ODI3NDMxOA==,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzMzAwODU4OTEyNzMwMw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,thanks Target!,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjM5ODQ3NjI4NTI1ODI=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzMzMzQ3NzI0NjMzMjM4MzU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,pretty sad I paid so much here yeah,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4ODM3MTE2NzQxMDkyMg==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,", I hope you can see how disappointing this was of a decision for so many of us. What a fcking bummer.",2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ3MjQ3NjgxNTc0NDkxMg==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,"hypocrisy!! that's why I won't be there anytime soon, not even online.. so if I pay a few more bucks for a product somewhere else, so be ti!",2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNzUzNjMzNjAzNTg1Mjc=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,"they moved our black history products (that are usually in front of store) to the back of the store by the dressing rooms. Decatur, il",2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3NjgxNzkxNTcwNzYwMjk=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,This.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1NTM0MzIxMjIwMzU4OTM=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NzE4NzgxNDM2NDkxNQ==,"people get smarter, sometimes so do companies",2025-02-07,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,,Another company caves to the Orange god. I was so happy to stop shopping at Amazon and move to target. Time to shop local.,2025-01-24,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxMzA2NDE4NDcwNjIyNQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,"if you have Meiers, they kept it, same with Costco. Costco refused to drop it when asked to.",2025-01-24,reply,104
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNjYzOTg0MTc5NzM5OTQ=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxMzA2NDE4NDcwNjIyNQ==,I love Meijers.,2025-01-24,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg0ODQyNzUxNzMzMDExOA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxMzA2NDE4NDcwNjIyNQ==,Sherri Baldwin - SheBcrzy thank you for the info on Meijer. We knew about Costco.,2025-01-24,reply,12
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwNjk0MjYyNzE4NjM0MDc=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,do you have an Aldi? They have a strong DEI policy.,2025-01-31,reply,26
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjUyMDQ3NTI0NDM4NjI=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,same,2025-01-24,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE0ODU0MTIwMzYxOTYxMTA=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,me too. Where do we go? Stopped Walmart years ago. Love costco if I need a lot of something. This is so sad.,2025-01-24,reply,15
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg5ODg2MTgyNzc4OTYwOTY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,I have no idea where to shop anymore,2025-01-24,reply,20
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4NzU0MTM2NzM2NTM5MQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg5ODg2MTgyNzc4OTYwOTY=,D.O.N.T,2025-01-24,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyMjQ3MTY3NjY5OTg0Mw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg5ODg2MTgyNzc4OTYwOTY=,Costco,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NjkwODUwNDc3NDE5OQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,"You might pay attention to the reasoning behind this, and why so many have been calling for it!",2025-01-24,reply,22
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4NTQyNDE4NDI1NTU2MQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NjkwODUwNDc3NDE5OQ==,"DEI helped women, Black workers, Hispanic workers, LGBTQ workers, veterans and people with disabilities.",2025-01-24,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2MTc3MjY5MTkxMTczMDA=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NjkwODUwNDc3NDE5OQ==,please do explain.,2025-01-24,reply,14
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzEwMjY4NDUxMzA1NTc=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NjkwODUwNDc3NDE5OQ==,what in the world would justify abandoning inclusiveness?,2025-01-24,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE5Nzk3NTQ5MjkxNzc4MjU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NjkwODUwNDc3NDE5OQ==,Costco is gonna be busy!,2025-01-24,reply,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ4NDQ0NjUyNzcyNTAxNw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NjkwODUwNDc3NDE5OQ==,maybe you could explain to us why dei is not necessary?,2025-01-24,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MjAxOTAxNzg1MzQxNjA=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NjkwODUwNDc3NDE5OQ==,Dinah Davenport Luevano you have no worries keep scrolling.,2025-01-24,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY1OTM5OTU1OTc0ODkyOQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MjAxOTAxNzg1MzQxNjA=,ppl think removing DEI will give white people an advantage to get jobs again cuz they think DEI is made to hire POC no matter their qualifications and that is not true.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ5MjAzNTEyNjg3OTY4Ng==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NjkwODUwNDc3NDE5OQ==,"hilarious. You mean so many *white men* have been ""calling"" for it, right? Because not a single woman or person of color or personal with disabilities or veteran or any other member of a marginalized group wants to be LESS recognized and have FEWER opportunities. You do realize that, right?",2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyODg2OTk2OTkwOTY2NDM=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ5MjAzNTEyNjg3OTY4Ng==,This does not stop people from having opportunities. It’s hurt more than helped….now. It had its place during the civil rights fights.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2Njk1Nzc0MTAyOTc1NjY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyODg2OTk2OTkwOTY2NDM=,The reasoning is prejudice.,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1NTcwMzk3NzUwMzgyNzY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NjkwODUwNDc3NDE5OQ==,fighting for civil rights is not over.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMDkyNzkzMjEyMDc3Mzk=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,and Costco!,2025-01-24,reply,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2MDQxODEzMjczMDc0Nw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,ditto,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2NzA5ODU2NzM4Mzc0NzQ=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,Exactly!,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxMjQwMTg3Njc3MTEzODA=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,Exactly! I started shopping at Target to avoid Amazon.,2025-01-31,reply,13
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg0ODI5NzExNDAxNjEzNw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxMjQwMTg3Njc3MTEzODA=,me too!,2025-01-31,reply,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyODgzNjIyNTkwODI1NzE=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,Jennifer Childers shopping local is always preferred. Have you tried the locally manufactured tissues found in your local Target?,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI2MTU4MDQ0NjE5Mzk0MzM=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,We recently moved where we don't have a Target nearby. I no longer care.,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUzMzk4MDIyNTYyNzI1Ng==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,You should have been doing this all along,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3NDA0MDcxMjMyMDI1MDU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,exactly,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY1NDk5NjE0MDE5NDQ2NQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3NDA0MDcxMjMyMDI1MDU=,i like aldis to for some groceries,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU3ODY4MDgwNTAzODUxOQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,Same.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MzAwMTg2NDc1NTE4OTc=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,A god he is not!,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjgwODA5NzE4NjQwNDU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,same.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyMDI1NzY2NDA2NzI2Mg==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjgwODA5NzE4NjQwNDU=,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzM5Nzc0MzQ0MTU2MDQ=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,booo hoooo,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5MjAzNDY1MzY4MzM2Ng==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTg2MDYwODE4MTE3MTE=,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyODcyNzc3ODkxOTc5NDY=,,These companies will realize that the black dollar is crucial,2025-01-31,initial,171
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwMjQyMzg5MDc5ODE1MDk=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyODcyNzc3ODkxOTc5NDY=,very!!!!!!,2025-01-31,reply,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyOTIxMDgxMzg3MDg4NzY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyODcyNzc3ODkxOTc5NDY=,So is everyone else's.......,2025-01-31,reply,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5NzcwNDc3Mjg5MjQ2Mw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyOTIxMDgxMzg3MDg4NzY=,It’s on record that blacks spend mostly. Good or bad blacks are the top consumers in goods.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ4MTMxMjU5NTAxNzg2MQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyOTIxMDgxMzg3MDg4NzY=,shush please,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU3NTQ5MTk0NTM5NzU5Ng==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5NzcwNDc3Mjg5MjQ2Mw==,LGBTQ money too.,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMDM5MTg3NDE3NDU5NzM=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyODcyNzc3ODkxOTc5NDY=,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTkzNTM2ODE3NTIzNzg=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyODcyNzc3ODkxOTc5NDY=,deleted my account and uninstalled the app.,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzMzMTE0ODgyNTU2NTg2Nzg=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyODcyNzc3ODkxOTc5NDY=,"And women, and veterans, and people of color, and the elderly, and the disabled, and LGBTQ+ people ...",2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzc1NTc5ODQ4MjU2OTk=,,Peace out Target,2025-01-24,initial,169
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2ODYwODA1NjIzMTc4NDI=,,Shame on you,2025-01-24,initial,112
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzNTI3OTU2NTgyNTk5Ng==,,I just want to wish good luck to your social media staff. They’ll need it…,2025-01-31,initial,103
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkwODA2Mjg3NTg2OTkxMjQ=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzNTI3OTU2NTgyNTk5Ng==,they’re complicit too,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE0NjAzNDAxODQ5MjU3MTg=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzNTI3OTU2NTgyNTk5Ng==,Smart Auto Savings Under $5000,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2NTY2MjA2MDgzMDkxOTg=,,Core belief???,2025-01-24,initial,68
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzMTkwMDA0OTM5MzA4NA==,,Can someone help me understand why inclusivity seems to be taking a backseat? I'd love an explanation of the DEI rollback.,2025-01-31,initial,50
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI3MDI4MjU4Mjk5MjA0OTc=,,The little things that keep me from losing it is companies that don’t crumble to Trumpism,2025-01-31,initial,45
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyMDA0OTY2MjAwMTA5MDI=,,"My fellow Target shoppers probably know, all too well, the experience of going in for shampoo and coming out with a full cart.",2025-01-31,initial,47
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxNTk4NDE1Mzk1MTMxNA==,,Gonna miss you Target.,2025-01-31,initial,46
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwODcxMzMzMDUwNTg4MDA=,,"Costco, Costco, Costco!!!!",2025-01-31,initial,42
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzY3MDA3MzgwNTc4MDA=,,We expected so much more.,2025-01-24,initial,43
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwNDU4NTY5NzkyNjU1ODY=,,I thought you were one of us…I thought wrong!,2025-01-31,initial,35
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMzYwODc4NzM5OTYzMDc=,,"Count your days, Target!",2025-01-24,initial,47
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzMyMTQyMDA1ODIwNTE2NzQ=,,So sad. I thought Target actually had values.,2025-01-31,initial,39
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2NjEyNTU3ODQ4MjQzNTU=,,Just when I thought I had an alternative to Amazon. Off to Costco we go!,2025-01-31,initial,41
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjE2ODY0NDI1Mjk2NzI=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2NjEyNTU3ODQ4MjQzNTU=,what Amazon do￼,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2NzgzMjAyMDkzODkxODQ=,,"We are all watching you fold, Target",2025-01-31,initial,34
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwNjM0NDQ0NDg4NzE2MDM=,,Now why would you roll back programs to make the workforce better?,2025-01-24,initial,55
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyOTIxNDg4ODIwNTM3NTU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwNjM0NDQ0NDg4NzE2MDM=,and we know it isn't better.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2MTM4NjU5Mjk1MTY4MzQ=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwNjM0NDQ0NDg4NzE2MDM=,"I’m so confused at what’s going on, but this comment has the most information to the passersby. Can you fill me in on what’s going on?",2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMDA3MDQzNjUxODc5MTU=,,Do the right thing!! Tired of this nonsense.,2025-01-31,initial,39
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQwNTI4MjQzMzUwNDA5ODE=,,I support companies that support DEI.,2025-01-31,initial,45
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE0NzQ3MjU2NjA1ODA5Mjk=,,What they all said. Sigh.,2025-01-31,initial,29
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MzQ5MjA5NDcwNTMwNzU=,,Y’all couldn’t wait to show yalls true colors,2025-01-31,initial,27
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyNjA3NDI0MzI3MTE5OQ==,,I’m switching to Costco.,2025-01-31,initial,34
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk1Njg3MzQyMjcyNjgxMg==,,Bye Target. How disappointing,2025-01-31,initial,27
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1MjUxNTk2MTQ4MTYyODg=,,Not a smart decision. Expect to lose money since many of us would rather just go to Costco now.,2025-01-31,initial,25
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk4NTgwMDQ1MzQ0NjQyOQ==,,The amount of money I spend at Target is insane!!! And anyone that knows me knows that I don’t shop at your competitor bc they lack morals I thought you stood on. I won’t spend my coins where I’m not valued!!,2025-01-31,initial,65
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNDk5NDQ4NTk0MTk3MzU=,,Awful! Shameful!,2025-01-31,initial,25
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyODMyMDYyNDYxMzI4MzU=,,I bet Target’s social media team is looking forward to their workweek. Sunday scaries?,2025-01-31,initial,23
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNjk1MDA4MjQ4OTAwNjE=,,Target. I needed you to be better. Bye.,2025-01-31,initial,22
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwMTA1ODUwOTMwMDczOQ==,,Shame on you!,2025-01-31,initial,24
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk3MjQ2OTY1MTQzNTg0Nw==,,I only shop with companies that stand up for what’s right. We vote with our dollars!,2025-01-31,initial,21
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4MDg0NjY4ODMyNDUzMDc=,,"I’m actually really mixed about the loss of target to my life. I will ultimately save money and probably contribute far less to fast fashion pollution but at the same time, I have been shopping there my whole adult life. You do realize that he didn’t win by very much and half the voters didn’t vote for him right? You don’t have to do this",2025-01-31,initial,17
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIyNDU5MDgwOTI0NzczNzk=,,I'm done with you!!!,2025-01-31,initial,19
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2MTMzNjgwMTk1NTI2Mjk=,,Yesterday was my last visit to your store. I shop at Target at 3 times a week.,2025-01-31,initial,16
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwNTA4MTQxNzA0MTg0Mjk=,,Can we stand outside of Target and notify the shoppers?,2025-01-31,initial,24
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNjA2Mjc1NzU4NTE5NTY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwNTA4MTQxNzA0MTg0Mjk=,"Tricky for me, red suburb.",2025-02-07,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI2Mjk0MTQ1OTQxMTU2OTk=,,Bad move following the orange Messiah.,2025-01-31,initial,18
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk0NTA3MDc1MDYzNTgwNA==,,I’ll be going to Costco,2025-01-31,initial,24
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMjc5OTUzMzE5NTY1MjM=,,"A container for something already in a container 
+ I can’t",2025-01-24,initial,24
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4MzY2NjM3NDU1MTkzNg==,,"Just goes to show their DEI ""support"" was only while they were getting paid for it.",2025-01-31,initial,22
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4MDgxMDg3NTY2OTMwNDQ=,,You are breaking my heart. DEI is important.,2025-01-31,initial,26
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI5MTY3NTMyNjA2MTc5MzA5,,Here we come Costco!!!,2025-01-31,initial,17
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDQ5MTI1NTcyMTMyMjQ=,,I believed in you Target..please reconsider,2025-01-31,initial,15
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIxNTQxNTg3OTgzMzM5NjA=,,"Well I just started shopping at Target due to the distance. And I just stopped!! 
+ sad",2025-01-31,initial,14
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MjMxMTc1MDgyNDA2ODE=,,"I assume you will be letting go of your iconic red color for orange, which will be a much better color for today’s Target corporation.",2025-01-31,initial,21
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTMxNTg4NDMxNTMwNTk=,,Last I heard Home Goods is still ok to shop at.,2025-01-31,initial,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4MTQ3NjE5NzYwMDY5NzU=,,The orange altar is pleased with your offering.,2025-01-31,initial,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIzNzY4NzE5MjYwMDk0MTQ=,,There is no calm when people are being attacked and excluded.,2025-01-31,initial,12
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNTU0MzkxOTU0ODgyMDE=,,Sell outs! Way to be just like Walmart.,2025-01-31,initial,18
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMDYyODY4NTQ2NTExMjM=,,If you’re in Texas HEB has a great DEI practice and programs.,2025-01-31,initial,27
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk1NjA5MTc1OTQxMzAxMA==,,Let's Go Costco!!,2025-01-31,initial,17
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyODg0NDQ4OTkwNjcwNjc=,,Target can we get an answer for the commentors questions?,2025-01-31,initial,16
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyNjc2MjM2Mjk5MjI2Mw==,,"Et tu, Target?",2025-01-31,initial,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNTM3Nzg2MzI0NjMyMzE=,,"Target, expect less pay more.",2025-01-31,initial,14
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDg2Nzc4Nzk1MDk5MTA=,,"Unliked. Unfollowed. Man, thanks for saving me so much money!",2025-01-31,initial,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3NjMyMDMwNzc4MDgzODM=,,"As an older yt woman, I trusted my sisters, WHO TOLD ME that you were a safe space, a supportive, cooperative ALLY.",2025-01-31,initial,20
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMzU1NjU3NTQ0NTY0MDI=,,I’d love to read their reasoning!,2025-01-31,initial,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ3NzIwMDQ4NTIwMzM0MQ==,,We have it and love not having five diff boxes in the drawer,2025-01-24,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY0Mjk5NzQ1NDk4MjA4NQ==,,"Corporate, please respond to our comments.",2025-01-31,initial,9
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY1ODc2NjE5OTgxNDQ3NA==,,Bye Target! I went three times a week! I have to find somewhere else to spend my money!,2025-01-31,initial,15
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE5ODA5MzIyNzI0Mjk4ODc=,,Comments did not disappoint.,2025-01-31,initial,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2MjA3NzkwNDIxNDY4MTQ=,,I wish Minnesota United FC could dump you. Soccer is a global sport.,2025-01-31,initial,12
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyNDk4MTQ2MzU0NTk4NQ==,,This is genius!!,2025-01-24,initial,17
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMDUzMTM5OTQ3MjI5MzU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyNDk4MTQ2MzU0NTk4NQ==,let’s hope not!,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNzAyNjQ5NjQ2OTYxNzM=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyNDk4MTQ2MzU0NTk4NQ==,because I like this box of zip lock baggies?,2025-01-31,reply,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjU2NTQwMzI2ODIzODI=,,One less place to go!,2025-01-31,initial,10
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUxNjMzNTI3NDI2OTEwNw==,,I can safely shop at Target again!!!,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwODY4ODQyMTE3ODMwMTg=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUxNjMzNTI3NDI2OTEwNw==,The parking lot will be less full and the lines won't be as long,2025-02-07,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MTE5MTc1NDk3NDUzMTE=,,"Target did not hit the 
+ with this decision!",2025-01-31,initial,6
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4NTc4MDQ3MDg5MzAwMA==,,I have this and love it!,2025-01-24,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk5ODkzNzY2NzQ0MzM5ODY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4NTc4MDQ3MDg5MzAwMA==,never seen iy,2025-01-24,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzODQ3NjQxODcwNTc3Mw==,,Not you!! So disappointing.,2025-01-31,initial,15
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNjk4MzY3NjA5MDgzMDM=,,Target we need to hear from you,2025-01-31,initial,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkwMDI4ODk0NTM2MTAzMA==,,I’m about to save so much money.,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5Njg3OTc5NjM4MzYxOA==,,Target has joined forces with the dark side.,2025-01-31,initial,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ5MTMzODEyMDMxNzczNg==,,We did expect more Target. Sad you caved to hate.,2025-01-31,initial,12
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzgxNDk2Nzc3ODY5MjU=,,We don’t have a Target here and now I am glad that we don’t.,2025-01-31,initial,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMjU5MTc5NTUwODc0NDg=,,Or get reusable ones... and help save the planet,2025-01-24,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5NjU0NTYxMzI5MzIwOA==,,"I just came here to see what things I'm never going to purchase from Target... 
+ We are never getting back together ....",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4ODA4MTYwNzQ2ODU4OA==,,I expected more from you.,2025-01-31,initial,9
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDMyNDcwNDcyMTM2MDE=,,"Do the right thing, Target",2025-01-31,initial,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM5OTIwMTgzMzI1MjM1OA==,,"Didn’t expect this one, so disappointing. More Fresh Thyme for me!",2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE0NDc3NTIxMTYxODQ3MDM=,,Target come to the front of the Altar !!!!!!!!!,2025-01-31,initial,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUyOTk1NjM4NjA4NTM1OQ==,,Maybe elon and orange and stephen miller can make up the difference in sales you decided to give up. See ya!,2025-01-31,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzk5NDA2MTc3MTMwMDQ=,,Not nice..,2025-01-31,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNTUxNDQ4MTk1MjUzMjY=,,I am going to save so much money! No more trips to Target. Never thought you all would sell out. It's a sad day.,2025-01-31,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMjUxODMzNDk2NDIyMzg=,,So disappointed. I’m sticking to Costco and Trader Joe’s from now on.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNDI4NzYyNTY3MTI3MzY=,,Hopefully Costco sees a boost from all this,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ1NjM4MjQzNzQwNTUxOQ==,,The orange god has spoken!,2025-01-31,initial,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxMzQyMzg2MTQzNDk1OQ==,,I am a HUGE fan of Target. Love all their products.,2025-01-31,initial,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI1MzM0MTc4MTM2NzA0NzA=,,I have seen a reusable wooden version of this at Costco.,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwNjY1NzU2MDg4MTY3NDc=,,"Breaking trust with loyal customers—Target, this move is heartbreaking.",2025-01-31,initial,9
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMTg2ODk5NDMxMjg3Nzg=,,Target used to be a good company,2025-01-31,initial,9
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg5MTc5NzMzMjg1NDE4Mw==,,Getting a Costco membership! Byeeeeeee!,2025-01-31,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDY4NjU0NjA0MDYwMjk=,,"Target, do the right thing and resume DEI. So disappointed in you.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM0Mzg3NzczNDk3NjMyMDI=,,"I’ve loved shopping at Target, but I’m done! Bye bye!",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExODUyOTA3MTMwMTgxMDc=,,Won’t get no more of my money,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2ODg0MDU4MTE3NTU5ODI=,,Never going again!!!,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk1MzIzNDQwMDEwNjY4Nw==,,You've lost a loyal customer and credit holder,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyOTMxMTgxNjE5MjQ1OTE=,,Looks like I don’t need to shop at target anymore. Such a shame.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQwMzY2Nzk3MTMyNjIyNDg=,,…and just when you were about to experience a tsunami of new customers fleeing Amazon and Walmart. Too bad and so long.,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE5OTk0NzQzNjM4OTcyMjM=,,Ending DEI? Done Investing Expenditures at Target.,2025-01-31,initial,9
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1NjI4MTY3MTQ0MTIxOTQ=,,Like to find this in my local Target .,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU3ODk2NDkwMTYyMjc5NQ==,,Make sure your next ad is a sale on white sheets. They will sell like hotcakes.,2025-01-31,initial,10
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3NjM2Mzg4MDQxNzgzNTA=,,"Mine kept in pantry, drawers for other stuff.",2025-01-24,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjM4MDIzMzU4ODgxNzM=,,Never shopping Target again. I was a life long customer.,2025-02-21,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwNjUxODE4NDg3MTIwNTM=,,Just got my new Costco membership today. Target won't get another penny from me.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1MTY1MzAzNDIzNTY1OTQ=,,"Target... I will continue to shop at your stores. I appreciate that I don't have to buy a certain amount in order to get curbside pickup. I'm love that you have the best specials in common everyday goods in my community. I am so happy that you carry the flavor of Hint water I can't get anywhere else. And in a community that's losing places to work.left and right, I appreciate that you have a huge presence in my community bringing jobs and opportunities.",2025-01-31,initial,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MjkxNjYwNDc2NDUxMDg=,,"Costco, here we come!",2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY0NTgxMTQzNDY5MDE5NQ==,,"Target has torn they red wagon... here's to saving money & dropping 
+ this bad habit",2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDAyMjgxNzA5MTUxMTA=,,I’ll gave less clutter since I won’t be buying anything from Target!,2025-02-07,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4NDEyMTc1ODMyOTExNjI=,,"Are these items sold at Costco? I hear they are inclusive with their employees, customers and vendors",2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4MjYxNDM4NDU5NDE1MQ==,,Shameful. I’m not spending money there anymore. I did 80% of my shopping at Target. Aldi and Costco it is.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk4MDE4NjE3NzM3MDk4NA==,,Just finished writing my private message to them. Came to check out the posts and the comments did not disappoint.,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIxMDY1MDkyNzk4MDc3NzU=,,I will no longer shop Target until support for DEI returns.,2025-02-07,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNTY2MTI3NzI0MzkwODQ=,,Remember Target said they don’t need your money,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ1MzM5ODgwMTA0MzYzOA==,,Just ordered mines picking it up tommorrow!,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1MzQ2NTUwNzcyMzMyOTM=,,Decluttering by taking yall off my shopping list,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNDY1MzMyMDMxOTU0MzY=,,Costco! Here I come,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDAwMTU1ODc3ODA5OTI=,,"I shopped at Target twice a week. I'm sad to have to find a different source for groceries, basics, gifts, clothes - basically everything. Just signed up for a Costco membership yesterday. And determined to shop local.",2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE0ODE0NzI0NjI4MTEzMjM=,,Guess I will be shopping more online at Amazon and Shein.,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyOTkxNTc1NzgwODU3NTY=,,Target pay attention to the comments,2025-01-31,initial,10
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4ODY2NDM5MzkzMjEwNQ==,,It's getting easier to quit big box retail.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMTM1ODEyNTAyNTM2OTM=,,Supporting Costco and deleted your app,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg3NjYxMzkyOTM0OTYwOTQ=,,"Better yet, buy reusable silicone bags!!!!",2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI4MDM4Mzg3MjY0NTM4MTc=,,This is sooo cool. I just bought two separate ones. My cabinet is very disorganized. Can't wait to buy this zip bag organizer from Target and keep it forever filling it up as needed. Thank you to whoever came up with this system.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzQxNTY3NjQ5ODc0ODE=,,This is great but I don’t use the snack bags. Make one without those,2025-01-24,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjAxOTE4MTkzMTk5MDE=,,all done with Target shopping - byebye,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk3MTI1ODczNzY3MTQ3OA==,,Costco here I come!!!,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzc0MzMyODQ2ODczOTY=,,Dollar Tree has versions of these AND supports DEI. No need to take money out of your community through Target. Spend it at Dollar Tree where they will reinvest in the community and charge you less. You get more for your money at DollarTree.,2025-02-07,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyODg2NDA5NDg4NDgyNzM=,,"With Luigi in jail, who holds the current CEO list? Just want to know what companies to avoid!",2025-01-31,initial,6
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzODYwNzgxNTIxMjc1OQ==,,Well we will roll back on spending our,2025-01-31,initial,13
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkzNTQxMTI1ODU3MDMzNw==,,"So disappointed in you, Target.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY2NzAyOTk5NjA1ODUzNw==,,"Same! I love Target, for the great deals and the their (previously) inclusive practices. But if you are back-tracking on your values, my dollars will go elsewhere. BYE!",2025-02-14,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwNDg4MDEzMTg4OTkwNzY=,,I have a wooden one,2025-02-14,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ2MDc0OTc1MDQzOTk2MA==,,Grateful for my Costco membership! Later Target,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1MzI4NDQxOTc0MDQ2MzI=,,I don’t have a Costco membership because it is a further drive however since they are welcoming of all people I am going to get a membership.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1MjU5NTE0NTQ3NTg5OTE=,,love this just wish we had a drawn for it,2025-01-24,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM0NzI2ODUyOTk1NDE0NTg=,,Costco has organization stuff.,2025-02-07,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI5MTQ2MDc2ODIxNzEwNDk=,,Why aren’t you defending DEI,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE0MjEyMjc1NzU1MjIzMTU=,,Target your Walmart is showing,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzMwMDQ1OTQxNDk3MDUxNDc=,,"So, I take the boxes and load them into another box?",2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMDcyNTg1NTc5MDgyMzc=,,"What did Target do this time, can someone fill me in?",2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzNDUzMTA3OTAyNTY2OA==,,Shame on you,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyNTQ5MDg4OTk3MzEzNA==,,Are you going to stop selling Mielle and Camille products?,2025-01-31,initial,6
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ5NzEzMTMwMzQwNzM5Mw==,,Hey... TARGET...NONE OF YOUR STORES IN ST.LOUIS HAVE THE AALIYAH BARBIE DOLL...WHICH WAS DUE TO BE RELEASED TODAY!!! This is a SERIOUS ordeal!!!,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4MTk0MTQ0NDgyMDU3OA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ5NzEzMTMwMzQwNzM5Mw==,"We apologize for the inconvenience. In some cases, demand may exceed supply, you can opt in or opt out of notifications on the product detail page for when the item comes back into stock.",2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMzE2NjE2MTUzNjU5OTA=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4MTk0MTQ0NDgyMDU3OA==,what do you have to say about your new policy ???,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzNTA2MDgzNTY0NTExNA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4MTk0MTQ0NDgyMDU3OA==,your bots don’t understand sarcasm.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExODYxNDYxNzI4NzA1MDg=,,"Whatever I was going to buy at Target, I can find elsewhere, or do without.",2025-01-31,initial,15
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4NDc1NzI0MTExMjY2MQ==,,Costco for me too,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyOTUzMjEyODQ5MTY0Nzc=,,"Just so you know, I am referring everyone who talks about their disappointment in your decision to buy either local or at Costco…a company that supports DEI.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk4MTE0ODA2MDU1MjI0NQ==,,So glad that we have Costco nearby 'cause I'm done with Target.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIzOTIzOTg3NDQ0Mzc1MzQ=,,"Target, you obeyed in advance. Shame on you.",2025-01-31,initial,13
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNDU4MjI3OTk4MTM2MDg=,,"Oh my God, I love this idea 
+￼",2025-01-24,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ4MzA1MzI0Nzg4ODYxMQ==,,"Ya buckled and fell into the 
+’s hands",2025-01-31,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNDM1NDkxODY3NDQ2MTA=,,Costco sounds good,2025-02-14,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwMTQ1NjUyNzIzOTk4NDA=,,what happened to your core beliefs?????????????????????????????????,2025-01-31,initial,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU3MTM5NjQ4NTcyNDYyOQ==,,"I consider Target’s recent corporate decision concerning DEI practices an affront to everyone who belongs to, or supports, marginalized segments of our society. My own decisions regarding with whom I do business are to a large extent based on their positions on such matters, and I will certainly keep this in mind in the future. I learned to live without Amazon and can certainly do the same thing when it comes to Target.",2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwMDQxMjY0NDY3MjM1MTY=,,So TARGET hasn't posted in 3 days.. hmmm nothing to say??,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2MzUzNTQ2OTA2ODg3NA==,,No more.,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNjk5NDkwNDc4MTIxNDI=,,Target: YOU keep losing it …,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyOTQ4NzQxMjUwNjM0Nzk=,,There is no calm when you have bowed to the orange monster,2025-02-21,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNzU5NTY1MzAwOTkxNzA=,,I’m,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMTg1NzYxOTYxNDM1NTA=,,Love it!,2025-01-24,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM1MzkyNTc1MzYzNzUwOTE=,,Costco won the lip sync battle babes,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2NjQ3Njg5NzExMDg0MDc=,,I notice there hasn't been a new post since the DEI announcement...,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyMzc1NzQwNjQ5MzY3OQ==,,Ty #Costco. Signed. A combat veteran!,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5ODQxMDY5NjIyNjA5Nw==,,"How does that boot taste, Target?",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1MTUzOTQyNTI0NzA5ODI=,,So sad to hear target has no backbone either. Shame on you.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM3OTg0MDYyODcwODM3NTc=,,I rather buy off Temu,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk4NjA4MDQzNjc2NzE1OQ==,,Driving 50 miles to Costco. Always went to Target and not Walmart. I will pass.,2025-02-07,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU3NjA5MTIxODU1MTAxMA==,,"Kind of brilliant, really!",2025-01-24,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MDk3NzYyNjYwNTIyOTY=,,Time to shop elsewhere,2025-02-07,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzc2MDQwODEzNDM1OTY=,,Costco here I come.,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk0ODE3NzU4NzQxNDgwMA==,,Would expect this from a Walmart not a Target.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3NTcyMDA0MDUwNzE2NzQ=,,I love this,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyMDU2NzE0MDI2ODE3NQ==,,No more target anymore! Shopping at Costco now!,2025-02-07,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNjQ4NjA4NTQ2MTk1OA==,,Getting Costco card… bye Target,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMTQ3ODU3NjcyMzU5NTg=,,You have to worry about me shopping there,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM3NjkzODYyMzMzMTExMzE=,,"I never felt conflicted about spending money at target. I will no longer be spending with you. While Target may not miss my money, it looks like they will be missing a lot of people's money.",2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNTc1NTIyMjg2MzExOTM=,,Shame on your company,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1MjUzNTkxMzQ4MDUxNzY=,,Can't wait to see your 1st quarter financials.,2025-01-31,initial,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDY0NjI0MDAzMzM3MTk=,,Disappointed!!!!,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMDU3NTkwNjE1NzQxMTY=,,What is THAT?!?! I NEED IT.,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzgzOTAyMjI2NDk3MDkwMA==,,"Boa tarde Target Sou do Brasil quero pedir porfavor uma entrevista de emprego pra trabalhar junto com a equipe de vocês eu trabalharia até de graça , Agradeço .",2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM4NjE4MTk4ODc0MTY4MDY=,,"Y’all were my store! If you don’t stand for anything, where do you go from here?",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNTg4MTkwOTIzMDAwNjE=,,I seriously used to place curb side orders 3-4 times/week but no more,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNjI1Njg1MjgxOTA5MDg=,,"Not my fav store anymore. I’ll go elsewhere 
+ Byyyyee!",2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2ODQ1MjIzNDU0OTg4NzE=,,Might want to make a different decision. It seems like you don’t know who your customers are (we’re).,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2MDk1Njk1NDk2OTE2NTQ=,,Tots and Pears,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzYxMDMwNjQ5MDMyOTQ=,,Thanks for your Belonging program.,2025-01-24,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ4MDAyNjM3ODIzNTI5Mw==,,So disappointing target. Goals for inclusion of all people is not something to be rolled back.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5MzkyNzUwNjc1OTA3Nw==,,"Theres a Walmart 15 minutes from my house, but I was willing to drive 30 to Target. Well, looks like I'm driving 45 to Costco. Disappointed in you Target.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3NzI2MzQ2ODY5MTUxNzc=,,OR....DON'T USE PLASTIC BAGS,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQxMjUzNjY5ODYxMzc5OA==,,Crazy was my go too.. not anymore,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNTI1NTE5MTMxMTY4NDU=,,how do the small companies spotlighted in New and Featured feel about you now? So you just showed up weak and caved. real real nice. you cannot buy this much bad press..but carry on..cause we know you will.,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ4ODAyMTQyMTAwNTM1MQ==,,"So very disappointed in target bowing to the Cheeto man. Target runs will no longer be on my list of fun, de-stressing activities. Eh, it’s better this way. I need to read more",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5NDAxODYzNjY3MjEwMQ==,,You can get real ones at Costco!,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwMTcyMzc1NjIwNzQyNzc=,,LOVE LOVE LOVE the fact that Target is moving away from DEI. DEI attempts to correct past injustices by creating a whole range of new ones. Bravo Target!,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg4ODc1Mjg1NDEzNDI2MjI=,,"Buh bye 
+…. Another company eats up the orange dust.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI2NTkyNzUwNzA5NTA0MjI=,,Costco,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxNzcyNTkyNDIzMDkxMTE=,,"Just came to say, it's been real",2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNzg4Njk1NTA1MzY2MTY=,,Bay Target welcome Costco,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxNTU0NzM3MDM5MTY2Nw==,,"Oh wow, that's actually pretty handy",2025-02-07,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2MTk5MDIyMjU3MzE1NQ==,,I see you are engaged in what authoritarianism expert Timothy Snyder refers to as “obeying in advance”.,2025-01-24,initial,63
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzMwMTg5ODExOTQ5MTg4NzU=,,Dear officers of Target: Please restore your former DEI hiring and retention policies. I always felt good about shopping with you and I hope to again.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4MTExMTE3MzYzNzYyMTg=,,You lost me as a customer,2025-01-31,initial,14
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4Nzg1NzY2NzM1MjExNw==,,"Bye Target. Hello Costco, Aldis & Trader Joe's.",2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2MzA3NTI4OTE2NTgyMDc=,,I just took back my like.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2NjUxNjQ1MDQzOTY4NTg=,,"I'll miss you, Target.",2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyNzUwMTk0OTY2MzcwOQ==,,Thank you for removing DEI!,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk1ODA2MzM0MjkyNDcwNQ==,,that'sa cool,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE5NzUzMjQ2MzYzMTEyNjg=,,Costco delivers everything I need.,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwODk0OTc0NTQxNzA1Mw==,,Go to Costco instead.,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNjE0MTI3NzE2MzUxMjc=,,"I am heading to @asktarget on Twitter to…well, ask.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE5MzkzNTkxNTY1OTEzMjg=,,"Sorry target…. I guess I’ll be wondering around tj max, Ulta, Walgreens and dollar tree from now on.",2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4MzI1OTQ5Mjc1ODUwMDY=,,That looks like it's not cheap. And it looks like it takes up more room than the individuals. ￼,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY0MTk1NTYyODM5NDk4Mg==,,This is not what is going to bring us back to target. Js.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwOTczMDA0NTMyNzQzNQ==,,We ain't cool anymore,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyMTg4MDEzMDU1MzI5MA==,,Kar,2025-02-21,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4MDk2MTQ3ODk4NzA4NzQ=,,"There’s still time to do the right thing, Target",2025-01-31,initial,6
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyNjc5MTE1MzE1NzY5MA==,,Guess what? Yuppp- will find somewhere else,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExODE5NDU5MDY4NTg3MjI=,,"Oh, so you are deciding to change your stance on DEI under a new administration??? Say less....",2025-01-31,initial,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNzU3Mzc0NDAzNjI2OTc=,,Sell outs.,2025-01-31,initial,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzMzNzMzMDAxMTk0NzMyNzI=,,So much for Target,2025-01-31,initial,6
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk4NTkxMTI3MDA3MTk0Mw==,,Imma unfollow you but Dollar tree have it for $5.00,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNzcwNjg5OTMyNzk4Njc=,,I use to work at target.,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDg2MDk5NjY5NTk2OTc=,,This one hurt….lol …. Stopped shopping everywhere but target. I guess it’s #costcoforlife,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3NTU3NTAxMjgzMjc3NTY=,,Give Costco your money.,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2NDk1MTY0Nzk3ODMwMTU=,,Costco forever...,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk3MjMzMzQwNDMwODYxNw==,,I am done,2025-02-07,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNTg2ODc5NDg5NDQxMjU=,,"I did expect more, boy was I wrong.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ4ODA0OTI4NDM1NzUzNg==,,Nah. I'll go to Costco instead. Because they are still inclusive with their policies. So disappointed in you!!!,2025-02-21,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNDM4Nzc2NjY3MDY3NzE=,,No reason to go to target anymore,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNjQ5OTY0MDQ5MjMzMzU=,,"We had a good run, Target, but you and I are done.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY0MTk2NDA5ODM1OTk0OA==,,"Hey Target, No DEI? No more money from me.",2025-02-07,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE5Mjk2NzM1MDc0NDE4NzY=,,"If I am going to have to shop at stores without any moral values, I might as well shop at one where the prices are lower. Target isn't it. Sad.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY1MDIyNDk3NDA5NTM5Ng==,,They have this at Costco !!,2025-02-07,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzMTMzNDMwMjc0Mjc2MQ==,,"I have never shopped at Target not for any ideological reasons, there where just no stores in my area. But now I will continue to not shop at target entirely for ideological reasons.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzMxNDc1NTkxODg3MTU0MjM=,,It’s cute yall think you can still post without getting lit up,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk0MTMyNjU1Njg3MjU4Mjg=,,They have over 22 million followers! Let's start by unfollow them!,2025-01-31,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk1NDg4MTExMjk1OTE5Ng==,,Costco!!!,2025-02-07,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU1MTg0OTkxNzg2MDY2OQ==,,Sorry target but Costco now has my business !!!!￼,2025-01-31,initial,10
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU1NjY4Mjk4MDY3MTE4MQ==,,Costco it is,2025-01-31,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ2MzEwMTY0MzUzNDYxMQ==,,"And oh by the way, we went to Costco last night and bought a ton of stuff. I'll put my money where my values are.",2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUzMjIwOTkzMzIxMDMyNA==,,No Target - stop wasting money on your commercials and bring back DEI,2025-02-07,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE5ODAwOTM2ODI0OTQzMDE=,,"Target When you supported me and my family, I supported you. It's going to look a lot different going forward. I'm choosing to put my money where my mouth is.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNjQyMDE4MTQ5NDMyMDY=,,NOPE . We're going to COSTCO.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4ODk1NjgxMDcxMTkyNA==,,Bye bye Target I will miss you forever.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyMzMyMDc0NjU3OTE4OA==,,That’s why all yall products in those bin stores now . I be buying everything from @ Daily Hot Deals for $2,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMTY1MzM2NjAyNjQ2MzA=,,"Fellow ex-Target shoppers, this list might come in handy",2025-01-31,initial,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1NDU2MDExMDI4MTQwODQ=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMTY1MzM2NjAyNjQ2MzA=,Thank you for posting this list!,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY1MDY2MDM0NzUyNjk1MQ==,,The retreat from DEI commitments is regrettable.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4MTkxNjYxNDU1MjY4MTE=,,"I used to shop frequently at Target, but now I will not. They have buckled to bigoted leaders. And BTW, I am a white cisgender male over 80. (I care about my kids and grandkids...)",2025-02-28,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM5NTI4NTcxMjE2Njk3Njk=,,I’m about to become an extreme couponer to avoid shopping at target,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDAyMTAwMjQzNjYxODY=,,Failing soon,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE0MDcwOTU5MDczMzA5NDE=,,Shop Costco!!! They have the integrity to continue their DEI programs in the face of adversity,2025-02-14,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyNTYzMDQxMDQxNzc1Mw==,,I need to find somewhere else to buy my cheese,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxMzIyMTU1NjAxOTc4OTM=,,What about your diverse designers and suppliers? What are you saying to them? Don't be slamming me with emails next month!,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMTg4MDgwNzk5NjkxOTI=,,"Play stupid games. Win stupid prizes. Even if you bring DEI back, I will not shop at Target.",2025-02-07,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwOTM5MDE1NTI0NzQ1MTc=,,Shame on you,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMTc2ODMxODk0Njg4MDQ=,,Also sold at dollartree. Wonder how much it is at Target?,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3ODA4NzY2MzI3MTIyMTg=,,Its better at Kroger,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwNjk3NzgwMDY3ODgwMjM=,,You should probably understand your demographic before you made such a hasty and shortsighted￼ “business decision”,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNzI2Mzk0NDc3Mjc1NjI=,,Lakisha Hardy ik it’s an uproar right now but this is good!,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzYzODY0NjgwMTQ5Nzc=,,Target don’t you think your loyal customers deserve an answer?,2025-01-31,initial,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQxNDExMjMyMTcyMzM0Mg==,,Target Another app to remove from my phone.... folks.... remove the app. Shop small business and re-stores!,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2ODMzNTY1NjU4NzIwODk=,,We coming for you,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMzgxMTIzMzA4NzczODc=,,After hearing Tabatha Brown￼. I will continue to buy my black owned products at your store. I will continue to support and allow my black sister and brothers THRIVE!!!!,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2ODU1NTgwODIwNzkwMjU=,,"Nobody likes collaborator brands. Bye bye, off to Costco.",2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY2NTA1NzI3Mjc1OTY0Nw==,,I bet they have lots of great organizing products at Costco,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4MTY4MjI4MTQ1MjIxMg==,,"Target, me and my family spent thousands of dollars in your business, as well as all here, what rays were pending when you betrayed your people? The one that made known and being that you are today ????",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4MDQ4NjM0NzY5NDU5NDE=,,So sad y'all sold out.,2025-01-24,initial,67
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNzgyMTYwNzY5MjQ3NTk=,,My birthday is in 2 weeks,2025-01-24,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2ODcwODA4MTU1Njk2Mzc=,,Store name should be Trumpget,2025-01-31,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk0NDA4NjQzNDQ4Mjk0Mw==,,PEOPLE ALREADY NOT USING AMAZON YOU WILL BE NEXT.,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNjQ3NzMwMjUzNTE0ODY=,,If our DEI money is not good enough for your products then you ain’t getting it,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwNzI2NjI0OTQ2MjUxNTU=,,"POC: don’t ASK WHY, just KNOW why and remember, you have the power of where you choose to spend your hard earned money.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMjYzODc1NTk1MzA3NDk=,,Where did the digital coupons go in your app??? Either make them available or take them away! I don’t have time for never ending scavenger hunts!!!,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM1NzU4MzMwOTYwNDEzNjc=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMjYzODc1NTk1MzA3NDk=,"Hello Patricia - Great question. Most savings are auto-applied, but any additional digital coupons will be available for you to ""click to save"" in your app or on your computer under Target Circle Bonuses, which should populate multiple categories to choose from. If you still are unable to locate them, please send us a PM at https://tgt.biz/9ko7w3, so we can assist further. Have a wonderful rest of your week! - Queen",2025-01-31,reply,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNzU2MDY3NDY5MzQwNzg=,,"What keeps me from ""losing it"" is knowing that we're working to a culture of inclusion & human rights.",2025-02-07,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUxNDM5NzExODMzMTk5Ng==,,"Yeah, quite sad about the change. Why wouldn't we want inclusivity?",2025-01-31,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNzIwNTQ4NjcyMzU0MDI=,,Tired of equality being just a trend in this country. DEI includes other things besides just a person's race.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ5MjE1ODAyNzI2OTAwNA==,,Sorry to hear that you caved on DEI.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkzODAwMDY5ODQ2MjExOQ==,,So disappointing. Did you think we wouldn’t care? We wouldn’t find out? Your loss,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNzc3NzcyNTcxMDM3NTI=,,"For a Minnesota company, you don't stand for Minnesota values.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNTY5NjY1OTI0MjI0NjQ=,,Please confirm you are not partnering with mommy killer Gypsy Rose Blanchard. She sure does mention your store a lot acting like she is.,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNDg4MDUwNjk4OTUwNzE=,,All the people whining about target but still following them,2025-02-14,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2ODUxODUyODA0MDQzMw==,,"So inclusivity is no longer a core value? We once had so much in common, but now we do not. I’d already cut my Target shopping way back because your housewares seem to be shiplap and your “fashions” appear to be designed for sister wives. Come to think of it, y’all have been moving away from inclusivity for years in the merchandise you carry. Mmm - bye.",2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1NzU3ODg4MDk3NTAxMjQ=,,"Shop at Costco , much better Values",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM5ODg1MzkzMTQ3NjIxMTI=,,"So you won’t be carrying any Black hair care products, or Black History Month items? Are you still going to carry St Patty’s Day gear? I bet you are! See ya!",2025-01-24,initial,9
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2ODkxMDMyNzkwMzg4MA==,,"Found everything on my Target shopping list at Costco 
+ Who knew?! Thanks for encouraging me to try a better store!",2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIxMDc1NTI4MDYzMjY5NzI=,,"Target 
+??",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyODAxNTgzMjg1NzUzMQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIxMDc1NTI4MDYzMjY5NzI=,They missed the mark!,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxOTg3Nzk2MzczOTcyOQ==,,"Regretting all the $ I spent at xmas in your stores, no more!",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzgyMzM4MzYyMjY3MTg5NzI=,,Step in the right direction Target. Good job.,2025-01-31,initial,6
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4ODI0MDY0NDEyNDIyNg==,,Shame on you!,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMzMwODc0MzU1MzAxODA=,,Y'all still gone shop.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDc5OTA3OTM1ODAwNjI=,,Just purchased a #Costco membership. Sorry #Target,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1Nzk5NjYyMTU5NzY0MTY=,,Guess your core beliefs don’t matter eh,2025-01-24,initial,22
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk3MTI0MDQ5NDM3MDAwNg==,,"Businesses are made to make money, not care. Campaigns create the illusion they do. Smart ones adapt to the economy, even if it risks losing shoppers. Life’s short—shop where you want, buy what you need. Nonprofits care, businesses don’t.",2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ3NjYwNzU5MjE2MjIwOA==,,Really stupid move. They aren’t going to shop with you anyway. Now no one is left,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjQ5MTk5OTU1Nzg2MTE=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY0OTgwNTY5MDcyNjM4MQ==,me too,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkzMzA4Mjc4OTY5ODM0NDE=,,#shutdown315,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2MzA4NzgzNDA4NTQzMDI=,,Tabitha Brown,2025-01-24,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI4MTgzNjk3ODMxMjc1MTMw,,#canel Target,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNTEzMzcxODYyMDg3NTM=,,Shame on you!!!,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE5OTI5OTM0ODc4NTM0NjI=,,"Don't try to placate us with a post about Black History Month; we see you and your DEI rollbacks. Until you correct this, my entire extended family will not shop with Target any longer.",2025-02-07,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5OTE3OTI3OTQxODE5Ng==,,Katalin Nofsinger,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDY5NTcyMzY5NDEwODc=,,Julian Carey,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE0OTY2OTE4NDEyODk2MzE=,,"Can't wait for the comments on Saturday when Target tries to advertise Black History Month, as if nothing happened.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwOTYwNDgzOTA4MjgxMzQ=,,Lorleinda R Nofsinger,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDM0MzE0MzQwMjk5Mjc=,,Michael Hughes,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ1NjQwMzgxMDczNjUzMw==,,Lù Lù Foxx,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUyNTM0MjA0MzI1MTE2OA==,,Maya Constance,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMDE5MTgyNTE5OTM2Njc=,,Minnesotans won’t stand by while you end your DEI programs. I wonder how we can impact any tax incentives you have. I’ll be contacting my state rep,2025-01-24,initial,54
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkzODIwMDU3NDk2ODU5MQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMDE5MTgyNTE5OTM2Njc=,good point!,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwMzMyMzQxNjcxMjI2MjA=,,"Read your own room, you have some customers BECAUSE you’ve stood up to the right, and those customers appreciated you for it. There will be pushback against Mad King Don and his MAGAts. With Amazon and Wally World caving, you had an upcoming competitive advantage that you’ve just thrown away.",2025-01-24,initial,17
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1OTg2MzI2Nzc0NTY0Mjc=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwMzMyMzQxNjcxMjI2MjA=,exactly. I stopped shopping at Walmart in 2006 when they were locking warehouse employees in overnight and someone died.,2025-01-24,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk5NTcxMjkzMjYxNDAwOA==,,Oh target you better change your stance soon!,2025-01-24,initial,15
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNTUwNjI4MjIzNjQ5NA==,,"2016: ""Inclusivity is a core belief at Target""",2025-01-31,initial,12
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4NDAxNDI5NDQ3NDAxNA==,,"2016: ""Inclusivity is a core belief at Target""",2025-01-31,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNTQyMTcwMDY3MTE1MjQ=,,"2016: ""Inclusivity is a core belief at Target""",2025-01-31,initial,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyMzQ5MDQwMjkzODAzNw==,,"How could you, Target?!",2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5NjcwMzg5MzA2ODkyMw==,,"No more MN nice, Target? Don’t you know where you started?",2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI5MzAxNzg4ODM4MTU3MzA=,,"Target, there’s nothing you sell that I can’t easily get at other stores, even in my small town. Good luck with your strategy of trying to court the bigots and racists who already never shop there.",2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI0MTExMTM3MTU5MDA3NTk=,,Way to cave in Target,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwOTA4Mzk1ODEzNzEwMDQ=,,I never shopped at Target or WalMart,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDA0NjA4Nzc0ODM0NTc=,,"You guys know who your target demographic is, right? Your shoppers are not Wal Mart's shoppers. Peace out, y'all.",2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxOTcyNDY2MzQ4MTMzNg==,,I support you Target. I am a multi racial democratic woman and I am SO GLAD you are dropping DEI,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMDQ2MTU0NDgxNDcyODk=,,"Piss-poor move to do this after Christmas on the week of MLK holiday, just days before the start of Black History Month, and five weeks before Women's History Month.",2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2MDUyMjc0ODcwNDk3NDU=,,"2016: ""Inclusivity is a core belief at Target""",2025-01-31,initial,6
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMzE3NTY4NTc4Mzk4NTI=,,Costco here I come,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkzNDEzNjI0ODg2MjQwNg==,,That’s alright. We’ll shop China direct. We know the distributors.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjE3Nzk1MDk0Mjk3NTA=,,Hey Target! I'm looking for DEI. Do you have any in stock? No. Then I will take my business elsewhere! Shame on you!!,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY0MzM2OTIyODE2MzgyOA==,,"Everyone complaining about ""caving to the orange"" and I'm wondering 'when the F you gonna stop the bots on Prismatic Evolutions!'",2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUwNDA4MDUxNTY0OTAxMg==,,2016: Inclusivity is a core belief at Target,2025-02-07,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyOTAxNDQzMjg4NjQ3MzA=,,￼ Costco is the savior for minorities.,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwOTUzNTM5MDIzMzU3MzU=,,I will be cutting up my red card soon. BYE BYE Target,2025-02-07,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMTc3NTM1MzAwODkxMDc=,,"2016: ""Inclusivity is a core belief at Target""",2025-01-31,initial,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxMzU2MDM1MTI1NzgwMg==,,Sell outs!,2025-01-24,initial,16
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4MTI1MTIwNDgyNTMzNQ==,,I’ve been a life long supporter of Target. It started while working for Daytons dept store in Minneapolis in the 80’s. The Dayton family started Target corporation. I’ll be shopping at Costco now.,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyMjE0OTQ4MzYyMjQ5Mw==,,To Costco I go! I been talking about it for months anyways,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk1NDY5MTQ4MjkxMjY3Nw==,,Let’s boycott target.,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzk3NjgzNjQxOTE2OTc=,,My favorite place to shop,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxMTk3MzMyNzY3Mjk0OQ==,,"Ps. No wonder your logo is a circle 
+, #ringkissers",2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDg4MjE2NzMzMDk1OTc=,,"You have always been the example, and the voice of reason and truth. You've stood up before. Now you're going to let them win? You're giving in just like that? COWARDS!!!",2025-01-24,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNjU2MzM2Njc3NTc1MzU=,,Remember people. Keep everything in drawers and closets now,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2OTA1NzQxMTg1MzExNzM=,,"2016: ""Inclusivity is a core belief at Target""",2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIyODgwMzMwODQ5MDA4NTg=,,Bye,2025-01-24,initial,59
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyOTAyNzQwNzg5MDg2MzA=,,Bye Target!,2025-01-24,initial,13
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMzA4ODA2NDQ3MzI3OTM=,,Bye Bye. Not okay.,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjc4NDk2MzU0ODkxMDg=,,Bye Target,2025-01-31,initial,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDE3NzYzMzA2ODEzMjI=,,Bye Target,2025-01-31,initial,6
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIyMDA0OTQ0NzM3MDIyODE=,,"Bye, Target.",2025-01-24,initial,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyNzc0NTk5MzA0OTczMQ==,,Bye Target,2025-01-24,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2Mzg1MTcxMTY4NzI2NDc=,,Shameful,2025-01-24,initial,10
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4OTYxMzU0NzA5MTU2NzM=,,Adios!,2025-01-24,initial,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIzNzEzNTQ5NzMyMTc3ODE=,,Orange,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2MTM0NTE1NTYyMjk1MjI=,,Good bye Target,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNjMwNDgxMDIxOTAyOTE=,,Just deleted by target app. Bye,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMDEwNDU5NTU0MDc4MTM=,,"Sad times, Target. Um-m-m. bye-bye.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY0ODM1MTAxNDIxNTIwNg==,,Bye Target,2025-02-07,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY0MDAxODQ2ODY4NTYwNQ==,,We see you Target,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4MzY5OTI3NzkwNDg3OQ==,,BRING KMART BACK!,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ3OTY1MzkwODUyOTMxNw==,,"Bye 
+ target",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1ODcxNzM0NjUyNDAzMTI=,,Sooo disappointing.,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkzMzkwNzg1MjIxMzQxOQ==,,Bye Target,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMDc0ODU1ODM3Mjc5NDM=,,Thanks,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxNjI1MDAwNDIzMTYzMg==,,Sell outs,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMTY0Mzk0ODMxMTkwNjM=,,Wow Target!!,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE0MTgxNjM0NzI0OTcwMjk=,,Bye Bye!,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2MTcxNTIyNTQ2NTk4MQ==,,Wow,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkzNDMzNjE3NzIzOTM4NzM=,,Bye bye Target,2025-01-24,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwNzY4NDMyMzc1NDY2MTg=,,Bye target,2025-01-24,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ4MTk5OTAzODAwMjU1Mw==,,Shame on you target,2025-01-24,initial,86
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxMTM0MTc1MjIxMDg3MDU=,,Bye Target,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI4MjEzOTc5OTQ3MzI2NjI=,,Bye bye Target.,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4NzcwMjM5NTY0NDE3NDA=,,No!,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4MjMyMDI1NzUyMDE0NDg=,,Boooooooo,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2NDIxMjk3MDk3MzkyOTU=,,Bye,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNjQ5ODg3NDQ2NzExNDE=,,A big Nope,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk5Mzk1MjQ1OTIxNTk4Mg==,,Shame!,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzMDExNDAwOTQ4NzE0NA==,,Latino power,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5NTk1NDE0NjY2NDI5Nw==,,Unfollowed and unliked.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUzMDM1NDQ5NjAzOTE5OA==,,Bye target,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzOTgzMjQyNTI0NzQzNw==,,Bye target!!,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2NjkyOTU3ODcwMDI0MTM=,,Shame. Shame. Shame.,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzMwMDA2MjE2NjY3NjY3NTA=,,Chapter 11,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI3MDI4MTk3ODk5MTI3NDk=,,Not surprised.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMDY1OTk4OTgxODc1OTM=,,Bye target,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyOTY0ODA2OTE2MTg0Mjk=,,Disgraceful,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ4MDY5NDk3NDgxNzM0Mw==,,Bye bye Felicia!!,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk0NzMzOTUwMDYwNTc5NTc=,,DEI…!?,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUyNzI4NzA4MDM2NTQ4NQ==,,Byeeeeeeeee,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI2NjY1MTAzNjM1NDUyODI=,,useful !!,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzM5MDc3NzIxNjk0NzAzMTc=,,Nah. Bye.,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIyNzgxMjU4ODI1Njg3ODE=,,Unfollow.,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyMDU0NDU1MDIzODc3MA==,,So long Target,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4ODgzODg5MDcxOTM4Ng==,,Buh bye Target.,2025-01-24,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI2MjEyMTYyOTQ5MzM5NjU=,,Shame!,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyNzkwNjY2OTcwODMxNw==,,Hi,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxOTgxNjUxMDQxNDk1Ng==,,Shame on you target,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2NzMyMjM4MTQ1NTM3MQ==,,Buh-bye bigots!,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg4NzgyOTYxMDA5MzM4OQ==,,Collaborators! Target is shameful.,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU1NzY4ODAwMDYwNDQxOQ==,,Yup I need! Thanks target,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwNTczNjg0MTEzODEzNTg=,,bye,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQwNDk1OTE4OTM0MDU0OA==,,FAFO!,2025-02-07,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUxNDA0NzUzNDUwMTEzNA==,,"Target = followers, not leaders!",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg4NjUwNzQ0MzQwMjA0Ng==,,"We need answers 
+ Target",2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE4NzA1OTQ0NzM3Njc4NDI=,,Nice,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMjA4MjcyMjU3Nzg3MzI=,,Looks like you bit off more than you can chew. And more of our money goes to Cost-Co. Im sure you're shareholders will thank you.,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMDY3MTY1ODA1NjU5NjI=,,Pissed off all the libs,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2NzU1NjU3NDYzMzIwMzA=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMDY3MTY1ODA1NjU5NjI=,We’re fellow Americans,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1OTc1OTQ0NDA4ODA4MjQ=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMDY3MTY1ODA1NjU5NjI=,"Target’s DEI policies included veterans and those with disabilities, but we all know those aren’t the ones you’re bent out of shape over.",2025-01-31,reply,6
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3Mzc3ODYxNTcxMjYxNzI=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMDY3MTY1ODA1NjU5NjI=,“Libs” are their customer base,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUwNjU3NDc4NTc4MzkwOQ==,,Bye-bye bigots...,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2NzY1MTQ3Njk5NjUzMzM=,,YOU JUST FAFO.,2025-01-24,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MjM4MTMzMDE1MTk2OTk=,,#NoDEINoDollar,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExODU1NjYxNzk1OTI4MDY=,,Good riddance Target.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMzcwNTg4NTc4ODM5MTI=,,"So disappointing, Target.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ3MTE3MDUzMjcyODM5Ng==,,Shame on you Target.,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIzMTk3NzQ4Nzg0MDI4OTA=,,Target - Boy Bye…..,2025-01-31,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMjAwNTg2MzM0NzUwNTM=,,Shame on target,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk0MDQ2NjkwMzk1NTU2MzE=,,"Bye, Target",2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzNjQ1Njg5OTQ1NjA5MzM=,,So disappointed.,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzMTkwMTA2MjY3Mjg3NQ==,,Don't end DEI,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ5NTIxNTIwNjU3MDYyMw==,,"Bye bye, Target. So disappointing.",2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg5NDYwOTQ3NjA3Nzc5Nw==,,Bye bye Target,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzY0MTk4OTU3ODI0ODY5MA==,,Bye bye Target.,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1OTM3MDYxMTc5MjM5MDA=,,Shame,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1ODQyNDk0NTU1MzAxMDA=,,Bye!,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE1NTAxMDE2NDIzNjA5MDQ=,,"Bye, Target.",2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk0MDQ4NTk0ODE4MzA1OA==,,Shame on target.,2025-01-31,initial,6
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk0MTAxMTU3MTUwODE0Nw==,,"Bye, Target!",2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg2MTEwNjEzMzkwMDAwMTI=,,I’ve been shopping exclusively at Target. Costco here I come!,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMjY0MTI4MTIyMDI1MjI=,,I'll just leave this here: From the Target website:,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkyMDc1NDk2MDI0MzU5Mw==,,FTarget&FSnoopDogg,2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ4MTEyMTIwODM5NTE2OA==,,"I really need a new one…but…
+.",2025-02-14,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk0NjIwNDY5NDI4NTg4Ng==,,"What a disappointment Target! Caving to the Trumpster Fire 
+….",2025-01-31,initial,6
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMzQyMDk1Mzc3Njk0MDc=,,I'm really disappointed to learn that you have no values at all. Shame.,2025-01-31,initial,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2MDc5MTkzNTk3ODYxNg==,,Don’t roll back your DEI efforts. I won’t shop there until you fix this.,2025-01-31,initial,15
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2MzkxNzIyMjAwMTI0ODc=,,I’m so… disappointed in Target but I have to remember that it’s a corporation and they’ll do anything but put their customers first!,2025-01-31,initial,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3MTQ4OTk5MTIzOTE0Njc=,,Costco has a more diverse selection.,2025-02-07,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2Njk5MzA3MDM5MDExMDM=,,"I’m a Brit in USA, so I doubt any connection.",2025-01-31,initial,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyNTkxNzYyMzUxNjA5MjM=,,Amazing,2025-01-31,initial,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwMDgzNzE4OTEzMzY2NjU=,,I didn’t know “core beliefs” could flip flop so fast. I expected better. I guess I can’t be surprised.,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk3Njc5MzkzMzgxNDY3Nw==,,"I have not visited the mens dept. in years, never visit housewares, or electronics unless I need something specific. I wonder how much your desire to garner the grocery business has hurt you.",2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUzMTEyMjY1OTMwMjA2MA==,,What’s song,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDQ5OTc2MjcyOTAyMTk=,,Wow ... just wow ... didn't see this coming.,2025-01-31,initial,3
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIzNTUyMTg2MTQ4Mzk4MDE=,,Clever,2025-01-31,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyNjIyNzI4NjcyMTE1OA==,,Good riddance.,2025-01-31,initial,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3NzU0NzM4OTY1NzM5ODM=,,History will remember those who were complicit and those who stood up and fought for what was right.,2025-01-31,initial,294
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNTg2NjMxMDkzMDQxOTk=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE3NzU0NzM4OTY1NzM5ODM=,this,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI4MzYzOTA1NDk2NTU4MDA5,,shameful,2025-01-31,initial,34
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4NDYwMDE1MTA5ODYyMg==,,I guess INTEGRITY isn’t a core value either.,2025-01-24,initial,105
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNjQwNzA0NjE5NDQzMzY=,,Inclusiveness HA!,2025-01-24,initial,25
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMjQyODk3NTE5MzE2Mjg=,,I like,2025-01-24,initial,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEwODg0MTEyNTk3MDIxMjE=,,SHAME!,2025-01-24,initial,13
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNzcyMDY1ODUyMDE0NA==,,Costco is all we have left. They did not FOLD.,2025-01-24,initial,925
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDk3OTE3MDA0ODMwNjI=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNzcyMDY1ODUyMDE0NA==,They will. Give it another week or 2.,2025-01-24,reply,10
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMDMxODM3MjczODkxNzM=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDk3OTE3MDA0ODMwNjI=,costco is powerful. They won’t,2025-01-24,reply,30
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDIzMTQ4NjczMDQ3Nzk=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEzMDMxODM3MjczODkxNzM=,So is Walmart and Target and Amazon?,2025-01-24,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4NTQ5NTQ2NDI1MDE0OA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDIzMTQ4NjczMDQ3Nzk=,I am hoping that they will not.,2025-01-24,reply,10
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg5Mjc5MjcyMjM5NjAyNTI=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDk3OTE3MDA0ODMwNjI=,no they won't.,2025-01-24,reply,8
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxNDkwODY4NDQ2MTg1NQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzg5Mjc5MjcyMjM5NjAyNTI=,they stood up to the board of directors. Hope it holds.,2025-01-24,reply,9
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzgwODE0MTgyMTQ5NjEzOQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExNDk3OTE3MDA0ODMwNjI=,they've already told the shareholders that want them to to go kick rocks...,2025-01-31,reply,2
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIwMDc5MTA2NDAwMzQ3MzY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzgwODE0MTgyMTQ5NjEzOQ==,", the shareholders voted overwhelmingly with the board.",2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkwNTczOTIyNDk3NjIyNQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4NTQ5NTQ2NDI1MDE0OA==,Ben & Jerry's hasn't either.,2025-01-24,reply,67
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMTgwOTIwMTMxOTAxMDM=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkwNTczOTIyNDk3NjIyNQ==,I love this for them,2025-01-24,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE0MjU4NjYzMDE3MjQ3MTc=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkwNTczOTIyNDk3NjIyNQ==,"Ben & Jerry is truly the 
+!!!!",2025-01-31,reply,7
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyOTk5MjQzMTgwMDYyMzA=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMTgwOTIwMTMxOTAxMDM=,Apple standing tall...,2025-01-31,reply,19
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU5NDE3MzE3MDA5Mjg1Mw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzEyOTk5MjQzMTgwMDYyMzA=,uh no they not. CEO was front row at the Inauguration. Apple probably next.,2025-01-31,reply,11
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzI2OTE0NzIzODc3MDQxMzU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNzcyMDY1ODUyMDE0NA==,Aldi hasn't caved and likely won't,2025-01-31,reply,34
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk4NDk5NTMxMDMxOTYzNw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNzcyMDY1ODUyMDE0NA==,yet.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4NTE1MjYyNzgxNjExMw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNzcyMDY1ODUyMDE0NA==,yet,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzUxMjY1OTk1Nzk0NzAxNw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNzcyMDY1ODUyMDE0NA==,", Cub is a good option as well.",2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzk2MTgzODE0NTkxMjE1Mw==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNzcyMDY1ODUyMDE0NA==,not yet…,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxOTcxOTU0NDA3MTQ3NA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNzcyMDY1ODUyMDE0NA==,"Vanguard is is the largest shareholder of Costco, same group that owns the most shares of Target. They believe in making money, not about your feelings.",2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYxOTM3NjIwNzMxMjQ1Mg==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNzcyMDY1ODUyMDE0NA==,"yet. If this is the case, I'll have to get a membership.",2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU4Mzk0MTkwMTIxNDMyMA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNzcyMDY1ODUyMDE0NA==,there’s also Aldi!,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzQ2ODgyNzA1Mjk1MjA1MQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNzcyMDY1ODUyMDE0NA==,Kohls gave to the campaign though.,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2MDEzODM0NDQwNzYwNzY=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNzcyMDY1ODUyMDE0NA==,They are not being threatened. They are following their Market. And maybe they have learned in their hiring process that Merit produces much better results.,2025-01-31,reply,0
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzE2NDQxOTA3NjYzMDYwMDU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwNzcyMDY1ODUyMDE0NA==,I believe Amazon and Walmart are orchestrating the threats,2025-01-31,reply,1
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU0NzcxNTI2MTc1ODE1MA==,,Costco EVERYONE!,2025-01-24,initial,106
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYyMjcxOTUyMDMxNjcxMQ==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU0NzcxNTI2MTc1ODE1MA==,"that’s where I am headed! Love Target, but I have values.",2025-01-24,reply,18
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxOTEyMzU3ODQyNDg1NDE=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU0NzcxNTI2MTc1ODE1MA==,are we sure they aren’t changing?,2025-01-24,reply,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYwMzg1NDA3NTY3OTkzMA==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxOTEyMzU3ODQyNDg1NDE=,So far Costco is choosing to do the right thing.,2025-01-24,reply,12
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzYzNDU1NDUwNTY4ODg2Ng==,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzkxOTEyMzU3ODQyNDg1NDE=,"Costco just announced keeping DEI during their annual stockholder's meeting, so for now: so good.",2025-01-24,reply,5
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzIyNzkxODk4NzU3ODQ1MzU=,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzU0NzcxNTI2MTc1ODE1MA==,exactly.,2025-01-24,reply,4
+Target,2025-01-24 08:17:00,Y29tbWVudDoxMTY0NjU3NjQxNjg2MjkyXzExMTM0OTMwNDM0Mzg2NjY=,,I love mine!,2025-01-24,initial,0
