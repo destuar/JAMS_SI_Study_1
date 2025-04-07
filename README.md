@@ -109,3 +109,24 @@ The generated CSV file will contain the following columns:
 *   `parent_id`: The identifier of the direct parent comment/reply (empty for initial comments).
 *   `reaction_count`: The number of reactions counted for the comment.
 *   `comment_type`: Type of the comment ('initial' or 'reply').
+
+## Ethics Statement and Data Collection Justification
+
+Comment data from public Facebook posts was collected using a **manual and user-initiated process** that does not rely on automated scraping, bots, or circumvention of access controls. The collection method involved:
+
+- A human researcher manually navigating to publicly visible Facebook posts on a logged-in account.
+- Manually loading all comments through user interface interactions (e.g., clicking “View more comments,” “View more replies”).
+- Running a JavaScript snippet in the browser’s developer console to extract only the visible comment text, relative timestamp text (e.g., "2d", "5w"), and reaction count.
+- Saving the extracted comments in JSON format for processing and anonymization.
+
+No personal identifying information (PII) such as usernames, user IDs, profile links, or photos was collected, stored, or analyzed. The data was restricted to comment text, approximate timing, comment/reply structure, and publicly visible engagement counts.
+
+The methodology was designed to **respect Meta’s Terms of Service**, as it:
+- Does not perform any automated scraping or crawling,
+- Does not circumvent access controls, authentication, or privacy settings,
+- Does not access private groups or content,
+- Involves only human-initiated interactions through a standard user interface,
+- Extracts only data already visible in the browser's rendered DOM.
+
+This project adheres to the principles of ethical research, including the avoidance of harm, respect for individual privacy, and responsible data stewardship. Data was collected solely for academic research and analysis purposes. No commercial use is intended or permitted.
+
