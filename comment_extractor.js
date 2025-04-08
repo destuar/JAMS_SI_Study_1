@@ -17,140 +17,206 @@
     const reactionSelector = 'div[role="button"][aria-label*=" reaction"]'; // Note the space before reaction
 
     // --- REVISED FUNCTION to extract text using querySelectorAll ---
+    /**
+     * Safely extracts the main text content from a comment element.
+     * @param {Element} element - The comment's root DOM element (matching commentSelector).
+     * @returns {{text: string|null, node: Element|null}} Object with extracted text and the node it came from.
+     */
     function safeGetText(element) {
-        // Find ALL divs with dir="auto" within the current comment element
+        // Find ALL potential text nodes within the comment element using the defined selector.
         const potentialTextNodes = element.querySelectorAll(potentialTextSelector);
-        let bestText = null;
-        let bestNode = null; // Keep track of the node containing the best text
+        let bestText = null; // Store the most likely comment text found.
+        let bestNode = null; // Store the DOM node corresponding to bestText.
 
         if (potentialTextNodes.length > 0) {
-            // Filter and find the most likely candidate
+            // Iterate through all found potential text nodes.
             potentialTextNodes.forEach(node => {
-                // Basic check: Must have some text content
+                // Basic check: Ensure the node has non-empty text content after trimming whitespace.
                 if (node.innerText && node.innerText.trim().length > 0) {
-                    // Avoid text that is clearly inside a link (likely author/tag)
+                    // Heuristic: Avoid text primarily within a link (likely an author tag or similar).
                     let parent = node.parentElement;
                     let isInsideLink = false;
-                    while (parent && parent !== element) {
+                    while (parent && parent !== element) { // Traverse up towards the comment root.
                         if (parent.tagName === 'A') {
-                            isInsideLink = true;
+                            isInsideLink = true; // Found an ancestor 'A' tag.
                             break;
                         }
                         parent = parent.parentElement;
                     }
 
-                    // We relax the link check slightly; we will handle leading links later if it's a reply
-                    // The main goal here is finding the most substantial text block
+                    // Relax the link check slightly - a reply might *start* with a link (tag).
+                    // Prioritize the longest text block found, assuming it's the main comment body.
                     const currentText = node.innerText.trim();
-                    if (!bestText || currentText.length > bestText.length) {
+                    if (!isInsideLink && (!bestText || currentText.length > bestText.length)) {
                         bestText = currentText;
-                        bestNode = node; // Store the node
+                        bestNode = node; // Remember the node containing this text.
+                    }
+                    // Handle case where it *might* be inside a link but is still the best candidate so far.
+                    // This is less ideal but provides a fallback if the main text is wrapped unexpectedly.
+                    else if (isInsideLink && !bestText) {
+                        // Tentatively accept text inside a link if nothing else has been found yet.
+                        // A later step might clean up leading tags if this is a reply.
+                         bestText = currentText;
+                         bestNode = node;
+                    }
+                    // If current text is longer than existing best text *even if inside a link*, update.
+                    // This assumes longer text inside a link is more likely the comment than a short tag.
+                    else if (isInsideLink && bestText && currentText.length > bestText.length) {
+                        bestText = currentText;
+                        bestNode = node;
                     }
                 }
             });
         }
 
-        // Fallback: If no div[dir=auto] worked, check direct child spans
+        // Fallback: If the primary strategy (div[dir=auto]) didn't find text, check direct child SPANs.
         if (!bestText) {
-             const children = Array.from(element.children);
+             const children = Array.from(element.children); // Get direct children of the comment element.
              for (let child of children) {
-                 // Ensure it's a SPAN, has text, and isn't itself a link container
+                 // Check if the child is a SPAN, has text, and doesn't contain a link itself (heuristic to avoid author/timestamp spans).
                  if(child.tagName === 'SPAN' && child.innerText && child.innerText.trim().length > 0 && !child.querySelector('a[role="link"]')) {
                     const spanText = child.innerText.trim();
+                     // Keep the longest text found among suitable SPANs.
                      if (!bestText || spanText.length > bestText.length) {
                          bestText = spanText;
-                         bestNode = child; // Store the node
+                         bestNode = child; // Remember the span node.
                      }
                  }
              }
         }
 
-        // Return both the text and the node it came from
+        // Return the best text found (or null) and the node it originated from.
+        // The node is useful later for tasks like removing leading tags from replies.
         return { text: bestText, node: bestNode };
     }
 
 
     // --- FUNCTION to extract attribute safely ---
+    /**
+     * Safely gets an attribute value from the first element matching a selector within a parent.
+     * @param {Element} element - The parent element to search within.
+     * @param {string} selector - The CSS selector for the target element.
+     * @param {string} attribute - The name of the attribute to retrieve.
+     * @returns {string|null} The attribute value or null if not found.
+     */
      function safeGetAttribute(element, selector, attribute) {
-        const el = element.querySelector(selector);
-        return el ? el.getAttribute(attribute) : null;
+        const el = element.querySelector(selector); // Find the element.
+        return el ? el.getAttribute(attribute) : null; // Return attribute value or null.
     }
 
     // --- FUNCTION to extract reaction count ---
+    /**
+     * Extracts the reaction count from the reaction button's aria-label.
+     * @param {Element} element - The comment's root DOM element.
+     * @returns {number} The reaction count, or 0 if not found/parsed.
+     */
     function getReactionCount(element) {
-        const reactionButton = element.querySelector(reactionSelector);
+        const reactionButton = element.querySelector(reactionSelector); // Find the reaction button.
         if (reactionButton) {
-            const label = reactionButton.getAttribute('aria-label') || '';
-            const match = label.match(/^(\d+)/); // Match digits at the beginning
+            const label = reactionButton.getAttribute('aria-label') || ''; // Get its aria-label.
+            const match = label.match(/^(\d+)/); // Use regex to find leading digits (the count).
             if (match && match[1]) {
-                return parseInt(match[1], 10);
+                return parseInt(match[1], 10); // Parse the digits into an integer.
             }
         }
-        return 0; // Default to 0 if not found or number not parsed
+        return 0; // Default to 0 if no button, label, or number found.
     }
 
     // --- FUNCTION to extract comment ID (More Robust) ---
+    /**
+     * Extracts the unique Facebook comment ID (comment_id or reply_comment_id).
+     * @param {Element} element - The comment's root DOM element.
+     * @returns {string|null} The comment ID or null if not found.
+     */
     function getCommentId(element) {
-        if (!element) return null;
-        const timestampLinkEl = element.querySelector(timestampSelector); // Use the specific selector
+        if (!element) return null; // Early exit if element is null.
+        // Find the timestamp link, which usually contains the ID in its href.
+        const timestampLinkEl = element.querySelector(timestampSelector);
         if (timestampLinkEl) {
-            const timestampLink = timestampLinkEl.getAttribute('href');
+            const timestampLink = timestampLinkEl.getAttribute('href'); // Get the href attribute.
             if (timestampLink) {
                 try {
-                    // Attempt standard URL parsing first
-                    const url = new URL(timestampLink, window.location.origin);
-                    const urlParams = url.searchParams;
+                    // 1. Attempt standard URL parsing (most reliable method).
+                    const url = new URL(timestampLink, window.location.origin); // Provide base URL context.
+                    const urlParams = url.searchParams; // Get URL parameters.
+                    // Look for 'comment_id' or 'reply_comment_id'.
                     let id = urlParams.get("comment_id") || urlParams.get("reply_comment_id");
-                    if (id) return id;
+                    if (id) return id; // Return the ID if found via URL parameters.
 
-                    // Fallback: Regex on the href attribute if params not found
+                    // 2. Fallback: Use regex on the href string if URL params didn't contain the ID.
+                    // This handles cases where the ID might be embedded differently.
                     const idMatch = timestampLink.match(/(?:comment_id|reply_comment_id)=([^&]+)/);
-                    if (idMatch && idMatch[1]) return idMatch[1];
+                    if (idMatch && idMatch[1]) return idMatch[1]; // Return ID found via regex.
 
                 } catch (e) {
-                    // Log error if URL parsing fails, but still try regex as fallback
+                    // Log errors during URL parsing but still attempt the regex fallback.
                     console.warn("URL parsing failed for ID, trying regex fallback:", timestampLink, e);
+                    // Repeat regex attempt in case of parsing error.
                     const idMatch = timestampLink.match(/(?:comment_id|reply_comment_id)=([^&]+)/);
                     if (idMatch && idMatch[1]) return idMatch[1];
                 }
             }
         }
+        // Log a warning if no ID could be extracted using any method.
         console.warn("Failed to extract comment ID for element:", element);
-        return null; // No ID found through reliable methods
+        return null; // Return null if ID extraction failed.
     }
 
     // --- FUNCTION to determine comment type ---
+    /**
+     * Determines if the comment is an initial comment or a reply based on its aria-label.
+     * @param {Element} element - The comment's root DOM element.
+     * @returns {'initial' | 'reply' | 'unknown'} The comment type.
+     */
     function getCommentType(element) {
+        // Relies on the format "Reply by ..." or "Comment by ..." in the aria-label.
         const label = element.getAttribute('aria-label') || '';
         if (label.startsWith('Reply by')) {
             return 'reply';
         } else if (label.startsWith('Comment by')) {
             return 'initial';
         }
-        return 'unknown'; // Fallback if label doesn't match expected patterns
+        // Return 'unknown' and log a warning if the label doesn't match expected patterns.
+        console.warn("Could not determine comment type from aria-label:", label, element);
+        return 'unknown';
     }
 
-    // --- NEW FUNCTION to extract author name from an article's aria-label ---    
+    // --- NEW FUNCTION to extract author name from an article's aria-label ---
+    /**
+     * Extracts the author's name from the comment article's aria-label.
+     * Primarily used for matching replies to potential parent comments.
+     * @param {Element} element - The comment's root DOM element.
+     * @returns {string|null} The extracted author name or null if parsing fails.
+     */
     function getAuthorNameFromArticleLabel(element) {
         if (!element) return null;
         const label = element.getAttribute('aria-label') || '';
-        const commentMatch = label.match(/^(?:Comment|Reply) by (.*?)(?: to| \d+)/i);
+        // Regex attempts to capture text after "Comment by " or "Reply by "
+        // up to common terminators like " to " (for replies) or time indicators.
+        const commentMatch = label.match(/^(?:Comment|Reply) by (.*?)(?: to | \d+h| \d+m| \d+s| \d+d| \d+w| yesterday| just now)/i);
         if (commentMatch && commentMatch[1]) {
-            return commentMatch[1].trim();
+            return commentMatch[1].trim(); // Return the captured name (group 1).
         }
         console.warn("Could not extract author name from article aria-label:", label);
-        return null; // Fallback if label doesn't match
+        return null; // Return null if regex doesn't match.
     }
 
     // --- NEW FUNCTION to extract target author from a reply's aria-label ---
+    /**
+     * Extracts the name of the author being replied to from a reply's aria-label.
+     * Helps identify the correct parent comment. Example: "Reply by Jane to John Doe" -> "John Doe"
+     * @param {string} label - The full aria-label of the reply article.
+     * @returns {string|null} The target author name or null if not found/parsed.
+     */
     function getTargetAuthorFromReplyLabel(label) {
         if (!label) return null;
-        // Regex to find name after "to" or "responding to" and before "'s" or end of string (case-insensitive)
+        // Regex looks for text after " to " or "responding to ", up to possessive "'s" or end of string.
         const match = label.match(/(?:\s+to|responding to)\s+(.*?)(?:'s|$)/i);
         if (match && match[1]) {
-            return match[1].trim();
+            return match[1].trim(); // Return the captured target name (group 1).
         }
-        console.warn("Could not extract target author from reply aria-label:", label);
+        // Don't warn here as not all replies might have this pattern consistently.
+        // console.warn("Could not extract target author from reply aria-label:", label);
         return null;
     }
 
