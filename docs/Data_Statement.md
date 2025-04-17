@@ -1,5 +1,5 @@
 # Data_Statement.md
-*Companion to “DEI Rollbacks, Brand Authenticity, and Consumer Reaction on Social Media”*
+*Companion to "DEI Rollbacks, Brand Authenticity, and Consumer Reaction on Social Media"*
 
 ---
 
@@ -8,7 +8,7 @@
 |-----------------------|-----------------------------------------------------|
 | **Name**              | *Facebook DEI Decision Comment Corpus*              |
 | **Curators**          | Diego Estuar (CGU)            |
-| **Size**              | 20,145 top-level comments and replies               |
+| **Size**              | 28,005 top-level comments and replies               |
 | **Language**          | English                                             |
 | **Temporal coverage** | 30-day window per company, Jan – Mar 2025           |
 | **Domain**            | Public Facebook pages of four large U.S. companies  |
@@ -37,14 +37,14 @@ The corpus enables causal tests of how **maintaining vs. rolling back DEI initia
 |---------------------|-------------------------------------------------------------------------------------|
 | **Companies**       | Four U.S. retailers (anonymised as *A–D* in public materials).                      |
 | **Event types**     | *Rollback* (2 brands) and *Keep / Re-affirm* DEI (2 brands).                       |
-| **Collection window** | −15 to +15 calendar days around each public DEI announcement.                        |
+| **Collection window** | 0 to +30 calendar days after each public DEI announcement.                        |
 | **Selectors**       | All visible comments + replies; no filtering by reaction count or keywords.        |
 
 ---
 
 ## 5 Collection Process
 
-1.  Analyst scrolls target post until “All comments loaded” indicator.
+1.  Analyst scrolls target post until "All comments loaded" indicator.
 2.  Executes `scripts/extract/comment_extractor.js` in browser console.
 3.  Script serialises each `div[role="article"]` outerHTML → JSON.
 4.  File saved as `YYYYMMDD_HHMM.json` inside `/data/raw/<Company>/`.
@@ -58,10 +58,10 @@ No automated bots or pagination endpoints were used.
 | Stage                | Steps                                                                                   |
 |----------------------|-----------------------------------------------------------------------------------------|
 | **Cleaning**         | spaCy v3.7: strip URLs, emojis, lemmatise. Thread metrics: `root_id`, `depth`.          |
-| **Gold labels**      | 1,000 comments, dual-coded for `relevance`, `stance`, `purchase`; Cohen's κ = 0.78.     |
-| **Active learning**  | `small-text v2.4.0` entropy sampling → +600 labels (κ = 0.76).                          |
+| **Gold labels**      | ___ comments, dual-coded for `relevance`, `stance`, `purchase`; Cohen's κ = _.__.     |
+| **Active learning**  | `small-text v2.4.0` entropy sampling → +___ labels (κ = _.__).                          |
 | **Label schema**     | `relevance` ∈ {0,1}; `stance` ∈ {–1,0,+1}; `purchase` ∈ {–1,0,+1}.                        |
-| **Class distribution** | Relevant 38%; Anti-DEI 19%, Pro-DEI 14%; Boycott 12%, Buy 7%.                            |
+| **Class distribution** | Relevant __%; Anti-DEI __%, Pro-DEI __%; Boycott __%, Buy __%.                            |
 
 ---
 
