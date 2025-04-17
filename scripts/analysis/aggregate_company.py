@@ -16,32 +16,35 @@ def parse_datetime_from_filename(filename):
         print(f"Error parsing date from filename '{filename}': {e}. Skipping file.", file=sys.stderr)
         return None
 
-def aggregate_csvs(company_folder, output_filename):
-    """Aggregates all CSVs in a folder, sorted by date parsed from filename."""
-    if not os.path.isdir(company_folder):
-        print(f"Error: Directory '{company_folder}' not found.", file=sys.stderr)
+def aggregate_csvs(company_name_filter, derived_data_dir, output_filename):
+    """Aggregates CSVs from derived_data_dir matching company_name_filter, sorted by date."""
+    if not os.path.isdir(derived_data_dir):
+        print(f"Error: Derived data directory '{derived_data_dir}' not found.", file=sys.stderr)
         return
 
     csv_files_with_dates = []
-    print(f"Scanning '{company_folder}' for CSV files...")
-    for filename in os.listdir(company_folder):
-        if filename.lower().endswith('.csv'):
-            full_path = os.path.join(company_folder, filename)
+    print(f"Scanning '{derived_data_dir}' for CSV files matching '{company_name_filter}*'...")
+    for filename in os.listdir(derived_data_dir):
+        # Match files starting with the company name and ending with .csv
+        if filename.lower().startswith(company_name_filter.lower() + "_") and filename.lower().endswith('.csv'):
+            full_path = os.path.join(derived_data_dir, filename)
             if os.path.isfile(full_path):
-                parsed_date = parse_datetime_from_filename(filename)
+                # Extract the date part of the filename (after company_ prefix)
+                date_part = filename[len(company_name_filter)+1:] # Get part after "CompanyName_"
+                parsed_date = parse_datetime_from_filename(date_part)
                 if parsed_date:
                     csv_files_with_dates.append((full_path, parsed_date))
                 else:
-                    print(f"Could not parse date for {filename}, skipping.")
+                    print(f"Could not parse date from date part of {filename}, skipping.")
 
     if not csv_files_with_dates:
-        print(f"No valid CSV files with parsable dates found in '{company_folder}'.", file=sys.stderr)
+        print(f"No valid CSV files with parsable dates found in '{derived_data_dir}' for company '{company_name_filter}'.", file=sys.stderr)
         return
 
     # Sort files based on the parsed datetime (ascending - oldest first)
     csv_files_with_dates.sort(key=lambda item: item[1])
 
-    print(f"Found {len(csv_files_with_dates)} CSV files to aggregate.")
+    print(f"Found {len(csv_files_with_dates)} CSV files for '{company_name_filter}' to aggregate.")
     print("Files will be appended in this order (oldest post first):")
     for path, dt in csv_files_with_dates:
         print(f"  - {os.path.basename(path)} ({dt.strftime('%Y-%m-%d %H:%M')})")
@@ -66,8 +69,8 @@ def aggregate_csvs(company_folder, output_filename):
     # Concatenate all dataframes
     combined_df = pd.concat(all_data_frames, ignore_index=True)
 
-    # Save the combined dataframe to the root directory (where the script is run)
-    output_path = os.path.join(".", output_filename) # Save in current directory
+    # Save the combined dataframe to the derived data directory
+    output_path = os.path.join(derived_data_dir, output_filename)
     try:
         combined_df.to_csv(output_path, index=False, encoding='utf-8')
         print(f"\nSuccessfully aggregated data into '{output_path}'")
@@ -77,23 +80,27 @@ def aggregate_csvs(company_folder, output_filename):
 
 
 if __name__ == "__main__":
-    # Get the directory where the script is located (root directory)
-    script_dir = os.path.dirname(os.path.abspath(__file__)) 
-    os.chdir(script_dir) # Change working directory to script directory
-    print(f"Working directory set to: {os.getcwd()}")
+    # Define Base Paths Relative to Script Location
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    base_data_dir = os.path.abspath(os.path.join(script_dir, '..', '..', 'data')) # Go up two levels to root, then data/
+    derived_data_dir = os.path.join(base_data_dir, 'derived')
+    # os.chdir(script_dir) # Avoid changing working directory
+    print(f"Reading from: {derived_data_dir}")
+    print(f"Will save output to: {derived_data_dir}")
 
-    company = input("Enter the company name (folder name, e.g., Target): ")
-    default_output = f"{company}_aggregated.csv"
-    output_file = input(f"Enter the desired output filename for the aggregated CSV (e.g., {default_output}): ")
+    company = input("Enter the company name to aggregate (e.g., Target): ")
+    default_output = f"{company}_aggregated_all.csv" # Changed default name
+    output_file = input(f"Enter the desired output filename (e.g., {default_output}): ")
 
     # Use default if user enters nothing
     if not output_file:
         output_file = default_output
         print(f"Using default output file: {output_file}")
-        
+
     # Basic validation for output filename
     if not output_file.lower().endswith('.csv'):
         output_file += '.csv'
         print(f"Added .csv extension. Output file will be: {output_file}")
-        
-    aggregate_csvs(company, output_file)
+
+    # Call the aggregation function with the derived dir path
+    aggregate_csvs(company, derived_data_dir, output_file)

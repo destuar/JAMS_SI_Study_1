@@ -217,27 +217,34 @@ if __name__ == "__main__":
         print("-" * 30)
 
     # --- Get User Input ---
-    company_folder = input("Enter the company name (folder name, e.g., Target): ")
+    company_folder_name = input("Enter the company name (folder name, e.g., Target): ")
     file_name_str = input("Enter the date & time (file name without .json, e.g., 02_03_25_0953AM): ")
 
+    # --- Define Base Paths Relative to Script Location ---
+    script_dir = os.path.dirname(__file__)
+    base_data_dir = os.path.abspath(os.path.join(script_dir, '..', '..', 'data')) # Go up two levels to root, then data/
+    raw_data_dir = os.path.join(base_data_dir, 'raw')
+    derived_data_dir = os.path.join(base_data_dir, 'derived')
+
+    # Ensure derived data directory exists
+    os.makedirs(derived_data_dir, exist_ok=True)
+
     # --- Validate Inputs and Construct Paths ---
-    # Assume script is run from the parent directory of company folders
-    # If script is IN the Namin, Ketron, Mai folder, adjust path base if needed.
-    # For now, assume company folder is directly accessible by name.
-    if not os.path.isdir(company_folder):
-         print(f"Error: Company folder '{company_folder}' not found in the current directory.")
+    company_path = os.path.join(raw_data_dir, company_folder_name)
+    if not os.path.isdir(company_path):
+         print(f"Error: Company folder '{company_folder_name}' not found in '{raw_data_dir}'.")
          exit()
 
     json_file_name = f"{file_name_str}.json"
-    json_file_path = os.path.join(company_folder, json_file_name)
+    json_file_path = os.path.join(company_path, json_file_name)
 
     if not os.path.isfile(json_file_path):
-        print(f"Error: JSON file '{json_file_name}' not found in folder '{company_folder}'.")
+        print(f"Error: JSON file '{json_file_name}' not found in folder '{company_path}'.")
         exit()
 
-    # Construct the output CSV filename
-    output_csv_name = f"{file_name_str}.csv"
-    output_csv_path = os.path.join(company_folder, output_csv_name)
+    # Construct the output CSV filename and path
+    output_csv_name = f"{company_folder_name}_{file_name_str}.csv" # Prepend company name for clarity
+    output_csv_path = os.path.join(derived_data_dir, output_csv_name)
 
     # --- Parse Post Date from Filename ---
     post_date_dt = parse_filename_date(file_name_str)
@@ -247,7 +254,7 @@ if __name__ == "__main__":
 
     # --- Process the Single File ---
     print("-" * 20)
-    if process_comment_file(json_file_path, output_csv_path, company_folder, post_date_dt):
+    if process_comment_file(json_file_path, output_csv_path, company_folder_name, post_date_dt):
         print("\nProcessing finished successfully.")
     else:
         print("\nProcessing failed.")

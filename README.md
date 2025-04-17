@@ -74,15 +74,17 @@ root/
 conda env create -f environment.yml
 conda activate fb-text
 
-# 2 – Run the spaCy project pipeline
+# 2 – Run the main spaCy project pipeline
+# This orchestrates steps like data processing (JSON->derived format),
+# text cleaning, feature engineering, etc., as defined in project.yml.
 spacy project run all
 
-# 3 – Train models
-python scripts/model/train_setfit.py
-python scripts/model/train_deberta_lora.py
+# 3 – (Optional) Train models manually if not part of the spaCy project
+# python scripts/model/train_setfit.py
+# python scripts/model/train_deberta_lora.py
 
-# 4 – Run causal analysis
-R -e "rmarkdown::render('scripts/analysis/did_regression.Rmd')"
+# 4 – (Optional) Run causal analysis manually if not part of the spaCy project
+# R -e "rmarkdown::render('scripts/analysis/did_regression.Rmd')"
 ```
 
 ---
@@ -94,14 +96,19 @@ R -e "rmarkdown::render('scripts/analysis/did_regression.Rmd')"
 2. Open **DevTools → Console** and paste `scripts/extract/comment_extractor.js`.  
 3. Copy the JSON block output and save as `MM_DD_YY_HHMMAM.json` inside `/data/raw/<Company>/`.  
 
-### Phase 2 – JSON → CSV Processing  
+### Phase 2 – JSON Processing (Handled by spaCy Project)  
+The `spacy project run all` command (see Quick-Start) includes steps defined in `project.yml` to automatically process the raw JSON files located in `/data/raw/<Company>/` folders.
 
-```bash
-python scripts/process/process_comments_json.py
-# prompts for company folder & filename stem
-```
+This processing likely involves:
+- Parsing the JSON structure.
+- Extracting relevant fields (text, timestamp, reactions, IDs).
+- Calculating approximate comment dates.
+- Adding company and post metadata.
+- Saving the processed data into a suitable format (e.g., parquet or CSV) in the `/data/derived/` directory for subsequent pipeline steps.
 
-### Output Columns  
+*(Note: The script `scripts/process/process_comments_json.py` provides the core logic for processing a single JSON file and can be run manually for debugging or individual file conversion if needed.)*
+
+### Output Columns (Example derived format)
 
 | Column            | Description                                           |
 |-------------------|-------------------------------------------------------|
