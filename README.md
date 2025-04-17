@@ -1,8 +1,8 @@
-# Facebook Comment Text‑Analytics Project – README ![status](https://img.shields.io/badge/JAMS--submission-2025-blue)
+# Facebook Comment Text‑Analytics Project – README ![status](https://img.shields.io/badge/JAMS--submission-2025-blue)
 
 ## Project Goal  
-This repository accompanies the study **"DEI Rollbacks, Brand Authenticity, and Consumer Reaction on Social Media"** (target journal: _Journal of the Academy of Marketing Science_).  
-We analyze **20 000 public Facebook comments** posted during a 30‑day window around four companies' DEI decisions to quantify:
+This repository accompanies the study **"DEI Rollbacks, Brand Authenticity, and Consumer Reaction on Social Media"** (target journal: _Journal of the Academy of Marketing Science_).  
+We analyze **~28,000 public Facebook comments** posted during a 30‑day window around four companies' DEI decisions to quantify:
 
 1. **Relevance** – whether a comment addresses DEI.  
 2. **Stance** – pro‑DEI, anti‑DEI, or neutral.  
