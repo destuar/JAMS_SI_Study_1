@@ -184,14 +184,3 @@ Activated **only if** real‑data macro‑F1 falls below target.
 * **Derived, de‑identified datasets:** CC‑BY‑4.0  
 * **Raw Facebook JSON:** _not_ redistributed to comply with Meta’s TOS.
 
----
-
-## Checklist Before Submission  
-
-- [ ] README (this file) finalized  
-- [ ] IRB letter uploaded to `/docs/`  
-- [ ] Data Statement completed  
-- [ ] Annotation guidelines + κ statistics included  
-- [ ] Code executes end‑to‑end via quick‑start commands  
-- [ ] GitHub release created and OSF DOI minted  
-
