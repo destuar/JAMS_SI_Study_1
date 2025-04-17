@@ -1,0 +1,62 @@
+Methodology: Preprocessing Facebook Comment Text for Analysis
+
+1.  **Objective:**
+    To transform raw, noisy Facebook comment text into a structured format amenable to quantitative text analysis (sentiment, political stance, purchase intention). The goal is to balance noise removal with preserving semantically meaningful content.
+
+2.  **Data Source:**
+    `all_companies_comments_with_dei.csv`, primarily the `comment_text` column.
+
+3.  **Preprocessing Steps:**
+
+    a.  **Initial Loading & Inspection:**
+        - Load `all_companies_comments_with_dei.csv` using pandas.
+        - Inspect `comment_text` for data types, missing values (`NaN`), and general content patterns.
+
+    b.  **Handling Missing Values:**
+        - Identify rows where `comment_text` is `NaN` or effectively empty.
+        - Remove these rows.
+
+    c.  **Text Cleaning:**
+        - **Lowercasing:** Convert all text to lowercase.
+        - **URL Removal:** Remove URLs (http/https patterns) using regular expressions.
+        - **Special Character Removal (Selective):**
+            - Remove punctuation and non-alphanumeric characters using regex, *preserving* apostrophes within words (for contractions).
+            - Remove excessive punctuation sequences (e.g., '???' -> '?').
+            - (Note: Consider preserving '!' or '?' during iteration if initial sentiment analysis suggests they provide valuable signal).
+        - **Emoji Replacement:** Replace emojis with their textual descriptions (e.g., using the `emoji` library like 🙂 -> ':slightly_smiling_face:') to preserve sentiment cues.
+        - **Number Removal:** Remove digits/numbers using regular expressions. (Note: May revisit if quantitative aspects become crucial for purchase intention).
+
+    d.  **Linguistic Normalization:**
+        - **Contraction Expansion:** Expand common English contractions (e.g., "don't" -> "do not") using a predefined mapping.
+        - **Tokenization:** Split cleaned text into individual words (tokens) using `spaCy`.
+        - **Stop Word Removal:**
+            - Remove standard English stop words (e.g., using `spaCy`'s default list or a custom list).
+            - **Crucially:** Retain negation words (e.g., "not", "no", "never", "nor").
+            - Review standard list to ensure strong sentiment intensifiers (e.g., "very", "really") are not removed if needed.
+            - Consider adding context-specific noise words if identified (e.g., common irrelevant Facebook terms).
+        - **Lemmatization:** Reduce tokens to their dictionary base form (lemma) using `spaCy`.
+
+    e.  **Filtering & Further Cleaning:**
+        - **Length Filter:** Remove tokens shorter than 3 characters.
+        - **Stop Word Filter:** Remove tokens that are entirely stop words.
+        - **Special Character Filter:** Remove tokens containing special characters.
+        - **Number Filter:** Remove tokens containing digits.
+        - **Emoji Filter:** Remove tokens containing emojis.
+        - **URL Filter:** Remove tokens containing URLs.
+        - **Negation Filter:** Remove tokens that are negations.
+        - **Intensifier Filter:** Remove tokens that are sentiment intensifiers.
+        - **Context Filter:** Remove tokens that are context-specific noise words.
+
+4.  **Postprocessing Steps:**
+    - **Sentiment Analysis:** Apply sentiment analysis to the preprocessed text.
+    - **Political Stance Analysis:** Analyze the political stance of the text.
+    - **Purchase Intention Analysis:** Analyze the purchase intention of the text.
+
+5.  **Output:**
+    - Structured data with sentiment, political stance, and purchase intention analysis.
+
+6.  **Evaluation:**
+    - Evaluate the performance of the preprocessing steps and the overall methodology.
+
+7.  **Conclusion:**
+    - Summarize the findings and implications of the analysis.
