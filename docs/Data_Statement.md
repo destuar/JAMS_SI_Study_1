@@ -7,7 +7,7 @@
 |                       | Description                                         |
 |-----------------------|-----------------------------------------------------|
 | **Name**              | *Facebook DEI Decision Comment Corpus*              |
-| **Curators**          | Diego Estuar (LMU), PhD Research Team               |
+| **Curators**          | Diego Estuar (CGU)            |
 | **Size**              | 20,145 top-level comments and replies               |
 | **Language**          | English                                             |
 | **Temporal coverage** | 30-day window per company, Jan – Mar 2025           |
