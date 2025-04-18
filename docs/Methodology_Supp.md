@@ -11,17 +11,15 @@ This project analyzes **33,872** public Facebook comments surrounding corporate 
      - Paste and execute the content of `scripts/extract/comment_extractor.js`.
      - Copy the resulting JSON output block.
      - *Deliverable:* Raw comment data saved as `MM_DD_YY_HHMMAM.json` within company-specific `before_DEI` or `after_DEI` subfolders (e.g., `/data/raw/Target/after_DEI/`).
-   - **JSON to CSV Processing:**
-     - Run the Python script `scripts/process/process_comments_json.py`.
-     - Provide the company folder name (e.g., `Target`) and filename stem when prompted.
-     - The script parses the JSON, extracts relevant fields (comment text, timestamp text, reaction count, comment ID, parent ID), approximates comment dates from relative timestamps (e.g., "2d ago"), incorporates the post date from the filename, and adds the company name.
-     - *Deliverable:* Processed, structured data saved as `MM_DD_YY_HHMMAM.csv` within the company folder.
+   - **JSON to CSV Processing & Aggregation:**
+     - Run appropriate scripts (e.g., `scripts/process/process_comments_json.py`, `scripts/preprocess/combine_company_csv.py`) to parse raw JSON, estimate dates, add company info, handle before/after flags, combine across companies/time periods, and deduplicate.
+     - *Deliverable:* Aggregated, deduplicated data saved as `combined_comments.csv` within the `/data/derived/` directory.
 
 ## 2. Phase 2: Data Engineering – Thread & Text Cleaning
-   - **Conversation Graph Reconstruction:** Utilize **NetworkX** to rebuild comment threads from the processed CSV data, calculating features like `root_id`, `depth`, `sibling_count`, and `time_since_root` via depth-first traversal. These features aid in understanding conversation dynamics and potentially improve model performance or allow study of cascade effects.
-     - *Deliverable:* `graph_features.py`
+   - **Conversation Graph Reconstruction:** Utilize **NetworkX** via `scripts/preprocess/graph_features.py` to rebuild comment threads from `combined_comments.csv`, calculating features like `root_id`, `depth`, `sibling_count`, and `time_since_root`. Merge these features with the original comment data.
+     - *Deliverable:* Enriched dataset saved as `graphed_comments.csv` within the `/data/derived/` directory.
    - **Text Normalization:** Employ a custom **spaCy v3.7** component, defined in `project.yml`, for standard text cleaning including lowercasing, URL removal, emoji handling (e.g., replacement with text descriptions), and lemmatization.
-     - *Deliverable:* `pipeline_clean.py` registered in `project.yml`.
+     - *Deliverable:* `pipeline_clean.py` registered in `project.yml` (output likely updates `graphed_comments.csv` or creates a new file like `cleaned_comments.parquet`).
    - **Data Storage:** Use **DuckDB** for efficient storage and querying of processed data within a single-file database (`data.duckdb`).
      - *Deliverable:* `data.duckdb`
 
