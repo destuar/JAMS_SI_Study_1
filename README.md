@@ -24,16 +24,20 @@ root/
 │  README.md
 │  LICENSE
 │  CITATION.cff
-│  environment.yml          ← (Planned) Python 3.10 Conda env lock‑file (currently empty)
-│  project.yml              ← (Planned) spaCy workflow config (currently empty)
+│  environment.yml          ← Conda env lock‑file (Python 3.10, includes Label Studio)
+│  project.yml              ← spaCy workflow config (includes annotation step)
 │
 ├─data/
 │   ├─raw/                  ← Raw JSON data (local only, **not** committed)
 │   └─derived/              ← Processed data outputs
-│        combined_comments.csv   # Output of process_comments_json.py
+│        combined_comments.csv   # Output of combine_company_csv.py (or similar)
 │        graphed_comments.csv    # Output of graph_features.py
-│      # labels_gold.csv         # (Planned - Phase 3)
-│      # labels_predicted.csv    # (Planned - Phase 3)
+│        labels_gold.csv         # (Planned - Phase 3 Output) Manually reconciled labels from annotation
+│      # labels_predicted.csv    # (Planned - Phase 3 Output) Model predictions
+│   └─corpus/                 ← spaCy DocBin files for train/dev/test splits
+│        train.spacy           # Output of convert_to_docbin workflow step
+│        dev.spacy             # Output of convert_to_docbin workflow step
+│        test.spacy            # Output of convert_to_docbin workflow step
 │
 ├─docs/                     ← Documentation (Data Statement, Ethics, Methodology)
 │   ethics.md
@@ -45,11 +49,13 @@ root/
 │   ├─extract/              ← Data collection script
 │   │  comment_extractor.js # (Used in Phase 1)
 │   ├─preprocess/           ← Data cleaning & feature scripts
+│   │  combine_company_csv.py # (Placeholder) Combines raw data
 │   │  graph_features.py     # Adds thread graph features
-│   │  process_comments_json.py # Parses raw JSON
-│   ├─annotate/             ← (Planned) Annotation setup & guidelines
-│   │  annotation_guidelines.md # (Planned)
-│   │  label_interface.json    # (Planned)
+│   │  clean_comments.py     # Cleans, splits, converts data to spaCy DocBin format
+│   ├─annotate/             ← Annotation setup & guidelines
+│   │  label_studio_config.xml # Label Studio UI configuration
+│   │  annotation_guidelines.md # (Planned) Guidelines for coders
+│   │  # small_text_sampler.py # Removed: Not using active learning ML backend
 │   ├─model/                ← (Planned) Model training & helper scripts
 │   │  train_setfit.py         # (Planned)
 │   │  train_deberta_lora.py   # (Planned)
@@ -62,11 +68,11 @@ root/
 │   EDA_threads.ipynb        # (Planned)
 │   Diagnostics_bias.ipynb   # (Planned)
 │
-├─tests/                    ← (Planned) Unit tests
-│   test_graph_features.py   # (Planned)
-│   test_process_pipeline.py # (Planned)
+├─tests/                    ← Unit tests
+│   test_graph_features.py
+│   test_process_pipeline.py # Includes tests for cleaning & conversion
 │
-└─results/                  ← (Planned) Outputs: model checkpoints, figures, tables
+└─results/                  ← Outputs: model checkpoints, figures, tables
     model_artifacts/         # (Planned)
     figures/                 # (Planned)
     tables/                  # (Planned)
@@ -77,28 +83,37 @@ root/
 ## Quick‑Start (Planned Workflow)
 ```bash
 # 1 – Create environment (Python 3.10 required)
-# NOTE: environment.yml is currently empty. Populating it is part of Phase 2.
-# conda env create -f environment.yml
-# conda activate fb-text
+# environment.yml now includes core dependencies + Label Studio
+conda env create -f environment.yml
+conda activate fb-text
 
-# 2 – Run Preprocessing Steps (Manual for now)
-# python scripts/preprocess/process_comments_json.py <raw_json_dir> data/derived/combined_comments.csv
-# python scripts/preprocess/graph_features.py data/derived/combined_comments.csv data/derived/graphed_comments.csv
+# 2 – Run Preprocessing Steps (via spaCy project)
+# (Assumes raw data is placed in data/raw/<Company>/)
+spacy project run preprocess # Runs combine -> graph -> convert_to_docbin
 
-# 3 – Run the entire spaCy project pipeline (Preprocessing -> Training -> Export)
-# NOTE: project.yml orchestration is not yet implemented (Planned Phase 2/3).
-# spacy project run all
+# 3 - Run Annotation (Phase 3 - Manual Steps Required)
+# Start Label Studio (e.g., `label-studio start my_project`)
+# Set up project(s) using `scripts/annotate/label_studio_config.xml`.
+# Import data (e.g., from data/corpus/train.spacy) via UI or CLI.
+# Set up user accounts for dual annotators.
+# --> Perform annotation in the Label Studio UI <--
+# Export annotations for each coder.
+# Reconcile disagreements (manual/scripted) to produce labels_gold.csv.
 
-# 4 – Verify installation & run unit tests (Planned)
-# python -m spacy validate
-# pytest tests/
+# 4 – Run the entire spaCy project pipeline (Preprocessing -> Training -> Analysis)
+# NOTE: Training/Analysis steps are placeholders. Annotation requires manual steps between.
+# spacy project run all 
 
-# 5 – (Optional) Train models manually (Planned - Phase 3)
-# python scripts/model/train_setfit.py
-# python scripts/model/train_deberta_lora.py
+# 5 – Verify installation & run unit tests
+# python -m spacy validate # Useful for checking spaCy installation
+pytest tests/
 
-# 6 – (Optional) Run causal Triple‑Difference analysis (Planned - Phase 4)
-# python scripts/analysis/did_results.py
+# 6 – (Optional) Train models manually (Planned - Phase 3)
+# python scripts/model/train_setfit.py ...
+# python scripts/model/train_deberta_lora.py ...
+
+# 7 – (Optional) Run causal Triple‑Difference analysis (Planned - Phase 4)
+# python scripts/analysis/did_results.py ...
 ```
 
 ---
@@ -113,6 +128,8 @@ root/
 ### Phase 2 – JSON Processing (In Progress)
 1.  `scripts/preprocess/process_comments_json.py` parses raw JSON files, extracts key fields (text, date, reactions, etc.), and saves to `data/derived/combined_comments.csv`.
 2.  `scripts/preprocess/graph_features.py` reads `combined_comments.csv`, calculates conversational thread features (root ID, depth, sibling count, time since root), and saves the enriched data to `data/derived/graphed_comments.csv`.
+3.  `scripts/preprocess/pipeline_clean.py` defines a spaCy pipeline component for cleaning comment text (URL/mention replacement, emoji conversion, etc.).
+4.  `scripts/preprocess/convert_comments.py` applies the cleaning component, stratifies `graphed_comments.csv` by company into train/dev/test splits, and saves the results as spaCy `DocBin` files (`.spacy`) in `data/derived/`.
 
 #### Processed Output Columns (`graphed_comments.csv`)
 
@@ -135,13 +152,20 @@ root/
 
 ## Annotation & Active Learning (Planned - Phase 3)
 
-* **Planned label schema**
-  * `relevance` ∈ {0, 1}
-  * `stance` ∈ {–1 (anti), 0, +1 (pro)}
-  * `purchase` ∈ {–1 (boycott), 0, +1 (buy)}
-  * `ideology_cue` ∈ {liberal, conservative, neutral/unknown}
-* **Planned Gold set**: ≈1,300 comments, dual‑coded (Target: **Cohen's κ ≥ 0.75**).
-* **Planned Active learning**: entropy sampling with **`small-text`** to add ≈400 labels (Total Gold ≈ 1,700).
+*   **Tool:** **Label Studio** will be used for annotation.
+    *   Interface defined in `scripts/annotate/label_studio_config.xml`.
+    *   Supports multi-label classification required for this project.
+*   **Planned label schema:**
+    *   `relevance` ∈ {0, 1}
+    *   `stance` ∈ {–1 (anti), 0, +1 (pro)}
+    *   `purchase` ∈ {–1 (boycott), 0, +1 (buy)}
+    *   `ideology_cue` ∈ {liberal, conservative, neutral/unknown} (Optional)
+*   **Planned Gold set:** ≈1,300 comments, dual‑coded (Target: **Cohen's κ ≥ 0.75**).
+    *   Data to be annotated will primarily come from `data/corpus/train.spacy` (and potentially `dev.spacy`).
+    *   **NOTE:** Since the train/dev/test split in Phase 2 is stratified only by `company_name`, care must be taken during annotation sampling to ensure adequate representation of potentially minority classes (e.g., `before_DEI = 1`) within the ~1,300 comments selected for the gold set.
+    *   Dual coding will be managed by having annotators work independently in Label Studio (e.g., using separate user accounts or projects).
+    *   Disagreements will be exported (e.g., as CSV/JSON) and reconciled manually or via a separate script to produce the final `labels_gold.csv`.
+*   **Active learning:** (Removed from immediate plan) If needed later, Label Studio supports ML backends, but setup is simplified for now.
 
 ---
 
@@ -197,7 +221,6 @@ To be activated **only if** real‑data model performance is insufficient (e.g.,
   note         = {Working paper, target: Journal of the Academy of Marketing Science. Phase 2 (Preprocessing) in progress.}
 }
 ```
-
 ---
 
 ## License
@@ -205,4 +228,5 @@ To be activated **only if** real‑data model performance is insufficient (e.g.,
 * **Code & prompts:** MIT License
 * **Derived, de‑identified datasets & synthetic comments (Planned):** CC‑BY‑4.0
 * **Raw Facebook JSON:** _not_ redistributed (Meta TOS).
+
 
