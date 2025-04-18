@@ -1,7 +1,7 @@
 # Methodology: Analyzing Facebook Comment Reactions to Corporate DEI Actions
 
 ## Objective
-This project analyzes ~28,000 public Facebook comments surrounding corporate DEI decisions to quantify comment Relevance (to DEI), Stance (pro/anti/neutral), and Purchase Intent (buy/boycott/neutral). The methodology follows a phased, reproducible workflow designed for submission to the *Journal of the Academy of Marketing Science (JAMS)*, leveraging a specific, lean technology stack (see Phase 10).
+This project analyzes **33,872** public Facebook comments surrounding corporate DEI decisions (collected **15 days before and 30 days after** the announcement) to quantify comment Relevance (to DEI), Stance (pro/anti/neutral), and Purchase Intent (buy/boycott/neutral). The methodology follows a phased, reproducible workflow designed for submission to the *Journal of the Academy of Marketing Science (JAMS)*, leveraging a specific, lean technology stack (see Phase 10).
 
 ## 1. Phase 1: Data Collection – Manual Extraction & Initial Processing
    - **Manual Comment Extraction:**
@@ -10,7 +10,7 @@ This project analyzes ~28,000 public Facebook comments surrounding corporate DEI
      - Open browser Developer Tools (Console).
      - Paste and execute the content of `scripts/extract/comment_extractor.js`.
      - Copy the resulting JSON output block.
-     - *Deliverable:* Raw comment data saved as `MM_DD_YY_HHMMAM.json` within a company-specific folder (e.g., `/data/raw/Target/`).
+     - *Deliverable:* Raw comment data saved as `MM_DD_YY_HHMMAM.json` within company-specific `before_DEI` or `after_DEI` subfolders (e.g., `/data/raw/Target/after_DEI/`).
    - **JSON to CSV Processing:**
      - Run the Python script `scripts/process/process_comments_json.py`.
      - Provide the company folder name (e.g., `Target`) and filename stem when prompted.
@@ -60,9 +60,9 @@ This project analyzes ~28,000 public Facebook comments surrounding corporate DEI
      - *Deliverables:* `lora_aug_adapter.bin`, `aug_results.csv`
 
 ## 8. Phase 8: Full Dataset Inference & Aggregation
-   - **Prediction Pipeline:** Apply the final trained models (SetFit for Relevance, DeBERTa-LoRA for Stance/Purchase) to predict labels for all ~28,000 comments.
+   - **Prediction Pipeline:** Apply the final trained models (SetFit for Relevance, DeBERTa-LoRA for Stance/Purchase) to predict labels for all **33,872** comments.
      - *Deliverable:* `predictions.parquet`
-   - **Weekly Aggregation:** Use **pandas** to aggregate predicted labels weekly by company and stance, calculating key metrics like `boycott_rate` and `buy_rate`.
+   - **Weekly Aggregation:** Use **pandas** to aggregate predicted labels weekly by company and stance, calculating key metrics like `boycott_rate` and `buy_rate` (potentially separating before/after periods).
      - *Deliverable:* `agg_weekly.csv`
 
 ## 9. Phase 9: Causal Analysis – Estimating Treatment Effects

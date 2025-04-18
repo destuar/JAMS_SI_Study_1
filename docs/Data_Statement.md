@@ -8,9 +8,9 @@
 |-----------------------|-----------------------------------------------------|
 | **Name**              | *Facebook DEI Decision Comment Corpus*              |
 | **Curators**          | Diego Estuar (CGU)            |
-| **Size**              | 28,005 top-level comments and replies               |
+| **Size**              | **33,872** unique comments and replies               |
 | **Language**          | English                                             |
-| **Temporal coverage** | 30-day window per company, Jan – Mar 2025           |
+| **Temporal coverage** | **-15 / +30 days** relative to company DEI announcement, Jan – Mar 2025           |
 | **Domain**            | Public Facebook pages of four large U.S. companies  |
 | **Version**           | v0.9 (2025-04-17) – frozen for JAMS review          |
 
@@ -37,7 +37,7 @@ The corpus enables causal tests of how **maintaining vs. rolling back DEI initia
 |---------------------|-------------------------------------------------------------------------------------|
 | **Companies**       | Four U.S. retailers (anonymised as *A–D* in public materials).                      |
 | **Event types**     | *Rollback* (2 brands) and *Keep / Re-affirm* DEI (2 brands).                       |
-| **Collection window** | 0 to +30 calendar days after each public DEI announcement.                        |
+| **Collection window** | **-15 to +30 calendar days** relative to each public DEI announcement.                        |
 | **Selectors**       | All visible comments + replies; no filtering by reaction count or keywords.        |
 
 ---
