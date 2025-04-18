@@ -209,7 +209,7 @@ def process_comment_file(json_file_path, output_csv_path, company_name, post_dat
 
 
 if __name__ == "__main__":
-    print("Facebook Comment Processor (Single File)")
+    print("Facebook Comment Processor (Batch Mode)")
     print("-" * 30)
     if not DATEUTIL_AVAILABLE:
         print("!! Warning: 'python-dateutil' is not installed. Comment date calculation requires it.")
@@ -217,46 +217,65 @@ if __name__ == "__main__":
         print("-" * 30)
 
     # --- Get User Input ---
-    company_folder_name = input("Enter the company name (folder name, e.g., Target): ")
-    file_name_str = input("Enter the date & time (file name without .json, e.g., 02_03_25_0953AM): ")
+    company_folder_name = input("Enter the company name (folder name containing 'comments-json', e.g., Google): ")
 
     # --- Define Base Paths Relative to Script Location ---
     script_dir = os.path.dirname(__file__)
     base_data_dir = os.path.abspath(os.path.join(script_dir, '..', '..', 'data')) # Go up two levels to root, then data/
     raw_data_dir = os.path.join(base_data_dir, 'raw')
-    derived_data_dir = os.path.join(base_data_dir, 'derived')
+    derived_data_dir = os.path.join(base_data_dir, 'derived') # Keep this for now, might be used elsewhere? Or remove if confirmed unused.
 
-    # Ensure derived data directory exists
+    # Ensure derived data directory exists - REMOVE IF UNUSED
     os.makedirs(derived_data_dir, exist_ok=True)
 
-    # --- Validate Inputs and Construct Paths ---
-    company_path = os.path.join(raw_data_dir, company_folder_name)
-    if not os.path.isdir(company_path):
-         print(f"Error: Company folder '{company_folder_name}' not found in '{raw_data_dir}'.")
+    # --- Construct Path to the comments-json Directory ---
+    company_raw_path = os.path.join(raw_data_dir, company_folder_name)
+    comments_json_dir = os.path.join(company_raw_path, 'comments-json') # Specific subfolder
+
+    if not os.path.isdir(comments_json_dir):
+         print(f"Error: Directory '{comments_json_dir}' not found.")
          exit()
 
-    json_file_name = f"{file_name_str}.json"
-    json_file_path = os.path.join(company_path, json_file_name)
+    # --- Process All JSON Files in the Directory ---
+    print(f"Processing files in: {comments_json_dir}")
+    success_count = 0
+    fail_count = 0
 
-    if not os.path.isfile(json_file_path):
-        print(f"Error: JSON file '{json_file_name}' not found in folder '{company_path}'.")
+    json_files = [f for f in os.listdir(comments_json_dir) if f.endswith('.json')]
+
+    if not json_files:
+        print("No JSON files found in the directory.")
         exit()
 
-    # Construct the output CSV filename and path
-    output_csv_name = f"{company_folder_name}_{file_name_str}.csv" # Prepend company name for clarity
-    output_csv_path = os.path.join(derived_data_dir, output_csv_name)
+    for json_file_name in json_files:
+        file_name_str = os.path.splitext(json_file_name)[0] # Filename without extension
+        json_file_path = os.path.join(comments_json_dir, json_file_name)
 
-    # --- Parse Post Date from Filename ---
-    post_date_dt = parse_filename_date(file_name_str)
-    if pd.isna(post_date_dt):
-        print("Error: Could not determine post date from filename. Exiting.")
-        exit()
+        # Construct the output CSV filename and path
+        # Output name is same as input, but with .csv extension
+        output_csv_name = f"{file_name_str}.csv"
+        # Output path is the same directory as the input JSON file
+        output_csv_path = os.path.join(comments_json_dir, output_csv_name)
 
-    # --- Process the Single File ---
-    print("-" * 20)
-    if process_comment_file(json_file_path, output_csv_path, company_folder_name, post_date_dt):
-        print("\nProcessing finished successfully.")
-    else:
-        print("\nProcessing failed.")
+        # --- Parse Post Date from Filename ---
+        post_date_dt = parse_filename_date(file_name_str)
+        if pd.isna(post_date_dt):
+            print(f"Error: Could not determine post date from filename '{json_file_name}'. Skipping file.")
+            fail_count += 1
+            continue # Skip to the next file
 
+        # --- Process the Single File ---
+        print("-" * 20)
+        if process_comment_file(json_file_path, output_csv_path, company_folder_name, post_date_dt):
+            success_count += 1
+        else:
+            fail_count += 1
+
+    # --- Final Summary ---
+    print("-" * 30)
+    print("Processing finished.")
+    print(f"  Successfully processed: {success_count} files.")
+    print(f"  Failed to process:    {fail_count} files.")
+    # Update the output location message
+    print(f"  Output saved to:      {comments_json_dir}")
     print("\nScript finished.") 
