@@ -3,9 +3,9 @@ import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
 
-# Assuming graph_features.py is importable (e.g., it's in the path or installed)
-# Adjust the import path as necessary based on your project structure.
-# If scripts/ is not a package, we might need to adjust sys.path or run pytest from the root.
+# Remove sys.path manipulation
+
+# Revert to original import style
 from scripts.preprocess.graph_features import calculate_graph_features
 
 @pytest.fixture
@@ -42,15 +42,18 @@ def sample_comments_df() -> pd.DataFrame:
     return df
 
 def test_calculate_features(sample_comments_df):
-    """Tests the main functionality of calculate_graph_features."""
+    """Tests the main functionality of calculate_graph_features.
+    Checks that the output contains only id + 4 feature columns.
+    """
     df_input = sample_comments_df.copy()
     df_result = calculate_graph_features(df_input)
 
     # --- Assertions --- 
-    assert 'root_id' in df_result.columns
-    assert 'depth' in df_result.columns
-    assert 'sibling_count' in df_result.columns
-    assert 'time_since_root' in df_result.columns
+    expected_cols = ['id', 'root_id', 'depth', 'sibling_count', 'time_since_root']
+    assert sorted(df_result.columns.tolist()) == sorted(expected_cols), "Output columns mismatch"
+    
+    # Check data types of feature columns
+    assert pd.api.types.is_object_dtype(df_result['root_id']) # or specific string dtype
     assert pd.api.types.is_integer_dtype(df_result['depth'])
     assert pd.api.types.is_integer_dtype(df_result['sibling_count'])
     assert pd.api.types.is_timedelta64_ns_dtype(df_result['time_since_root'])
@@ -71,16 +74,25 @@ def test_calculate_features(sample_comments_df):
         'b3': {'root_id': 'b3', 'depth': 0, 'sibling_count': 1, 'time_since_root': timedelta(0)}, # Orphaned; 2 roots (b1,b3) -> count=1
     }
 
+    # Check features for each comment ID
+    result_features = df_result.set_index('id').to_dict(orient='index')
+    assert len(result_features) == len(expected_features), "Mismatch in number of comments processed"
+    
     for comment_id, expected in expected_features.items():
-        result_row = df_result[df_result['id'] == comment_id].iloc[0]
-        assert result_row['root_id'] == expected['root_id'], f"Mismatch root_id for {comment_id}"
-        assert result_row['depth'] == expected['depth'], f"Mismatch depth for {comment_id}"
-        assert result_row['sibling_count'] == expected['sibling_count'], f"Mismatch sibling_count for {comment_id}"
-        assert result_row['time_since_root'] == expected['time_since_root'], f"Mismatch time_since_root for {comment_id}"
+        assert comment_id in result_features, f"Comment ID {comment_id} missing in results"
+        result = result_features[comment_id]
+        assert result['root_id'] == expected['root_id'], f"Mismatch root_id for {comment_id}"
+        assert result['depth'] == expected['depth'], f"Mismatch depth for {comment_id}"
+        assert result['sibling_count'] == expected['sibling_count'], f"Mismatch sibling_count for {comment_id}"
+        # Handle potential NaT comparison
+        if pd.isna(expected['time_since_root']):
+            assert pd.isna(result['time_since_root']), f"Mismatch time_since_root for {comment_id} (expected NaT)"
+        else:
+            assert result['time_since_root'] == expected['time_since_root'], f"Mismatch time_since_root for {comment_id}"
 
-    # Check overall shape and that original columns are preserved
+    # Check overall shape
     assert df_result.shape[0] == df_input.shape[0]
-    assert all(col in df_result.columns for col in df_input.columns)
+
 
 def test_empty_input():
     """Tests behavior with an empty DataFrame."""
@@ -90,11 +102,12 @@ def test_empty_input():
     empty_df['post_date'] = pd.to_datetime(empty_df['post_date'])
     
     df_result = calculate_graph_features(empty_df)
-    # Check that the returned df is the original empty df
+    
+    # Expect an empty DataFrame with the specific feature columns
+    expected_cols = ['id', 'root_id', 'depth', 'sibling_count', 'time_since_root']
     assert df_result.empty
-    assert df_result.columns.tolist() == empty_df.columns.tolist()
-    # Ensure graph feature columns are NOT present
-    assert 'root_id' not in df_result.columns
+    assert sorted(df_result.columns.tolist()) == sorted(expected_cols)
+    
 
 def test_input_without_grouping_cols():
     """Tests ValueError if grouping columns (company_name, post_date) are missing."""
@@ -111,18 +124,22 @@ def test_input_without_grouping_cols():
 def test_input_with_nat_dates(sample_comments_df):
     """Tests handling of NaT in comment_date."""
     df_input = sample_comments_df.copy()
-    # Introduce NaT for a child comment
-    df_input.loc[df_input['id'] == 'a2', 'comment_date'] = pd.NaT
+    # Introduce NaT for a root comment and a child comment
+    df_input.loc[df_input['id'] == 'a1', 'comment_date'] = pd.NaT # Root
+    df_input.loc[df_input['id'] == 'a2', 'comment_date'] = pd.NaT # Child
     
     df_result = calculate_graph_features(df_input)
     
-    # Check the time_since_root for the comment with NaT date and its children
+    # Check the time_since_root for the comments with NaT dates
+    assert pd.isna(df_result.loc[df_result['id'] == 'a1', 'time_since_root'].iloc[0])
     assert pd.isna(df_result.loc[df_result['id'] == 'a2', 'time_since_root'].iloc[0])
-    # Check a sibling's time_since_root is still calculated correctly
-    assert df_result.loc[df_result['id'] == 'a3', 'time_since_root'].iloc[0] == timedelta(minutes=15)
-    # Check a child of the NaT comment (a4 replies to a3, not a2 in this case - let's modify)
-    # Modify fixture or test case for child of NaT needed if required.
-    # For now, we check the NaT itself is handled.
+    # Check a sibling (a3) whose root (a1) is now NaT
+    assert pd.isna(df_result.loc[df_result['id'] == 'a3', 'time_since_root'].iloc[0])
+    # Check a child (a4) of a non-NaT parent (a3) but with a NaT root (a1)
+    assert pd.isna(df_result.loc[df_result['id'] == 'a4', 'time_since_root'].iloc[0])
+    # Check an unrelated comment's time is still calculated correctly
+    assert df_result.loc[df_result['id'] == 'b2', 'time_since_root'].iloc[0] == timedelta(minutes=10)
+
 
 # Consider adding more tests:
 # - Test with only root comments
