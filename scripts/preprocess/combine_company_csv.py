@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import glob
 import logging
+from datetime import datetime
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -11,13 +12,23 @@ HAS_DEI_COMPANIES = ['Delta', 'Costco'] # Companies that kept DEI (has_DEI = 1)
 NO_DEI_COMPANIES = ['Target', 'Google'] # Companies that rolled back (has_DEI = 0)
 TARGET_COMPANIES = HAS_DEI_COMPANIES + NO_DEI_COMPANIES
 
-TIME_FOLDERS = ['before_DEI', 'after_DEI']
+# --- Define DEI Cutoff Dates ---
+# Dates are inclusive for the 'after' period (before_DEI = 0)
+DEI_CUTOFF_DATES = {
+    'Costco': datetime(2025, 1, 23),
+    'Delta': datetime(2025, 2, 4),
+    'Google': datetime(2025, 2, 5),
+    'Target': datetime(2025, 1, 24),
+}
+
+# --- Deprecated: Time folders are no longer the source of truth for before/after ---
+# TIME_FOLDERS = ['before_DEI', 'after_DEI']
 
 if __name__ == "__main__":
-    logging.info("Combine Company Comment CSVs across time periods")
+    logging.info("Combine Company Comment CSVs based on Comment Dates")
     logging.info("-" * 30)
 
-    # --- Define Base Paths Relative to Script Location --- 
+    # --- Define Base Paths Relative to Script Location ---
     script_dir = os.path.dirname(__file__)
     base_data_dir = os.path.abspath(os.path.join(script_dir, '..', '..', 'data'))
     raw_data_dir = os.path.join(base_data_dir, 'raw')
@@ -28,7 +39,7 @@ if __name__ == "__main__":
 
     all_dfs = []
 
-    # --- Iterate through Target Companies --- 
+    # --- Iterate through Target Companies ---
     for company_name in TARGET_COMPANIES:
         logging.info(f"Processing company: {company_name}")
         company_path = os.path.join(raw_data_dir, company_name)
@@ -37,43 +48,73 @@ if __name__ == "__main__":
             logging.warning(f"  Company directory not found: {company_path}. Skipping.")
             continue
 
-        # Determine the value for has_DEI column
+        # Determine the value for has_DEI column (remains the same)
         has_DEI_value = 1 if company_name in HAS_DEI_COMPANIES else 0
 
-        # --- Iterate through Time Folders (before/after) --- 
-        for time_folder in TIME_FOLDERS:
-            time_folder_path = os.path.join(company_path, time_folder)
-            logging.info(f"  Looking in: {time_folder_path}")
+        # --- Get the company-specific cutoff date ---
+        cutoff_date = DEI_CUTOFF_DATES.get(company_name)
+        if not cutoff_date:
+            logging.error(f"  Cutoff date not defined for company: {company_name}. Skipping.")
+            continue
+        logging.info(f"  Using cutoff date: {cutoff_date.strftime('%Y-%m-%d')}")
 
-            if not os.path.isdir(time_folder_path):
-                logging.warning(f"    Subdirectory not found: {time_folder_path}. Skipping.")
-                continue
+        # --- Find and Process ALL CSV files within the company directory (recursive) ---
+        # We no longer rely on specific 'before_DEI'/'after_DEI' subfolders for the flag
+        csv_pattern = os.path.join(company_path, '**', '*.csv') # Search recursively
+        csv_files = glob.glob(csv_pattern, recursive=True)
 
-            # Determine the value for before_DEI column
-            before_DEI_value = 1 if time_folder == 'before_DEI' else 0
+        if not csv_files:
+            logging.warning(f"    No CSV files found recursively in '{company_path}'.")
+            continue
 
-            # --- Find and Process CSV files --- 
-            csv_pattern = os.path.join(time_folder_path, '*.csv')
-            csv_files = glob.glob(csv_pattern)
+        logging.info(f"    Found {len(csv_files)} CSV files across all subdirectories.")
 
-            if not csv_files:
-                logging.warning(f"    No CSV files found in '{time_folder_path}'.")
-                continue
+        for f in csv_files:
+            # --- Add Debug Log ---
+            logging.debug(f"      Processing file: {f}") # Log the full path
+            # --- End Add Debug Log ---
+            try:
+                # logging.debug(f"      Processing file: {f}") # Original debug line (commented out)
+                df = pd.read_csv(f)
 
-            logging.info(f"    Found {len(csv_files)} CSV files.")
+                # Check for comment_date column
+                if 'comment_date' not in df.columns:
+                    logging.warning(f"      'comment_date' column not found in {os.path.basename(f)}. Skipping this file.")
+                    continue
 
-            for f in csv_files:
-                try:
-                    df = pd.read_csv(f)
-                    df['company_name'] = company_name # Ensure company name is a column
-                    df['before_DEI'] = before_DEI_value
-                    df['has_DEI'] = has_DEI_value
-                    all_dfs.append(df)
-                    # logging.debug(f"      Read: {os.path.basename(f)}")
-                except Exception as e:
-                    logging.error(f"      Error reading file {os.path.basename(f)}: {e}. Skipping.")
+                # --- Assign before_DEI based on comment_date ---
+                # Attempt to parse dates, coercing errors to NaT (Not a Time)
+                df['comment_date_parsed'] = pd.to_datetime(df['comment_date'], errors='coerce')
 
-    # --- Combine and Deduplicate --- 
+                # Log rows where date parsing failed
+                failed_dates = df[df['comment_date_parsed'].isna()]
+                if not failed_dates.empty:
+                    logging.warning(f"      Could not parse 'comment_date' for {len(failed_dates)} rows in {os.path.basename(f)}. Example invalid date: '{failed_dates['comment_date'].iloc[0]}'. These rows will be excluded from before/after assignment.")
+                    # Optionally drop rows with unparseable dates, or handle them differently
+                    df.dropna(subset=['comment_date_parsed'], inplace=True)
+                    if df.empty:
+                        logging.warning(f"      No valid dates found in {os.path.basename(f)} after attempting parse. Skipping file.")
+                        continue
+
+
+                # Assign before_DEI: 1 if date is strictly BEFORE cutoff, 0 otherwise
+                df['before_DEI'] = (df['comment_date_parsed'] < cutoff_date).astype(int)
+
+                # Assign company name and has_DEI flag
+                df['company_name'] = company_name
+                df['has_DEI'] = has_DEI_value
+
+                # Drop the temporary parsed date column if no longer needed
+                df.drop(columns=['comment_date_parsed'], inplace=True)
+
+                all_dfs.append(df)
+                # logging.debug(f"      Successfully processed and added data from: {os.path.basename(f)}")
+
+            except Exception as e:
+                logging.error(f"      Error processing file {os.path.basename(f)}: {e}. Skipping.")
+
+
+    # --- Combine and Deduplicate ---
     if not all_dfs:
         logging.error("No dataframes were successfully read from any company/time folder. Exiting.")
         exit()
@@ -89,7 +130,7 @@ if __name__ == "__main__":
     if duplicates_mask.any():
         logging.warning(f"Found {duplicates_mask.sum()} rows with duplicate IDs. Example duplicates:")
         # Show some examples of the duplicates found
-        logging.warning(combined_df[duplicates_mask].sort_values(by='id').head().to_string())
+        # logging.warning(combined_df[duplicates_mask].sort_values(by='id').head().to_string()) # Commented out to prevent printing rows
         # Decide on removal strategy: keep='first' is common
         combined_df.drop_duplicates(subset=['id'], keep='first', inplace=True)
         final_count = len(combined_df)
