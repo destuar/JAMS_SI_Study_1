@@ -1,0 +1,61 @@
+Workflow Breakdown:
+Phase 1: Data Collection (Completed)
+- What: Manually gather raw comment data from public Facebook posts of 4 target companies around their DEI announcements.
+- How: Use the scripts/extract/comment_extractor.js script in the browser's developer console to save comments as raw JSON files.
+    
+Input: Public Facebook posts.
+Output: Raw JSON files stored locally (e.g., in data/raw/<Company>/<Phase>/). Not committed.
+
+Phase 2: Preprocessing (Mostly Complete)
+Step 2a: Parse Raw JSON:
+- What: Process raw JSON files to extract key fields, clean them, parse timestamps, and add metadata. PII is stripped.
+- How: Run scripts/preprocess/process_comments_json.py for each company/phase.
+
+Input: Raw JSON files from Phase 1.
+Output: Individual CSV files (e.g., in data/raw/<Company>/<Phase>/comments-csv/).
+
+Step 2b: Combine CSVs & Add Flags:
+- What: Combine the individual CSV files, add the company_name, assign treatment flags (has_DEI based on company, before_DEI based on comment date vs. cutoff), and deduplicate based on comment ID.
+- How: Run scripts/preprocess/combine_company_csv.py (Command: combine_raw_csvs in project.yml).
+
+Input: Individual CSVs from Step 2a found within data/raw/<Company>/ subdirectories.
+Output: data/derived/combined_comments.csv.
+
+Step 2c: Calculate Graph Features:
+- What: Add features describing the comment's position within its conversational thread (root comment ID, reply depth, sibling count, time since root).
+- How: Run scripts/preprocess/graph_features.py (Command: preprocess_graph in project.yml).
+
+Input: data/derived/combined_comments.csv.
+Output: data/derived/graphed_comments.csv (This is the main dataset used for subsequent steps).
+
+Phase 3: Annotation (Planned)
+- What: Manually label a subset of comments (~1700) for Relevance, Stance, Purchase Intent, and Ideology Cue.
+- How: Use an annotation tool like Prodigy (Placeholder command: annotate).
+
+Input: data/derived/graphed_comments.csv.
+Output: Gold standard labels file (e.g., data/derived/labels_gold.csv).
+
+Phase 4: Model Training (Planned)
+- What: Train ML models to predict labels from Phase 3.
+- How: Run training scripts (Placeholders: train_relevance, train_stance_pi, train_ideology).
+
+Input: data/derived/graphed_comments.csv and data/derived/labels_gold.csv.
+Output: Trained models in results/model_artifacts/.
+
+Phase 5: Inference/Prediction (Planned)
+- What: Use trained models to predict labels for the entire dataset.
+- How: Run a prediction script (Placeholder: predict_all).
+
+Input: data/derived/graphed_comments.csv and trained models.
+Output: Full dataset with predicted labels (e.g., data/derived/labels_predicted.csv).
+
+Phase 6: Causal Analysis (Planned)
+- What: Perform the Triple-Difference (DDD) analysis.
+- How: Run scripts/analysis/did_results.py (Placeholder: analyze).
+
+Input: Dataset with predicted labels (data/derived/labels_predicted.csv), possibly aggregated.
+Output: Results tables/figures in results/tables/ and results/figures/.
+
+Ongoing: Testing & Reproducibility
+- What: Ensure code quality and reproducibility.
+- How: Write/run unit tests (pytest tests/, placeholder test command), maintain environment.yml and project.yml.

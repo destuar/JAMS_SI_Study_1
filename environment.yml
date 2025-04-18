@@ -1,0 +1,49 @@
+# environment.yml  (drop this in repo root)
+name: fb-text
+channels:
+  - conda-forge
+  - nodefaults
+  - pytorch # Add pytorch channel for PyTorch
+  - nvidia # Add nvidia channel if using GPU for PyTorch/Transformers
+dependencies:
+  # Core
+  - python=3.10
+  - pip
+  # Preprocessing & Data Handling
+  - pandas>=1.5,<2.3 # Specify version range for compatibility
+  - python-dateutil>=2.8 # For process_comments_json.py
+  - networkx>=3.0 # For graph_features.py
+  - pyarrow>=10.0 # For parquet support (optional but good practice)
+  - scikit-learn>=1.0 # For data splitting in convert_comments.py
+  - typer>=0.9 # For CLI in convert_comments.py
+  - cleantext>=1.1 # For pipeline_clean.py
+  - emoji>=2.0 # For pipeline_clean.py
+  # NLP & Modeling
+  - spacy>=3.7,<3.8 # Mentioned in data_statement.md
+  - spacy-transformers # If using transformer models within spaCy
+  - pytorch>=2.0 # Common backend for transformers, setfit
+  - torchvision # Often needed with pytorch
+  - torchaudio # Often needed with pytorch
+  - pytorch-cuda=11.8 # Specify CUDA version if using GPU, adjust as needed
+  - transformers>=4.30 # For DeBERTa, SetFit backend
+  - datasets>=2.10 # Hugging Face datasets library
+  - accelerate>=0.20 # For efficient training
+  - peft>=0.5 # For LoRA
+  - setfit>=1.0 # For SetFit models
+  - sentence-transformers>=2.2 # Dependency for SetFit
+  # Analysis
+  - statsmodels>=0.14 # Mentioned in methodology.md
+  - linearmodels>=5.0 # For DID utilities
+  # Testing & Development
+  - pytest>=7.0
+  - ipykernel # For running notebooks if needed
+  - jupyterlab # Optional: For EDA notebooks
+  # - prodigy # Requires separate license and installation via pip after activating env
+  # - small-text # For active learning - Install via pip if needed
+  - pip:
+    # Placeholder for pip installs if needed, e.g.:
+    # - small-text==1.3.*
+    - en_core_web_lg # Example spaCy model, choose appropriate one
+
+
+
