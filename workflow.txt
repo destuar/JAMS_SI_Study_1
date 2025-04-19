@@ -28,32 +28,36 @@ Step 2c: Calculate Graph Features:
 Input: data/derived/combined_comments.csv.
 Output: data/derived/graphed_comments.csv (This is the main dataset used for subsequent steps).
 
-Phase 3: Annotation (Planned)
-- What: Manually label a subset of comments (~1700) for Relevance, Stance, Purchase Intent, and Ideology Cue.
-- How: Use an annotation tool like Prodigy (Placeholder command: annotate).
+Phase 3: Text Preprocessing & Thread-aware Feature Creation
+- Step 3a: Clean the comment text (preprocessing for text analytics).
+- Step 3b: Build a "thread-aware" field called full_text by looking up each reply's parent (and even grandparent) comment and prepending that text to the reply, separated by an arrow, limited to at most two ancestor levels.
 
 Input: data/derived/graphed_comments.csv.
-Output: Gold standard labels file (e.g., data/derived/labels_gold.csv).
+Output: data/derived/cleaned_threaded_comments.csv.
 
-Phase 4: Model Training (Planned)
-- What: Train ML models to predict labels from Phase 3.
-- How: Run training scripts (Placeholders: train_relevance, train_stance_pi, train_ideology).
+Phase 4: Relevance Annotation & Model Training
+- Step 4a: Obtain a stratified sample (by company) of 500 comments, which will be passed to Label Studio for annotation on "relevance" to DEI (0 = comment not related to DEI, 1 = comment related to DEI).
+- Step 4b: Annotate in Label Studio.
+- Step 4c: Fine-tune a lightweight SetFit model to label all comments (34,000) as relevant or not.
+- Step 4d: Use the newly fine-tuned SetFit model to label all 34,000 comments with a new column, "relevance".
 
-Input: data/derived/graphed_comments.csv and data/derived/labels_gold.csv.
-Output: Trained models in results/model_artifacts/.
+Input: data/derived/cleaned_threaded_comments.csv.
+Output: data/derived/comments_with_relevance.csv.
 
-Phase 5: Inference/Prediction (Planned)
-- What: Use trained models to predict labels for the entire dataset.
-- How: Run a prediction script (Placeholder: predict_all).
+Phase 5: Downstream Annotation & Model Training for Stance and Purchase Intention
+- Step 5a: Among relevant comments (relevance = 1), obtain a stratified sample (by company) of 1,000 comments, which will be passed to Label Studio for dual-coded annotation on "stance_dei" (−1 = anti-dei, 0 = neutral, 1 = pro-dei) and "purchase_intention" (−1 = boycott, 0 = neutral, 1 = buy).
+- Step 5b: Annotate in Label Studio.
+- Step 5c: Fine-tune DeBERTa‑LoRA to label all comments (38,000) with dei stance and purchase intention.
 
-Input: data/derived/graphed_comments.csv and trained models.
-Output: Full dataset with predicted labels (e.g., data/derived/labels_predicted.csv).
+Input: data/derived/comments_with_relevance.csv.
+Output: data/derived/comments_with_stance_pi.csv.
 
-Phase 6: Causal Analysis (Planned)
-- What: Perform the Triple-Difference (DDD) analysis.
+Phase 6: Analysis and DiD
+- Step 6a: Use the 15-day baseline to test whether the PI slopes are similar between the rollback companies and companies maintaining DEI.
+- Step 6b: Once that is verified, find the effect of DEI stance on PI in "keep-DEI" companies, "rollback" companies, and the difference-in-differences (DiD) of those two effects.
 - How: Run scripts/analysis/did_results.py (Placeholder: analyze).
 
-Input: Dataset with predicted labels (data/derived/labels_predicted.csv), possibly aggregated.
+Input: data/derived/comments_with_stance_pi.csv.
 Output: Results tables/figures in results/tables/ and results/figures/.
 
 Ongoing: Testing & Reproducibility

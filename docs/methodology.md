@@ -9,8 +9,7 @@
 | ID | Hypothesis | Data source |
 |----|------------|-------------|
 | **H1** | *Rollback* (vs *Keep*) DEI → ↑ boycott‑rate & ↓ buy‑rate | Comment‑level Purchase‑Intent (PI) labels |
-| **H2** | Effect magnitude larger in comments with **liberal lexical cues** than **conservative cues** | Ideology‑cue classifier |
-| **H3** | High ex‑ante **Perceived Brand Authenticity (PBA)** attenuates boycott effect | External survey scale |
+| **H2** | High ex‑ante **Perceived Brand Authenticity (PBA)** attenuates boycott effect | External survey scale |
 
 *Mediated paths via Self‑Brand Connection are reserved for Study 2.*
 
@@ -18,18 +17,22 @@
 
 ## B. End-to-end Python pipeline (overview)
 
-| Step | Tool / script | Output |
-|------|---------------|--------|
-| 1  Collection | Manual DOM scraper (JS) → `scripts/extract/comment_extractor.js` | Raw JSON (in `data/raw/`) |
-| 2a Base Processing | `scripts/preprocess/process_comments_json.py` | `data/derived/combined_comments.csv` |
-| 2b Graph Features | `scripts/preprocess/graph_features.py` (**NetworkX** used) | `data/derived/graphed_comments.csv` |
-| 3  Gold annotation (Planned) | *Prodigy* dual coders ▢ **TBD** comments | `gold_v1.csv` (Planned) |
-| 4  Ideology cue coding (Planned) | Weak-supervision lexicon + ▢ **TBD** hand-labels; fine-tuned **SetFit** | `ideology_preds.parquet` (Planned) |
-| 5  Model training (Planned) | **DeBERTa-v3-Large** + PEFT-LoRA; weighted focal loss | `stance_pi_adapter.bin` (Planned) |
-| 6  Full inference (Planned) | Batch predict → weekly aggregation | `agg_weekly.csv` (Planned) |
-| 7  Causal analysis (Planned) | **statsmodels / linearmodels** `PanelOLS` DID script (`did_results.py`) | Tables & event-study plots (Planned) |
+| Step | Phase | Tool / script | Output |
+|------|-------|---------------|--------|
+| 1    | 1     | Manual DOM scraper (JS) → `scripts/extract/comment_extractor.js` | Raw JSON (in `data/raw/`) |
+| 2a   | 2a    | `scripts/preprocess/process_comments_json.py` | Individual CSVs (`data/raw/<...>/comments-csv/`) |
+| 2b   | 2b    | `scripts/preprocess/combine_company_csv.py` (Cmd: `combine_raw_csvs`) | `data/derived/combined_comments.csv` |
+| 2c   | 2c    | `scripts/preprocess/graph_features.py` (Cmd: `preprocess_graph`) | `data/derived/graphed_comments.csv` |
+| 3    | 3a, 3b| (Text cleaning & thread field creation scripts TBD) | `data/derived/cleaned_threaded_comments.csv` |
+| 4    | 4a, 4b| **Label Studio** annotation (Sample: 500 comments) | Relevance labels |
+| 5    | 5a, 5b| **Label Studio** annotation (Sample: 1000 relevant comments) | Stance & PI labels |
+| 6    | 4c    | **SetFit** fine-tuning (`train_setfit.py`) | Relevance model artifact |
+| 7    | 4d    | **SetFit** prediction | `data/derived/comments_with_relevance.csv` |
+| 8    | 5c    | **DeBERTa-LoRA** fine-tuning (`train_deberta_lora.py`) | `stance_pi_adapter.bin` (Planned) |
+| 9    | 5c    | **DeBERTa-LoRA** prediction | `data/derived/comments_with_stance_pi.csv` |
+| 10   | 6a, 6b| **statsmodels / linearmodels** `did_results.py` (Cmd: `analyze`) | Tables & event-study plots |
 
-(Planned) Commands orchestrated via `project.yml`; environment captured in `environment.yml` (conda). *(Currently empty placeholders)*
+Commands orchestrated via `project.yml`; environment captured in `environment.yml` (conda).
 
 ---
 
@@ -40,18 +43,17 @@
 | Relevance | ▢ TBD | ▢ TBD |
 | Stance | ▢ TBD | ▢ TBD |
 | Purchase Intention | ▢ TBD | ▢ TBD |
-| Ideology Cue | ▢ TBD | ▢ TBD |
 
 ---
 
-## D. Difference-in-Difference-in-Differences (DDD) specification
+## D. Difference-in-Difference (DiD) specification
 
 Python implementation uses **statsmodels 0.14** with clustered standard errors.
 
 ```python
 import statsmodels.formula.api as smf
 model = smf.wls(
-    formula="rate ~ Rollback * Post * LiberalCue + PBA + depth + is_reply + C(brand) + C(week)",
+    formula="rate ~ Rollback * Post + PBA + depth + is_reply + C(brand) + C(week)",
     data=panel_df,
     weights=panel_df["n_comments"],
 ).fit(cov_type="cluster", cov_kwds={"groups": panel_df["brand_week"]})
@@ -76,19 +78,27 @@ model = smf.wls(
 
 | File | Description |
 |------|-------------|
-| `data/derived/combined_comments.csv` | Parsed comments from raw JSON |
-| `data/derived/graphed_comments.csv` | Comments enriched with graph features |
-| `scripts/extract/comment_extractor.js` | Data collection script |
-| `scripts/preprocess/process_comments_json.py` | JSON parsing script |
-| `scripts/preprocess/graph_features.py` | Graph feature calculation script |
+| `data/derived/combined_comments.csv` | Combined comments from Step 2b |
+| `data/derived/graphed_comments.csv` | Comments enriched with graph features (Step 2c) |
+| `data/derived/cleaned_threaded_comments.csv` | (Planned) Output of text cleaning/threading (Phase 3) |
+| `data/derived/comments_with_relevance.csv` | (Planned) Output of relevance prediction (Phase 4) |
+| `data/derived/comments_with_stance_pi.csv` | (Planned) Output of stance/PI prediction (Phase 5) |
+| `scripts/extract/comment_extractor.js` | Data collection script (Phase 1) |
+| `scripts/preprocess/process_comments_json.py` | JSON parsing script (Step 2a) |
+| `scripts/preprocess/combine_company_csv.py` | CSV combining script (Step 2b) |
+| `scripts/preprocess/graph_features.py` | Graph feature calculation script (Step 2c) |
+| `scripts/model/train_setfit.py` | (Planned) Relevance model training script (Phase 4) |
+| `scripts/model/train_deberta_lora.py` | (Planned) Stance/PI model training script (Phase 5) |
+| `scripts/analysis/did_results.py` | (Planned) DiD regression script (Phase 6) |
 | `docs/ethics.md` | Full compliance checklist |
 | `docs/data_statement.md` | Dataset overview & details |
 | `docs/methodology.md` | This document |
-| `project.yml` | (Planned) spaCy project orchestrator *(currently empty)* |
-| `environment.yml` | (Planned) Conda environment *(currently empty)* |
-| `did_results.py` | (Placeholder Name) Planned DDD regression script (Python) |
-| `gold_v1.csv` | (Planned) Annotated sample (▢ TBD rows, de-identified) |
-| `stance_pi_adapter.bin` | (Planned) LoRA adapter (≈ 100 MB) |
+| `project.yml` | (Planned) Workflow orchestrator |
+| `environment.yml` | (Planned) Conda environment |
+| `results/model_artifacts/setfit_model/` | (Planned) Saved SetFit model |
+| `results/model_artifacts/stance_pi_adapter.bin` | (Planned) Saved DeBERTa LoRA adapter |
+| `results/tables/` | (Planned) Output tables from analysis |
+| `results/figures/` | (Planned) Output figures from analysis |
 
 ---
 

@@ -1,4 +1,4 @@
-# Facebook Comment Text-Analytics Project – README ![status](https://img.shields.io/badge/status-Phase2_InProgress-yellow) ![target](https://img.shields.io/badge/target-JAMS-blue)
+# Facebook Comment Text-Analytics Project – README ![status](https://img.shields.io/badge/status-Phase3_InProgress-yellow) ![target](https://img.shields.io/badge/target-JAMS-blue)
 
 ## Project Goal
 This repository accompanies the study **"DEI Rollbacks, Brand Authenticity, and Consumer Reaction on Social Media"** (target journal: _Journal of the Academy of Marketing Science_).
@@ -14,7 +14,7 @@ The planned pipeline will then **causally estimate shifts in boycott‑ and buy�
 
 ## Compliance & Ethics Summary
 See `/docs/ethics.md` for **CGU IRB Exempt status (Protocol TBD)**, Meta/Facebook TOS compliance, and privacy safeguards.
-_Key points_: human‑initiated collection (Phase 1 complete), public comments only, no PII stored post-processing (planned).
+_Key points_: human‑initiated collection (Phase 1 complete), public comments only, no PII stored post-processing (planned Phase 2a).
 
 ---
 
@@ -25,19 +25,19 @@ root/
 │  LICENSE
 │  CITATION.cff
 │  environment.yml          ← Conda env lock‑file (Python 3.10, includes Label Studio)
-│  project.yml              ← spaCy workflow config (includes annotation step)
+│  project.yml              ← Workflow config (defines commands like combine_raw_csvs)
 │
 ├─data/
 │   ├─raw/                  ← Raw JSON data (local only, **not** committed)
+│   │  └─<Company>/<Phase>/
+│   │     YYYYMMDD_HHMM.json
+│   │     comments-csv/       # Output of process_comments_json.py (Step 2a)
 │   └─derived/              ← Processed data outputs
-│        combined_comments.csv   # Output of combine_company_csv.py (or similar)
-│        graphed_comments.csv    # Output of graph_features.py
-│        labels_gold.csv         # (Planned - Phase 3 Output) Manually reconciled labels from annotation
-│      # labels_predicted.csv    # (Planned - Phase 3 Output) Model predictions
-│   └─corpus/                 ← spaCy DocBin files for train/dev/test splits
-│        train.spacy           # Output of convert_to_docbin workflow step
-│        dev.spacy             # Output of convert_to_docbin workflow step
-│        test.spacy            # Output of convert_to_docbin workflow step
+│        combined_comments.csv     # Output of combine_company_csv.py (Step 2b)
+│        graphed_comments.csv      # Output of graph_features.py (Step 2c)
+│        cleaned_threaded_comments.csv # (Planned - Phase 3 Output)
+│        comments_with_relevance.csv # (Planned - Phase 4 Output)
+│        comments_with_stance_pi.csv # (Planned - Phase 5 Output)
 │
 ├─docs/                     ← Documentation (Data Statement, Ethics, Methodology)
 │   ethics.md
@@ -49,9 +49,11 @@ root/
 │   ├─extract/              ← Data collection script
 │   │  comment_extractor.js # (Used in Phase 1)
 │   ├─preprocess/           ← Data cleaning & feature scripts
-│   │  combine_company_csv.py # (Placeholder) Combines raw data
-│   │  graph_features.py     # Adds thread graph features
-│   │  clean_comments.py     # Cleans, splits, converts data to spaCy DocBin format
+│   │  process_comments_json.py # (Step 2a) Parses raw JSON
+│   │  combine_company_csv.py # (Step 2b) Combines raw CSVs, adds flags
+│   │  graph_features.py     # (Step 2c) Adds thread graph features
+│   │  # text_cleaner.py       # (Placeholder for Phase 3a cleaning script)
+│   │  # thread_builder.py     # (Placeholder for Phase 3b thread field script)
 │   ├─annotate/             ← Annotation setup & guidelines
 │   │  label_studio_config.xml # Label Studio UI configuration
 │   │  annotation_guidelines.md # (Planned) Guidelines for coders
@@ -87,33 +89,38 @@ root/
 conda env create -f environment.yml
 conda activate fb-text
 
-# 2 – Run Preprocessing Steps (via spaCy project)
-# (Assumes raw data is placed in data/raw/<Company>/)
-spacy project run preprocess # Runs combine -> graph -> convert_to_docbin
+# 2 – Run Preprocessing Steps (via project.yml commands)
+# (Assumes raw data is placed in data/raw/<Company>/<Phase>/)
+# python scripts/preprocess/process_comments_json.py ... # Step 2a (Run per company/phase)
+# spacy project run combine_raw_csvs                    # Step 2b (Defined in project.yml)
+# spacy project run preprocess_graph                    # Step 2c (Defined in project.yml)
 
-# 3 - Run Annotation (Phase 3 - Manual Steps Required)
+# 3 - Run Text Preprocessing & Threading (Planned - Phase 3)
+# (Commands TBD, assumes scripts like text_cleaner.py, thread_builder.py exist)
+# python scripts/preprocess/text_cleaner.py ...
+# python scripts/preprocess/thread_builder.py ...
+
+# 4 - Run Annotation Prep & Annotation (Planned - Phase 4 & 5 - Manual Steps Required)
+# (Script for stratified sampling - Step 4a & 5a - TBD)
 # Start Label Studio (e.g., `label-studio start my_project`)
 # Set up project(s) using `scripts/annotate/label_studio_config.xml`.
-# Import data (e.g., from data/corpus/train.spacy) via UI or CLI.
-# Set up user accounts for dual annotators.
-# --> Perform annotation in the Label Studio UI <--
-# Export annotations for each coder.
-# Reconcile disagreements (manual/scripted) to produce labels_gold.csv.
+# Import data (e.g., sampled comment IDs/text) via UI or CLI.
+# Set up user accounts for annotators.
+# --> Perform annotation in the Label Studio UI (Step 4b & 5b) <--
+# Export annotations for each coder/task.
 
-# 4 – Run the entire spaCy project pipeline (Preprocessing -> Training -> Analysis)
-# NOTE: Training/Analysis steps are placeholders. Annotation requires manual steps between.
-# spacy project run all 
+# 5 – Train models & Predict (Planned - Phase 4c/d & 5c)
+# python scripts/model/train_setfit.py ...        # Step 4c
+# (Script/command for SetFit prediction - Step 4d - TBD)
+# python scripts/model/train_deberta_lora.py ...  # Step 5c
+# (Script/command for DeBERTa prediction - Needs Phase 5 output - TBD)
 
-# 5 – Verify installation & run unit tests
-# python -m spacy validate # Useful for checking spaCy installation
+# 6 – Run unit tests
 pytest tests/
 
-# 6 – (Optional) Train models manually (Planned - Phase 3)
-# python scripts/model/train_setfit.py ...
-# python scripts/model/train_deberta_lora.py ...
-
-# 7 – (Optional) Run causal Triple‑Difference analysis (Planned - Phase 4)
-# python scripts/analysis/did_results.py ...
+# 7 – (Optional) Run causal Difference-in-Differences analysis (Planned - Phase 6)
+# spacy project run analyze # Step 6b (Defined in project.yml)
+# python scripts/analysis/did_results.py ... # Or run script directly
 ```
 
 ---
@@ -123,13 +130,12 @@ pytest tests/
 ### Phase 1 – Manual Extraction (Completed)
 1. Scroll a public Facebook post until **all comments/replies are visible**.
 2. Open **DevTools → Console** and paste `scripts/extract/comment_extractor.js` (captures each `div[role="article"]` outerHTML).
-3. Save the JSON as `YYYYMMDD_HHMM.json` in `/data/raw/<Company>/`.
+3. Save the JSON as `YYYYMMDD_HHMM.json` in `/data/raw/<Company>/<Phase>/`.
 
 ### Phase 2 – JSON Processing (In Progress)
-1.  `scripts/preprocess/process_comments_json.py` parses raw JSON files, extracts key fields (text, date, reactions, etc.), and saves to `data/derived/combined_comments.csv`.
-2.  `scripts/preprocess/graph_features.py` reads `combined_comments.csv`, calculates conversational thread features (root ID, depth, sibling count, time since root), and saves the enriched data to `data/derived/graphed_comments.csv`.
-3.  `scripts/preprocess/pipeline_clean.py` defines a spaCy pipeline component for cleaning comment text (URL/mention replacement, emoji conversion, etc.).
-4.  `scripts/preprocess/convert_comments.py` applies the cleaning component, stratifies `graphed_comments.csv` by company into train/dev/test splits, and saves the results as spaCy `DocBin` files (`.spacy`) in `data/derived/`.
+1.  **Step 2a:** `scripts/preprocess/process_comments_json.py` parses raw JSON files, extracts key fields, cleans them, parses timestamps, adds metadata (stripping PII), and saves individual CSV files to `data/raw/<Company>/<Phase>/comments-csv/`.
+2.  **Step 2b:** `scripts/preprocess/combine_company_csv.py` (run via `project.yml` command `combine_raw_csvs`) combines the individual CSVs, adds `company_name`, assigns `has_DEI`/`before_DEI` flags, deduplicates, and saves to `data/derived/combined_comments.csv`.
+3.  **Step 2c:** `scripts/preprocess/graph_features.py` (run via `project.yml` command `preprocess_graph`) reads `combined_comments.csv`, calculates conversational thread features (root ID, depth, sibling count, time since root), and saves the enriched data to `data/derived/graphed_comments.csv`.
 
 #### Processed Output Columns (`graphed_comments.csv`)
 
@@ -147,46 +153,42 @@ pytest tests/
 | `depth`           | Edges from root (root=0)                  | graph_features |
 | `sibling_count`   | Comments with the same parent             | graph_features |
 | `time_since_root` | Timedelta from root comment               | graph_features |
+| `has_DEI`         | Treatment flag based on company           | combine_company_csv |
+| `before_DEI`      | Treatment flag based on comment date      | combine_company_csv |
 
 ---
 
-## Annotation & Active Learning (Planned - Phase 3)
+## Annotation (Planned - Phase 4 & 5)
 
 *   **Tool:** **Label Studio** will be used for annotation.
     *   Interface defined in `scripts/annotate/label_studio_config.xml`.
-    *   Supports multi-label classification required for this project.
-*   **Planned label schema:**
-    *   `relevance` ∈ {0, 1}
-    *   `stance` ∈ {–1 (anti), 0, +1 (pro)}
-    *   `purchase` ∈ {–1 (boycott), 0, +1 (buy)}
-    *   `ideology_cue` ∈ {liberal, conservative, neutral/unknown} (Optional)
-*   **Planned Gold set:** ≈1,300 comments, dual‑coded (Target: **Cohen's κ ≥ 0.75**).
-    *   Data to be annotated will primarily come from `data/corpus/train.spacy` (and potentially `dev.spacy`).
-    *   **NOTE:** Since the train/dev/test split in Phase 2 is stratified only by `company_name`, care must be taken during annotation sampling to ensure adequate representation of potentially minority classes (e.g., `before_DEI = 1`) within the ~1,300 comments selected for the gold set.
-    *   Dual coding will be managed by having annotators work independently in Label Studio (e.g., using separate user accounts or projects).
-    *   Disagreements will be exported (e.g., as CSV/JSON) and reconciled manually or via a separate script to produce the final `labels_gold.csv`.
-*   **Active learning:** (Removed from immediate plan) If needed later, Label Studio supports ML backends, but setup is simplified for now.
+*   **Phase 4 (Relevance):**
+    *   **Step 4a:** Sample 500 comments (stratified by company) from `cleaned_threaded_comments.csv`.
+    *   **Step 4b:** Annotate for `relevance` (0=not DEI-related, 1=DEI-related).
+*   **Phase 5 (Stance & Purchase Intention):**
+    *   **Step 5a:** Sample 1,000 comments (stratified by company) from *relevant* comments (`relevance=1`).
+    *   **Step 5b:** Annotate for `stance_dei` (−1=anti, 0=neutral, 1=pro) and `purchase_intention` (−1=boycott, 0=neutral, 1=buy).
+*   **Process:** Dual coding planned (Target: **Cohen's κ ≥ 0.75**). Disagreements will be reconciled.
 
 ---
 
-## Modeling Pipeline (Planned - Phase 3)
+## Modeling Pipeline (Planned - Phase 4 & 5)
 
-| Task                 | Planned Model (link)                                                                         | Planned Notes                  |
-|----------------------|----------------------------------------------------------------------------------------------|----------------------------------|
-| **Relevance**        | [`SetFit/all‑MiniLM‑L6‑v2`](https://huggingface.co/setfit/all-MiniLM-L6-v2)                  | Few‑shot, CPU‑friendly           |
-| **Stance & Purchase**| [`microsoft/deberta-v3-large`](https://huggingface.co/microsoft/deberta-v3-large) + **LoRA** | PEFT adapter, focal loss         |
-| **Ideology Cue**     | SetFit or similar weak-supervision + fine-tuning approach TBD                                | TBD                              |
+| Task                  | Phase | Planned Model (link)                                                                         | Planned Notes                  | Script (Planned)                 | Output (Planned)                      |
+|-----------------------|-------|----------------------------------------------------------------------------------------------|----------------------------------|----------------------------------|---------------------------------------|
+| **Relevance**         | 4c, 4d| [`SetFit/all‑MiniLM‑L6‑v2`](https://huggingface.co/setfit/all-MiniLM-L6-v2)                  | Few‑shot, CPU‑friendly           | `scripts/model/train_setfit.py`    | `data/derived/comments_with_relevance.csv` |
+| **Stance & Purchase** | 5c    | [`microsoft/deberta-v3-large`](https://huggingface.co/microsoft/deberta-v3-large) + **LoRA** | PEFT adapter, focal loss         | `scripts/model/train_deberta_lora.py` | `data/derived/comments_with_stance_pi.csv`  |
 
 ---
 
-## Causal Analysis (Planned - Phase 4)
+## Causal Analysis (Planned - Phase 6)
 
-Planned Triple‑Difference (DDD) on weekly rates using Python (`statsmodels`/`linearmodels`):
+Planned Difference-in-Differences (DiD) on weekly rates using Python (`statsmodels`/`linearmodels`):
 ```text
 # Planned Specification (example):
-rate ~ Rollback * Post * LiberalCue + PBA + controls + C(brand) + C(week)
+rate ~ Rollback * Post + PBA + controls + C(brand) + C(week)
 ```
-Implementation planned in `/scripts/analysis/did_results.py` (outputs to `/results/`).
+Implementation planned in `/scripts/analysis/did_results.py` (outputs to `/results/`), potentially run via `project.yml` command `analyze`.
 
 ---
 

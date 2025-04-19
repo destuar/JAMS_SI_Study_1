@@ -1,62 +1,128 @@
-import pandas as pd, spacy, pathlib, typer
-import re, emoji # Add re and emoji imports
-from spacy.tokens import DocBin, Doc
+import pandas as pd
+from pathlib import Path
+import typer
+import re
+import emoji
+import string
+import unicodedata
 
-# Use blank nlp mainly for vocab and make_doc
-nlp = spacy.blank("en") 
-# REMOVED: nlp.add_pipe("comment_cleaner") 
-
-# Register custom Doc extensions
-Doc.set_extension("id", default=None)
-Doc.set_extension("company", default=None)
-Doc.set_extension("before_DEI", default=None)
-
-# --- Text Cleaning Logic (inlined from pipeline_clean.py) ---
+# --- Text Cleaning Logic ---
 def _clean_text(txt: str) -> str:
     """Applies cleaning steps to comment text."""
-    # Ensure input is a string
     if not isinstance(txt, str):
-        txt = str(txt) # Attempt to convert non-strings
+        txt = str(txt)
+
+    # 1. Unicode normalization
+    try:
+        txt = unicodedata.normalize('NFKC', txt)
+    except TypeError:
+        # Handle potential errors if input is not a valid string for normalization
+        return "" # Or handle as appropriate, e.g., log error
         
+    # 2. Lowercase
     txt = txt.lower()
-    txt = re.sub(r"https?://\S+", "<url>", txt) 
+
+    # 3. Replace URLs/Mentions
+    txt = re.sub(r"https?://\S+", "<url>", txt)
     txt = re.sub(r"@\w+", "<mention>", txt)
+
+    # 4. Demojize (handles emojis)
     txt = emoji.demojize(txt, delimiters=(" :", ": "))
-    txt = re.sub(r'\s+', ' ', txt)
+
+    # 5. Character Filtering (Keep letters, numbers, standard punc, whitespace, colons, < >)
+    # Define allowed characters explicitly
+    allowed_chars = string.ascii_lowercase + string.digits + string.punctuation + string.whitespace + ":<>"
+    # Remove characters not in the allowed set
+    txt = ''.join(c for c in txt if c in allowed_chars)
+    
+    # 6. Normalize whitespace (after potential character removals)
+    txt = re.sub(r"\s+", " ", txt)
     return txt.strip()
-# --- End Text Cleaning Logic ---
+
+# --- Ancestor-based full_text Construction ---
+def build_full_text(row, parent_map: dict, text_map: dict) -> str:
+    """Prepend up to two cleaned-ancestor texts to the current comment."""
+    cleaned = row["cleaned_text"]
+    pid1 = row.get("parent_id")
+    if pd.isna(pid1) or pid1 == "" or pid1 not in text_map:
+        return cleaned
+    parent_text = text_map[pid1]
+    pid2 = parent_map.get(pid1)
+    if pd.isna(pid2) or pid2 == "" or pid2 not in text_map:
+        return f"{parent_text} → {cleaned}"
+    grandparent_text = text_map[pid2]
+    return f"{grandparent_text} → {parent_text} → {cleaned}"
+
+# --- Readability Filtering Logic (SIMPLIFIED + Refined Symbol Check v3) ---
+def is_readable_comment(text: str) -> bool:
+    """Checks if a cleaned comment has basic validity and meaningful content beyond placeholders/emojis."""
+    # 1. Basic validity checks
+    if pd.isna(text): return False
+    text = str(text).strip()
+    if not text: return False
+    low = text.lower()
+    if low in ("none", "nan"): return False
+    if len(low) <= 2: return False
+
+    # 2. Check for placeholder-only comments
+    cleaned_no_placeholders = re.sub(r"<url>|<mention>", "", text).strip()
+    if not cleaned_no_placeholders:
+        return False
+    if low == "<url>" or low == "<mention>": 
+        return False
+
+    # 3. Check if content exists beyond placeholders AND demojized emojis
+    # Start with text after removing placeholders
+    temp_text = cleaned_no_placeholders
+    # Remove demojized emoji patterns like :word:
+    text_no_emojis = re.sub(r":([a-zA-Z0-9_]+):", "", temp_text).strip()
+
+    # If nothing is left after removing placeholders and emoji patterns, filter
+    if not text_no_emojis:
+         # print(f"Filtering: Only placeholders/emojis found in '{text}'")
+         return False
+
+    # Optional: Check again for only punctuation/whitespace remaining *after* emoji removal
+    # This catches cases like ":)" or "!!! " which might have been left
+    # Use re.escape to handle punctuation safely in the character set
+    if re.fullmatch(r"[" + re.escape(string.punctuation + string.whitespace) + r"]*", text_no_emojis):
+         # print(f"Filtering: Only punctuation/whitespace left after emoji removal in '{text}' -> '{text_no_emojis}'")
+          return False
+
+    # 4. Language check REMOVED - too unreliable for this context.
+
+    # Passed all filters
+    return True
 
 def main(src: str, out_dir: str):
+    """Phase 3: Text Preprocessing, Thread Creation & Filtering"""
+    # Load data
     df = pd.read_csv(src)
-    db_train = DocBin(store_user_data=True)
-    db_dev   = DocBin(store_user_data=True)
-    db_test  = DocBin(store_user_data=True)
-    # stratify by brand to avoid leakage
-    from sklearn.model_selection import StratifiedShuffleSplit
-    splitter = StratifiedShuffleSplit(n_splits=1, test_size=0.3, random_state=42)
-    y = df["company_name"]
-    train_idx, temp_idx = next(splitter.split(df, y))
-    df_train = df.iloc[train_idx]; df_temp = df.iloc[temp_idx]
-    # split temp 50‑50 into dev+test
-    dev_idx, test_idx = next(
-        StratifiedShuffleSplit(n_splits=1, test_size=0.5, random_state=42)
-        .split(df_temp, df_temp["company_name"])
-    )
-    mapping = [("train", df_train, db_train),
-               ("dev",   df_temp.iloc[dev_idx],  db_dev),
-               ("test",  df_temp.iloc[test_idx], db_test)]
-    for split, frame, db in mapping:
-        for row in frame.itertuples():
-            # 1. Clean text explicitly
-            cleaned_text = _clean_text(row.comment_text or "")
-            # 2. Create Doc from cleaned text
-            doc = nlp.make_doc(cleaned_text)
-            # 3. Assign attributes to this doc
-            doc._.id           = row.id
-            doc._.company      = row.company_name
-            doc._.before_DEI   = row.before_DEI
-            # 4. Add the final doc to DocBin
-            db.add(doc)
-        db.to_disk(pathlib.Path(out_dir)/f"{split}.spacy")
+
+    # Step 3a: Clean the comment_text field
+    df["cleaned_text"] = df["comment_text"].apply(_clean_text)
+
+    # Build lookup maps
+    parent_map = df.set_index("id")["parent_id"].to_dict() # Restored
+    text_map = df.set_index("id")["cleaned_text"].to_dict() # Restored
+
+    # Step 3b: Build full_text with ancestor context
+    df["full_text"] = df.apply(lambda row: build_full_text(row, parent_map, text_map), axis=1) # Restored
+    
+    # Step 3c: Filter out non-readable comments using the REVISED function
+    initial_rows = len(df)
+    df["is_readable"] = df["cleaned_text"].apply(is_readable_comment) 
+    df_filtered = df[df["is_readable"]].copy()
+    filtered_rows = len(df_filtered)
+    print(f"Filtered out {initial_rows - filtered_rows} non-readable comments.")
+    
+    # Drop the helper column before saving
+    df_filtered.drop(columns=["is_readable"], inplace=True)
+
+    # Write filtered cleaned threaded comments
+    out_path = Path(out_dir) / "cleaned_threaded_comments.csv"
+    df_filtered.to_csv(out_path, index=False)
+
+
 if __name__ == "__main__":
     typer.run(main)
