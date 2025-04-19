@@ -1,13 +1,16 @@
 import json
 import csv
 import sys
+import os # Import the os module
 
 def convert_json_to_csv(json_file_path, csv_file_path):
     """Converts the Label Studio annotation JSON export to a CSV file.
+    If the target csv_file_path exists, it appends a number (2, 3, ...)
+    to the filename until a non-existent path is found.
 
     Args:
         json_file_path (str): Path to the input JSON file.
-        csv_file_path (str): Path to the output CSV file.
+        csv_file_path (str): Path to the desired output CSV file.
     """
     try:
         with open(json_file_path, 'r', encoding='utf-8') as f:
@@ -47,6 +50,19 @@ def convert_json_to_csv(json_file_path, csv_file_path):
         'reaction_count', 'before_DEI', 'has_DEI', 'root_id', 'depth',
         'sibling_count', 'time_since_root', 'cleaned_text', 'full_text'
     ]
+
+    # --- Start: Add logic to check for existing file and increment ---
+    original_csv_path = csv_file_path
+    base, ext = os.path.splitext(csv_file_path)
+    counter = 1
+    while os.path.exists(csv_file_path):
+        counter += 1
+        csv_file_path = f"{base}{counter}{ext}"
+
+    if csv_file_path != original_csv_path:
+        print(f"Warning: Output file '{original_csv_path}' already exists.")
+        print(f"Writing to '{csv_file_path}' instead.")
+    # --- End: Add logic to check for existing file and increment ---
 
     try:
         with open(csv_file_path, 'w', newline='', encoding='utf-8') as csvfile:
@@ -101,14 +117,32 @@ def convert_json_to_csv(json_file_path, csv_file_path):
         sys.exit(1)
 
 if __name__ == "__main__":
+    # Keep the argument parsing logic, but the function now handles the incrementing
     if len(sys.argv) != 3:
         print("Usage: python json_to_csv.py <input_json_file> <output_csv_file>")
+        print("If <output_csv_file> exists, a number will be appended (e.g., output2.csv).")
         # Provide default paths if no arguments are given, for convenience
-        print("Running with default paths: data/annotate/project-1-at-2025-04-19-06-02-a8a8f5bc.json -> data/annotate/project-1-annotations.csv")
-        input_json = "data/annotate/project-1-at-2025-04-19-06-02-a8a8f5bc.json"
-        output_csv = "data/annotate/project-1-annotations.csv"
+        # Default input is still expected in data/annotate/
+        default_input_json = "data/annotate/project-1-at-2025-04-19-06-02-a8a8f5bc.json"
+        # Default output now goes to the review subdirectory
+        default_output_csv = "data/annotate/review/annotated_relevance.csv"
+        print(f"Running with default paths: {default_input_json} -> {default_output_csv} (or {os.path.splitext(default_output_csv)[0]}N.csv if exists)")
+        input_json = default_input_json
+        output_csv = default_output_csv
     else:
         input_json = sys.argv[1]
         output_csv = sys.argv[2]
+        # Optional: Add a check here if the user provided output path doesn't contain 'review' or 'complete'?
+        # For now, we assume the user knows where they want to save if providing args.
+
+    # Create the review directory if it doesn't exist, just in case
+    output_dir = os.path.dirname(output_csv)
+    if output_dir and not os.path.exists(output_dir):
+        try:
+            os.makedirs(output_dir)
+            print(f"Created directory: {output_dir}")
+        except OSError as e:
+            print(f"Error creating directory {output_dir}: {e}")
+            sys.exit(1)
 
     convert_json_to_csv(input_json, output_csv) 

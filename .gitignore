@@ -137,4 +137,7 @@
 #*~
 
 # Specific derived files to ignore (due to raw text content)
-#data/derived/all_companies_comments_with_dei.csv 
+#data/derived/all_companies_comments_with_dei.csv
+
+# Label Studio instance data (database, media, etc.)
+data/annotate/ls_data/ 

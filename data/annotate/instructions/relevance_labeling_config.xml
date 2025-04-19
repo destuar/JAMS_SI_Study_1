@@ -1,0 +1,15 @@
+<View>
+  <Style>
+    .ant-card {
+      margin-bottom: 10px;
+    }
+  </Style>
+  <Header value="Comment Relevance Annotation"/>
+  <Text name="full_text" value="$full_text"/>
+
+  <Header value="Is the comment relevant to DEI (Diversity, Equity, Inclusion)?"/>
+  <Choices name="relevance" toName="full_text" required="true" choice="single">
+    <Choice value="1 (Relevant)"/>
+    <Choice value="0 (Not Relevant)"/>
+  </Choices>
+</View> 
