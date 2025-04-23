@@ -18,7 +18,7 @@ dependencies:
   # - linearmodels # Planned for Phase 4
 
   # Annotation (Phase 3)
-  - label-studio # Core UI for annotation
+  # - label-studio # Core UI for annotation
   # - label-studio-ml # Removed: Not needed if not using ML backend
   # - small-text # Removed: Not needed if not using active learning
 
@@ -29,6 +29,7 @@ dependencies:
   - pip:
       - cleantext # Not easily available on default/conda-forge channels
       # Add other pip-only dependencies here
+      - label-studio # Core UI for annotation
       - setfit
       - datasets
       - sentence-transformers

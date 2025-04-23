@@ -91,4 +91,83 @@ A Python script is provided to convert the exported JSON file into a more tabula
     python scripts/annotate/json_to_csv.py 
     ```
 
-    This will create a CSV file (e.g., `data/annotate/review/annotated_relevance.csv`) containing the original data fields plus the annotation results (`relevance_choice`). 
+    This will create a CSV file (e.g., `data/annotate/review/annotated_relevance.csv`) containing the original data fields plus the annotation results (`relevance_choice`).
+
+---
+---
+
+# Facebook DEI Comment - Stance & Purchase Intention Annotation Task
+
+This document describes how to set up and perform the **second** annotation task using Label Studio: labeling comments for **DEI Stance** and **Purchase Intention**.
+
+The goal of this task is to label comments from `sentiment_sample.csv` based on the guidelines below. This sample contains comments previously labeled for relevance (0 or 1).
+
+## 1. Setup Label Studio (if not already running)
+
+Follow the same Docker setup steps as outlined in the Relevance Annotation Task section above to start Label Studio. Ensure the `data/annotate/ls_data` volume is mounted.
+
+## 2. Create and Configure the Project
+
+1.  **Create Project:**
+    *   Click `Create Project`.
+    *   Enter a project name (e.g., "DEI Stance & PI").
+    *   Optionally, add a description.
+2.  **Import Data:**
+    *   Go to the `Data Import` tab.
+    *   Click `Upload Files`.
+    *   Select the input file for this task: `data/annotate/sample/sentiment_sample.csv` (relative to the project root).
+    *   Label Studio should automatically detect it as a CSV file. Ensure it correctly identifies the columns, especially `full_text` and `relevance`.
+    *   Click `Import`.
+3.  **Setup Labeling Interface:**
+    *   Go to `Settings` -> `Labeling Interface`.
+    *   Click `Browse Templates` and select the `Custom template` option.
+    *   Click on the `Code` tab.
+    *   Delete the default content in the code editor.
+    *   Open the file `data/annotate/instructions/sentiment_labeling_config.xml` (relative to the project root) in a text editor.
+    *   Copy the entire content of `sentiment_labeling_config.xml`.
+    *   Paste the copied XML content into the Label Studio `Code` editor.
+    *   Click `Save`.
+
+## 3. Perform Annotation
+
+1.  **Start Labeling:** Go back to the project's main page and click `Start Labeling` or select tasks from the `Data Manager`.
+2.  **Guidelines:** For each comment displayed (`full_text`):
+    *   **Note the Pre-computed Relevance:** The interface will show whether the comment was labeled `relevance = 0` (Not DEI-Related) or `relevance = 1` (DEI-Related).
+    *   **If Relevance = 1:**
+        *   **Annotate Stance:** Choose the option that best describes the comment's stance towards DEI:
+            *   `-1 (Anti-DEI)`: Opposes or criticizes DEI concepts, policies, or outcomes.
+            *   `0 (Neutral/Unclear towards DEI)`: Does not express a clear positive or negative stance on DEI, or the stance is ambiguous.
+            *   `1 (Pro-DEI)`: Supports or praises DEI concepts, policies, or outcomes.
+        *   **Annotate Purchase Intention:** Choose the option describing purchase intention towards the brand mentioned:
+            *   `-1 (Boycott/Negative)`: Expresses intent to stop buying, return products, or negative sentiment impacting purchase likelihood.
+            *   `0 (Neutral/Unclear/No PI)`: No mention of purchase intent, or intent is unclear/neutral.
+            *   `1 (Buy/Positive)`: Expresses intent to buy, continue buying, or positive sentiment increasing purchase likelihood.
+    *   **If Relevance = 0:**
+        *   **DEI Stance is Implicitly Neutral:** The interface will note this. *Do not* select a DEI stance option.
+        *   **Annotate Purchase Intention:** Choose the purchase intention option (`-1`, `0`, or `1`) based *only* on the comment content, ignoring the DEI context.
+    *   Click `Submit` to save the annotation and move to the next task.
+
+## 4. Export Results
+
+Follow the same export procedure as for the Relevance task:
+
+1.  Go to the project's `Data Manager`.
+2.  Click `Export`.
+3.  Select `JSON` format.
+4.  Download the file.
+5.  Save the downloaded JSON file into the `data/annotate/` directory (e.g., `annotated_sentiment.json`).
+
+## 5. Convert Exported JSON to CSV (Optional)
+
+Use the same conversion script (`scripts/annotate/json_to_csv.py`) as before.
+
+1.  Ensure the script exists at `scripts/annotate/json_to_csv.py`.
+2.  Run from the project root:
+
+    ```bash
+    python scripts/annotate/json_to_csv.py data/annotate/<your_sentiment_exported_json_file.json> data/annotate/review/annotated_sentiment.csv
+    ```
+
+    Replace `<your_sentiment_exported_json_file.json>` with the **actual name of the file you downloaded** for this task.
+
+    This will create a CSV file (e.g., `data/annotate/review/annotated_sentiment.csv`) containing the original data plus the new annotations (`stance_dei`, `purchase_intention`). 

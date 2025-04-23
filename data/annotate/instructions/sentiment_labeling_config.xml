@@ -1,0 +1,54 @@
+<View>
+  <Style>
+    .ant-card {
+      margin-bottom: 10px;
+      white-space: pre-wrap; /* Ensure long comments wrap */
+    }
+    .label-studio-highlighting {
+        background-color: #f0f0f0;
+        padding: 5px;
+        border-radius: 3px;
+        font-weight: bold;
+        display: inline-block; /* Keep on one line */
+        margin-bottom: 10px;
+    }
+  </Style>
+
+  <Header value="Stance & Purchase Intention Annotation"/>
+  
+  <!-- Display the comment text -->
+  <Text name="comment_text" value="$full_text"/>
+
+  <!-- Display the pre-computed relevance label for context -->
+  <View style="background: #f8f8f8; border: 1px solid #e0e0e0; padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+      <Header value="Pre-computed Relevance (from Model):"/>
+      <Text name="relevance_display" value="$relevance" style="font-weight:bold; font-size: 1.1em;"/>
+      <Text value="(0 = Not DEI-Related, 1 = DEI-Related)"/>
+  </View>
+
+  <!-- DEI Stance Annotation - Conditional -->
+  <View visibleWhen="eq" variableName="relevance" value="1" perRegion="false">
+      <Header value="1. What is the comment's stance towards DEI?"/>
+      <Text value="Annotate ONLY if Relevance is 1." style="font-style: italic; color: gray;"/>
+      <Choices name="stance_dei" toName="comment_text" required="true" choice="single">
+          <Choice value="-1 (Anti-DEI)" />
+          <Choice value="0 (Neutral/Unclear towards DEI)"/>
+          <Choice value="1 (Pro-DEI)"/>
+      </Choices>
+  </View>
+
+  <!-- Purchase Intention Annotation - Always Visible -->
+   <Header value="2. What is the comment's Purchase Intention towards the brand?"/>
+   <Text value="Annotate regardless of Relevance." style="font-style: italic; color: gray;"/>
+   <Choices name="purchase_intention" toName="comment_text" required="true" choice="single">
+       <Choice value="-1 (Boycott/Negative)"/>
+       <Choice value="0 (Neutral/Unclear/No PI)"/>
+       <Choice value="1 (Buy/Positive)"/>
+   </Choices>
+
+   <!-- Implicit Stance for Non-Relevant Comments -->
+   <View visibleWhen="eq" variableName="relevance" value="0" perRegion="false">
+        <Text name="stance_dei_implicit" value="0 (Neutral/Unclear towards DEI)" choice="single" showSubmitButton="false" />
+        <Text value="Note: DEI Stance is implicitly Neutral (0) for non-relevant comments." style="font-style: italic; color: #999; margin-top: 10px;"/>
+   </View>
+</View> 
