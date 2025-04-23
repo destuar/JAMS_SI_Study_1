@@ -29,6 +29,10 @@ dependencies:
   - pip:
       - cleantext # Not easily available on default/conda-forge channels
       # Add other pip-only dependencies here
+      - setfit
+      - datasets
+      - sentence-transformers
+      - torch # Or torch-cpu if CUDA is not available/needed
 
 
 
