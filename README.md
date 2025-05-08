@@ -2,7 +2,7 @@
 
 ## Project Goal
 This repository accompanies the study **"DEI Rollbacks, Brand Authenticity, and Consumer Reaction on Social Media"** (target journal: _Journal of the Academy of Marketing Science_).
-We analyze **~34,000 public Facebook comments** (collected Jan-Mar 2025) posted during a ±30‑day window around four companies' DEI decisions to quantify (planned):
+We analyze **~33,000 public Facebook comments** (collected Jan-Mar 2025) posted during a ±30‑day window around four companies' DEI decisions to quantify (planned):
 
 1. **Relevance** – whether a comment addresses DEI.
 2. **Stance** – pro‑DEI, anti‑DEI, or neutral.
@@ -13,7 +13,7 @@ The planned pipeline will then **causally estimate shifts in boycott‑ and buy�
 ---
 
 ## Compliance & Ethics Summary
-See `/docs/ethics.md` for **CGU IRB Exempt status (Protocol TBD)**, Meta/Facebook TOS compliance, and privacy safeguards.
+See `/docs/ethics.md` for Meta/Facebook TOS compliance and and privacy safeguards.
 _Key points_: human‑initiated collection (Phase 1 complete), public comments only, no PII stored post-processing (planned Phase 2a).
 
 ---
@@ -132,12 +132,12 @@ conda activate fb-text
 
 ## Data Collection Methodology
 
-### Phase 1 – Manual Extraction (Completed)
+### Phase 1 – Manual Extraction
 1. Scroll a public Facebook post until **all comments/replies are visible**.
 2. Open **DevTools → Console** and paste `scripts/extract/comment_extractor.js` (captures each `div[role="article"]` outerHTML).
 3. Save the JSON as `YYYYMMDD_HHMM.json` in `/data/raw/<Company>/<Phase>/`.
 
-### Phase 2 – JSON Processing (In Progress)
+### Phase 2 – JSON Processing
 1.  **Step 2a:** `scripts/preprocess/process_comments_json.py` parses raw JSON files, extracts key fields, cleans them, parses timestamps, adds metadata (stripping PII), and saves individual CSV files to `data/raw/<Company>/<Phase>/comments-csv/`.
 2.  **Step 2b:** `scripts/preprocess/combine_company_csv.py` (run via `project.yml` command `combine_raw_csvs`) combines the individual CSVs, adds `company_name`, assigns `has_DEI`/`before_DEI` flags, deduplicates, and saves to `data/derived/combined_comments.csv`.
 3.  **Step 2c:** `scripts/preprocess/graph_features.py` (run via `project.yml` command `preprocess_graph`) reads `combined_comments.csv`, calculates conversational thread features (root ID, depth, sibling count, time since root), and saves the enriched data to `data/derived/graphed_comments.csv`.
@@ -178,7 +178,7 @@ conda activate fb-text
 
 ---
 
-## Modeling Pipeline (Phase 4 & 5 - Completed)
+## Modeling Pipeline (Phase 4 & 5)
 
 | Task                  | Phase | Model Used (link)                                                                         | Notes                                                  | Script / Notebook                 | Output                      |
 |-----------------------|-------|----------------------------------------------------------------------------------------------|--------------------------------------------------------|----------------------------------|---------------------------------------|
