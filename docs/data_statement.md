@@ -30,7 +30,7 @@ All visible comments and replies on the focal DEI announcement post for each bra
 | Text Prep (Phase 3) | Clean comment text (3a), Build `full_text` thread field (3b) |
 | Annotation (Phase 4) | Sample 500 comments; Annotate `relevance` in Label Studio |
 | Annotation (Phase 5) | Sample 1000 relevant comments; Annotate `stance_dei` & `purchase_intention` |
-| Prediction (Phase 4/5) | Fine-tune & predict with SetFit (relevance) and DeBERTa-LoRA (stance/PI) |
+| Prediction (Phase 4/5) | Fine-tune & predict with SetFit (relevance); Use GPT-4o API for stance/PI (via `models/sentiment_gpt4o_model/text_analytics.ipynb`) |
 | Analysis (Phase 6) | DiD analysis on aggregated data |
 
 ## 6 | Intended use & licensing

@@ -1,4 +1,4 @@
-# Facebook Comment Text-Analytics Project – README ![status](https://img.shields.io/badge/status-Phase3_InProgress-yellow) ![target](https://img.shields.io/badge/target-JAMS-blue)
+# Facebook Comment Text-Analytics Project – README ![status](https://img.shields.io/badge/status-Phase5_Complete-green) ![target](https://img.shields.io/badge/target-JAMS-blue)
 
 ## Project Goal
 This repository accompanies the study **"DEI Rollbacks, Brand Authenticity, and Consumer Reaction on Social Media"** (target journal: _Journal of the Academy of Marketing Science_).
@@ -32,37 +32,45 @@ root/
 │   │  └─<Company>/<Phase>/
 │   │     YYYYMMDD_HHMM.json
 │   │     comments-csv/       # Output of process_comments_json.py (Step 2a)
-│   └─derived/              ← Processed data outputs
-│        combined_comments.csv     # Output of combine_company_csv.py (Step 2b)
-│        graphed_comments.csv      # Output of graph_features.py (Step 2c)
-│        cleaned_threaded_comments.csv # (Planned - Phase 3 Output)
-│        comments_with_relevance.csv # (Planned - Phase 4 Output)
-│        comments_with_stance_pi.csv # (Planned - Phase 5 Output)
+│   ├─derived/              ← Processed data outputs
+│   │    combined_comments.csv     # Output of combine_company_csv.py (Step 2b)
+│   │    graphed_comments.csv      # Output of graph_features.py (Step 2c)
+│   │    cleaned_threaded_comments.csv # (Phase 3 Output)
+│   │    comments_with_relevance.csv # (Phase 4 Output)
+│   │    comments_with_sentiment.csv # (Phase 5 Output - GPT-4o predictions)
+│   └─annotate/             ← Annotation-related files
+│      ├─sample/            # Data samples for annotation
+│      │  relevance_sample.csv
+│      │  sentiment_sample.csv
+│      ├─complete/          # Completed annotations from Label Studio
+│      │  combined_relevance_annotations.csv
+│      │  combined_sentiment_annotations.csv
+│      ├─instructions/      # Annotation guidelines & Label Studio configs
+│      │  ANNOTATION_README.md
+│      │  relevance_labeling_config.xml
+│      │  sentiment_labeling_config.xml
+│      └─ls_data/           # Label Studio's internal data storage (if used directly)
 │
 ├─docs/                     ← Documentation (Data Statement, Ethics, Methodology)
 │   ethics.md
 │   data_statement.md
 │   methodology.md
-│   (IRB_exemption.pdf)     # (Placeholder for final document)
 │
 ├─scripts/
 │   ├─extract/              ← Data collection script
 │   │  comment_extractor.js # (Used in Phase 1)
-│   ├─preprocess/           ← Data cleaning & feature scripts
 │   │  process_comments_json.py # (Step 2a) Parses raw JSON
+│   ├─preprocess/           ← Data cleaning & feature scripts
 │   │  combine_company_csv.py # (Step 2b) Combines raw CSVs, adds flags
 │   │  graph_features.py     # (Step 2c) Adds thread graph features
-│   │  # text_cleaner.py       # (Placeholder for Phase 3a cleaning script)
-│   │  # thread_builder.py     # (Placeholder for Phase 3b thread field script)
+│   │  clean_comments.py       # (Phase 3a script)
 │   ├─annotate/             ← Annotation setup & guidelines
-│   │  label_studio_config.xml # Label Studio UI configuration
-│   │  annotation_guidelines.md # (Planned) Guidelines for coders
-│   │  # small_text_sampler.py # Removed: Not using active learning ML backend
-│   ├─model/                ← (Planned) Model training & helper scripts
-│   │  train_setfit.py         # (Planned)
-│   │  train_deberta_lora.py   # (Planned)
-│   │  prompts/                # (Planned) LLM prompts for synthetic data
-│   │     gpt4o_synthetic_prompt.txt # (Planned)
+│   │  sample_for_relevance.py # Script to sample data for relevance annotation
+│   │  sample_for_sentiment.py # Script to sample data for sentiment annotation
+│   │  # Annotation guidelines are in data/annotate/instructions/ANNOTATION_README.md
+│   ├─model/                ← Model training & helper scripts
+│   │  train_relevance_model.py # (Phase 4c script for Relevance - SetFit)
+│   │  apply_relevance_model.py # (Phase 4d script for Relevance - SetFit)
 │   └─analysis/             ← (Planned) Causal analysis scripts
 │      did_results.py          # (Planned) DDD analysis script
 │
@@ -95,25 +103,25 @@ conda activate fb-text
 # spacy project run combine_raw_csvs                    # Step 2b (Defined in project.yml)
 # spacy project run preprocess_graph                    # Step 2c (Defined in project.yml)
 
-# 3 - Run Text Preprocessing & Threading (Planned - Phase 3)
-# (Commands TBD, assumes scripts like text_cleaner.py, thread_builder.py exist)
-# python scripts/preprocess/text_cleaner.py ...
-# python scripts/preprocess/thread_builder.py ...
+# 3 - Run Text Preprocessing & Threading (Phase 3 - Completed)
+# (Processed via scripts like clean_comments.py and potentially thread_builder.py or notebook logic)
+# python scripts/preprocess/clean_comments.py ...
+# python scripts/preprocess/thread_builder.py ... # Or handled in notebook
 
-# 4 - Run Annotation Prep & Annotation (Planned - Phase 4 & 5 - Manual Steps Required)
-# (Script for stratified sampling - Step 4a & 5a - TBD)
-# Start Label Studio (e.g., `label-studio start my_project`)
-# Set up project(s) using `scripts/annotate/label_studio_config.xml`.
-# Import data (e.g., sampled comment IDs/text) via UI or CLI.
-# Set up user accounts for annotators.
-# --> Perform annotation in the Label Studio UI (Step 4b & 5b) <--
-# Export annotations for each coder/task.
+# 4 - Run Annotation Prep & Annotation (Phase 4 & 5 - Completed for 1k dev sample)
+# (Sampling scripts: scripts/annotate/sample_for_relevance.py, scripts/annotate/sample_for_sentiment.py)
+# (Sampled files: data/annotate/sample/relevance_sample.csv, data/annotate/sample/sentiment_sample.csv)
+# Label Studio used for annotation (configs in data/annotate/instructions/, guidelines in ANNOTATION_README.md).
+# --> Annotation performed in the Label Studio UI (Step 4b & 5b for 1k sample) <--
+# Exported annotations: data/annotate/complete/combined_relevance_annotations.csv, data/annotate/complete/combined_sentiment_annotations.csv (used in GPT-4o notebook)
 
-# 5 – Train models & Predict (Planned - Phase 4c/d & 5c)
-# python scripts/model/train_setfit.py ...        # Step 4c
-# (Script/command for SetFit prediction - Step 4d - TBD)
-# python scripts/model/train_deberta_lora.py ...  # Step 5c
-# (Script/command for DeBERTa prediction - Needs Phase 5 output - TBD)
+# 5 – Train models & Predict (Phase 4c/d & 5c - Completed)
+# python scripts/model/train_relevance_model.py ... # Step 4c (Relevance model training)
+# python scripts/model/apply_relevance_model.py ... # Step 4d (Relevance model prediction)
+# (SetFit prediction for relevance - Step 4d - resulted in comments_with_relevance.csv)
+# For Stance & Purchase Intention (Step 5c), run the Jupyter Notebook:
+# models/sentiment_gpt4o_model/text_analytics.ipynb
+# This notebook uses the GPT-4o API for predictions, producing comments_with_sentiment.csv.
 
 # 6 – Run unit tests
 pytest tests/
@@ -158,26 +166,27 @@ pytest tests/
 
 ---
 
-## Annotation (Planned - Phase 4 & 5)
+## Annotation (Completed for 1k sample used in model evaluation/development)
 
-*   **Tool:** **Label Studio** will be used for annotation.
-    *   Interface defined in `scripts/annotate/label_studio_config.xml`.
+*   **Tool:** **Label Studio** was used for annotation.
+    *   Interface defined in `scripts/annotate/label_studio_config.xml` (and `data/annotate/instructions/` for specific tasks).
+    *   Annotation guidelines: `data/annotate/instructions/ANNOTATION_README.md`.
 *   **Phase 4 (Relevance):**
-    *   **Step 4a:** Sample 500 comments (stratified by company) from `cleaned_threaded_comments.csv`.
-    *   **Step 4b:** Annotate for `relevance` (0=not DEI-related, 1=DEI-related).
+    *   **Step 4a:** Sampled 500 comments (`data/annotate/sample/relevance_sample.csv`) using `scripts/annotate/sample_for_relevance.py`.
+    *   **Step 4b:** Annotated for `relevance`. Result: `data/annotate/complete/combined_relevance_annotations.csv`.
 *   **Phase 5 (Stance & Purchase Intention):**
-    *   **Step 5a:** Sample 1,000 comments (stratified by company) from *relevant* comments (`relevance=1`).
-    *   **Step 5b:** Annotate for `stance_dei` (−1=anti, 0=neutral, 1=pro) and `purchase_intention` (−1=boycott, 0=neutral, 1=buy).
-*   **Process:** Dual coding planned (Target: **Cohen's κ ≥ 0.75**). Disagreements will be reconciled.
+    *   **Step 5a:** Sampled 1,000 comments (`data/annotate/sample/sentiment_sample.csv`) using `scripts/annotate/sample_for_sentiment.py`. This forms the basis for `data/annotate/complete/combined_sentiment_annotations.csv`.
+    *   **Step 5b:** Annotated for `stance_dei` (−1=anti, 0=neutral, 1=pro) and `purchase_intention` (−1=boycott, 0=neutral, 1=buy).
+*   **Process:** Dual coding was planned (Target: **Cohen's κ ≥ 0.75**). Disagreements were reconciled. Kappa scores reported in `models/sentiment_gpt4o_model/text_analytics.ipynb`.
 
 ---
 
-## Modeling Pipeline (Planned - Phase 4 & 5)
+## Modeling Pipeline (Phase 4 & 5 - Completed)
 
-| Task                  | Phase | Planned Model (link)                                                                         | Planned Notes                  | Script (Planned)                 | Output (Planned)                      |
-|-----------------------|-------|----------------------------------------------------------------------------------------------|----------------------------------|----------------------------------|---------------------------------------|
-| **Relevance**         | 4c, 4d| [`SetFit/all‑MiniLM‑L6‑v2`](https://huggingface.co/setfit/all-MiniLM-L6-v2)                  | Few‑shot, CPU‑friendly           | `scripts/model/train_setfit.py`    | `data/derived/comments_with_relevance.csv` |
-| **Stance & Purchase** | 5c    | [`microsoft/deberta-v3-large`](https://huggingface.co/microsoft/deberta-v3-large) + **LoRA** | PEFT adapter, focal loss         | `scripts/model/train_deberta_lora.py` | `data/derived/comments_with_stance_pi.csv`  |
+| Task                  | Phase | Model Used (link)                                                                         | Notes                                                  | Script / Notebook                 | Output                      |
+|-----------------------|-------|----------------------------------------------------------------------------------------------|--------------------------------------------------------|----------------------------------|---------------------------------------|
+| **Relevance**         | 4c, 4d| [`SetFit/all‑MiniLM‑L6‑v2`](https://huggingface.co/setfit/all-MiniLM-L6-v2)                  | Few‑shot, CPU‑friendly. Trained using `train_relevance_model.py` | `scripts/model/train_relevance_model.py` & `scripts/model/apply_relevance_model.py`    | `data/derived/comments_with_relevance.csv` |
+| **Stance & Purchase** | 5c    | OpenAI GPT-4o API                                                                            | API-based, evaluated on 1k sample, then applied to full dataset | `models/sentiment_gpt4o_model/text_analytics.ipynb` | `data/derived/comments_with_sentiment.csv`  |
 
 ---
 
@@ -189,17 +198,6 @@ Planned Difference-in-Differences (DiD) on weekly rates using Python (`statsmode
 rate ~ Rollback * Post + PBA + controls + C(brand) + C(week)
 ```
 Implementation planned in `/scripts/analysis/did_results.py` (outputs to `/results/`), potentially run via `project.yml` command `analyze`.
-
----
-
-## Synthetic‑Data (Conditional Workflow - Planned)
-
-To be activated **only if** real‑data model performance is insufficient (e.g., macro‑F1 < target or minority recall < 0.60).
-
-1. Generate ≤ 1 synthetic comment per real label via GPT‑4o (`/scripts/model/prompts/`).
-2. Filter with OpenAI self‑critique + perplexity checks.
-3. Retrain; retain only if F1 improves significantly on real‑only test set.
-4. Run toxicity & demographic bias checks (`/notebooks/Diagnostics_bias.ipynb`).
 
 ---
 

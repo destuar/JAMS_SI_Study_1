@@ -47,17 +47,17 @@ Output: data/derived/comments_with_relevance.csv.
 Phase 5: Downstream Annotation & Model Training for Stance and Purchase Intention
 - Step 5a: Obtain a stratified sample (by company) of 1,000 comments from the **full** `comments_with_relevance.csv` dataset (including both relevant and non-relevant comments), which will be passed to Label Studio for annotation.
 - Step 5b: Annotate in Label Studio. **Instructions**: If `relevance == 0`, assign `stance_dei = 0` and annotate `purchase_intention` only. If `relevance == 1`, annotate both `stance_dei` and `purchase_intention`.
-- Step 5c: Fine-tune DeBERTa‑LoRA on the annotated sample to label all comments (~34,000) with `stance_dei` and `purchase_intention`.
+- Step 5c: Use the OpenAI GPT-4o API to label all comments (~34,000) with `stance_dei` and `purchase_intention`. This is done using the `models/sentiment_gpt4o_model/text_analytics.ipynb` notebook, which first evaluates GPT-4o on the 1,000 annotated samples and then applies it to the full `comments_with_relevance.csv` dataset.
 
-Input: data/derived/comments_with_relevance.csv.
-Output: data/derived/comments_with_stance_pi.csv.
+Input: data/derived/comments_with_relevance.csv and the 1,000 annotated samples for evaluation.
+Output: data/derived/comments_with_sentiment.csv.
 
 Phase 6: Analysis and DiD
 - Step 6a: Use the 15-day baseline to test whether the PI slopes are similar between the rollback companies and companies maintaining DEI.
 - Step 6b: Once that is verified, find the effect of DEI stance on PI in "keep-DEI" companies, "rollback" companies, and the difference-in-differences (DiD) of those two effects.
 - How: Run scripts/analysis/did_results.py (Placeholder: analyze).
 
-Input: data/derived/comments_with_stance_pi.csv.
+Input: data/derived/comments_with_sentiment.csv.
 Output: Results tables/figures in results/tables/ and results/figures/.
 
 Ongoing: Testing & Reproducibility

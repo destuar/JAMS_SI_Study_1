@@ -20,17 +20,17 @@
 | Step | Phase | Tool / script | Output |
 |------|-------|---------------|--------|
 | 1    | 1     | Manual DOM scraper (JS) → `scripts/extract/comment_extractor.js` | Raw JSON (in `data/raw/`) |
-| 2a   | 2a    | `scripts/preprocess/process_comments_json.py` | Individual CSVs (`data/raw/<...>/comments-csv/`) |
+| 2a   | 2a    | `scripts/preprocess/process_comments_json.py` (moved to `scripts/extract/` by user) | Individual CSVs (`data/raw/<...>/comments-csv/`) |
 | 2b   | 2b    | `scripts/preprocess/combine_company_csv.py` (Cmd: `combine_raw_csvs`) | `data/derived/combined_comments.csv` |
 | 2c   | 2c    | `scripts/preprocess/graph_features.py` (Cmd: `preprocess_graph`) | `data/derived/graphed_comments.csv` |
-| 3    | 3a, 3b| (Text cleaning & thread field creation scripts TBD) | `data/derived/cleaned_threaded_comments.csv` |
-| 4    | 4a, 4b| **Label Studio** annotation (Sample: 500 comments) | Relevance labels |
-| 5    | 5a, 5b| **Label Studio** annotation (Sample: 1000 relevant comments) | Stance & PI labels |
-| 6    | 4c    | **SetFit** fine-tuning (`train_setfit.py`) | Relevance model artifact |
-| 7    | 4d    | **SetFit** prediction | `data/derived/comments_with_relevance.csv` |
-| 8    | 5c    | **DeBERTa-LoRA** fine-tuning (`train_deberta_lora.py`) | `stance_pi_adapter.bin` (Planned) |
-| 9    | 5c    | **DeBERTa-LoRA** prediction | `data/derived/comments_with_stance_pi.csv` |
-| 10   | 6a, 6b| **statsmodels / linearmodels** `did_results.py` (Cmd: `analyze`) | Tables & event-study plots |
+| 3    | 3a, 3b| Text cleaning (`scripts/preprocess/clean_comments.py`) & `full_text` creation (e.g., in notebook or `clean_comments.py`) | `data/derived/cleaned_threaded_comments.csv` |
+| 4    | 4a, 5a| Sampling for annotation (`scripts/annotate/sample_for_relevance.py`, `scripts/annotate/sample_for_sentiment.py`) | `data/annotate/sample/relevance_sample.csv`, `data/annotate/sample/sentiment_sample.csv` |
+| 5    | 4b, 5b| **Label Studio** annotation (see `data/annotate/instructions/ANNOTATION_README.md`) | `data/annotate/complete/combined_relevance_annotations.csv`, `data/annotate/complete/combined_sentiment_annotations.csv` |
+| 6    | 4c    | **SetFit** fine-tuning (`scripts/model/train_relevance_model.py`) | Relevance model artifact (Location TBD) |
+| 7    | 4d    | **SetFit** prediction (`scripts/model/apply_relevance_model.py`) | `data/derived/comments_with_relevance.csv` |
+| 8    | 5c    | **GPT-4o API** via `models/sentiment_gpt4o_model/text_analytics.ipynb` (Evaluation on `combined_sentiment_annotations.csv`) | Stance & PI predictions on 1k sample (`models/sentiment_gpt4o_model/dev_1000_with_gpt_preds_full.csv`) |
+| 9    | 5c    | **GPT-4o API** via `models/sentiment_gpt4o_model/text_analytics.ipynb` (Prediction on `comments_with_relevance.csv`) | `data/derived/comments_with_sentiment.csv` |
+| 10   | 6a, 6b| **statsmodels / linearmodels** `scripts/analysis/did_results.py` (Cmd: `analyze`) | Tables & event-study plots (Planned) |
 
 Commands orchestrated via `project.yml`; environment captured in `environment.yml` (conda).
 
@@ -38,11 +38,11 @@ Commands orchestrated via `project.yml`; environment captured in `environment.ym
 
 ## C. Classification performance (held-out test – placeholders)
 
-| Task | F1 | Recall (minority class) |
-|------|----|-------------------------|
-| Relevance | ▢ TBD | ▢ TBD |
-| Stance | ▢ TBD | ▢ TBD |
-| Purchase Intention | ▢ TBD | ▢ TBD |
+| Task | F1 (Macro Avg) | Accuracy | Notes |
+|------|----|-------------------------|-------|
+| Relevance (SetFit) | ▢ TBD | ▢ TBD | On held-out test set for `comments_with_relevance.csv` |
+| Stance (GPT-4o) | 0.9245 | 0.9630 | On 1k annotated sample (`dev_1000_with_gpt4o_preds_full.csv`) |
+| Purchase Intention (GPT-4o) | 0.9044 | 0.9600 | On 1k annotated sample (`dev_1000_with_gpt4o_preds_full.csv`) |
 
 ---
 
@@ -80,23 +80,35 @@ model = smf.wls(
 |------|-------------|
 | `data/derived/combined_comments.csv` | Combined comments from Step 2b |
 | `data/derived/graphed_comments.csv` | Comments enriched with graph features (Step 2c) |
-| `data/derived/cleaned_threaded_comments.csv` | (Planned) Output of text cleaning/threading (Phase 3) |
-| `data/derived/comments_with_relevance.csv` | (Planned) Output of relevance prediction (Phase 4) |
-| `data/derived/comments_with_stance_pi.csv` | (Planned) Output of stance/PI prediction (Phase 5) |
+| `data/derived/cleaned_threaded_comments.csv` | Output of text cleaning/threading (Phase 3) |
+| `data/derived/comments_with_relevance.csv` | Output of relevance prediction (Phase 4) |
+| `data/derived/comments_with_sentiment.csv` | Output of stance/PI prediction using GPT-4o (Phase 5) |
+| `data/annotate/sample/relevance_sample.csv` | Sampled comments for relevance annotation |
+| `data/annotate/sample/sentiment_sample.csv` | Sampled comments for sentiment annotation |
+| `data/annotate/complete/combined_relevance_annotations.csv` | Relevance annotations from Label Studio |
+| `data/annotate/complete/combined_sentiment_annotations.csv` | Sentiment annotations from Label Studio (1k sample) |
+| `data/annotate/instructions/ANNOTATION_README.md` | Annotation guidelines and Label Studio setup notes |
+| `data/annotate/instructions/relevance_labeling_config.xml` | Label Studio config for relevance task |
+| `data/annotate/instructions/sentiment_labeling_config.xml` | Label Studio config for sentiment task |
 | `scripts/extract/comment_extractor.js` | Data collection script (Phase 1) |
-| `scripts/preprocess/process_comments_json.py` | JSON parsing script (Step 2a) |
+| `scripts/extract/process_comments_json.py` | JSON parsing script (Step 2a) |
 | `scripts/preprocess/combine_company_csv.py` | CSV combining script (Step 2b) |
 | `scripts/preprocess/graph_features.py` | Graph feature calculation script (Step 2c) |
-| `scripts/model/train_setfit.py` | (Planned) Relevance model training script (Phase 4) |
-| `scripts/model/train_deberta_lora.py` | (Planned) Stance/PI model training script (Phase 5) |
+| `scripts/preprocess/clean_comments.py` | Text cleaning script (Phase 3a) |
+| `# scripts/preprocess/thread_builder.py` | (Phase 3b script - `full_text` creation might be in `clean_comments.py` or notebook) |
+| `scripts/annotate/sample_for_relevance.py` | Script to sample data for relevance annotation (Step 4a) |
+| `scripts/annotate/sample_for_sentiment.py` | Script to sample data for sentiment annotation (Step 5a) |
+| `scripts/model/train_relevance_model.py` | Relevance model training script (Phase 4c - SetFit) |
+| `scripts/model/apply_relevance_model.py` | Relevance model application script (Phase 4d - SetFit) |
+| `models/sentiment_gpt4o_model/text_analytics.ipynb` | Jupyter notebook for GPT-4o Stance/PI evaluation and prediction |
 | `scripts/analysis/did_results.py` | (Planned) DiD regression script (Phase 6) |
 | `docs/ethics.md` | Full compliance checklist |
 | `docs/data_statement.md` | Dataset overview & details |
 | `docs/methodology.md` | This document |
 | `project.yml` | (Planned) Workflow orchestrator |
 | `environment.yml` | (Planned) Conda environment |
-| `results/model_artifacts/setfit_model/` | (Planned) Saved SetFit model |
-| `results/model_artifacts/stance_pi_adapter.bin` | (Planned) Saved DeBERTa LoRA adapter |
+| `results/model_artifacts/setfit_model/` | (Planned) Saved SetFit model for relevance |
+| `models/sentiment_gpt4o_model/dev_1000_with_gpt4o_preds_full.csv` | GPT-4o predictions on 1k annotated sample |
 | `results/tables/` | (Planned) Output tables from analysis |
 | `results/figures/` | (Planned) Output figures from analysis |
 

@@ -18,6 +18,7 @@
 
 - **PII stripping.** Immediately after collection each JSON record is purged of user IDs, profile links, avatars, and @‑mentions.
 - **Public‑interest allowance.** Facebook comments are legally public; nevertheless we treat them as *contextual integrity* sensitive and never release raw HTML.
+- **Third-party processing**: De-identified comment text is programmatically sent to a third-party Large Language Model API (OpenAI GPT-4o) for sentiment classification.
 - **Data access tiers.**
   - *Tier 1* — Raw HTML/JSON (PII) stored on encrypted CGU server; access limited to authorised project members.
   - *Tier 2* — De‑identified texts with internal comment IDs; shared among co‑authors under NDA.
@@ -42,7 +43,6 @@
 | Algorithmic bias in classifiers (stance, PI, ideology) | Balanced gold‑label sampling across brands, weeks, initial vs reply; weighted focal loss for minority classes; report per‑class precision/recall.                 |
 | Political‑ideology misclassification                   | Manual review of high‑entropy samples; 95 % CI on liberal‑cue prevalence.                                                                                         |
 | Demographic inference                                  | We explicitly avoid inferring race, gender, or age from names or photos.                                                                                          |
-| Synthetic data artefacts                               | If LLM augmentation is triggered, synthetic comments are capped at ≤ 50 % of training data; perplexity filter ensures linguistic realism; provenance flag stored. |
 
 All model checkpoints include [model card] metadata documenting training data composition and evaluation metrics.
 
