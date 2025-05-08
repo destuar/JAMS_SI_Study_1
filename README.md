@@ -23,9 +23,6 @@ _Key points_: human‑initiated collection (Phase 1 complete), public comments o
 root/
 │  README.md
 │  LICENSE
-│  CITATION.cff
-│  environment.yml          ← Conda env lock‑file (Python 3.10, includes Label Studio)
-│  project.yml              ← Workflow config (defines commands like combine_raw_csvs)
 │
 ├─data/
 │   ├─raw/                  ← Raw JSON data (local only, **not** committed)
