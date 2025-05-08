@@ -90,46 +90,6 @@ root/
 
 ---
 
-## Quick‑Start (Planned Workflow)
-```bash
-# 1 – Create environment (Python 3.10 required)
-# environment.yml now includes core dependencies + Label Studio
-conda env create -f environment.yml
-conda activate fb-text
-
-# 2 – Run Preprocessing Steps (via project.yml commands)
-# (Assumes raw data is placed in data/raw/<Company>/<Phase>/)
-# python scripts/preprocess/process_comments_json.py ... # Step 2a (Run per company/phase)
-# spacy project run combine_raw_csvs                    # Step 2b (Defined in project.yml)
-# spacy project run preprocess_graph                    # Step 2c (Defined in project.yml)
-
-# 3 - Run Text Preprocessing & Threading (Phase 3 - Completed)
-# (Processed via scripts like clean_comments.py and potentially thread_builder.py or notebook logic)
-# python scripts/preprocess/clean_comments.py ...
-# python scripts/preprocess/thread_builder.py ... # Or handled in notebook
-
-# 4 - Run Annotation Prep & Annotation (Phase 4 & 5 - Completed for 1k dev sample)
-# (Sampling scripts: scripts/annotate/sample_for_relevance.py, scripts/annotate/sample_for_sentiment.py)
-# (Sampled files: data/annotate/sample/relevance_sample.csv, data/annotate/sample/sentiment_sample.csv)
-# Label Studio used for annotation (configs in data/annotate/instructions/, guidelines in ANNOTATION_README.md).
-# --> Annotation performed in the Label Studio UI (Step 4b & 5b for 1k sample) <--
-# Exported annotations: data/annotate/complete/combined_relevance_annotations.csv, data/annotate/complete/combined_sentiment_annotations.csv (used in GPT-4o notebook)
-
-# 5 – Train models & Predict (Phase 4c/d & 5c - Completed)
-# python scripts/model/train_relevance_model.py ... # Step 4c (Relevance model training)
-# python scripts/model/apply_relevance_model.py ... # Step 4d (Relevance model prediction)
-# (SetFit prediction for relevance - Step 4d - resulted in comments_with_relevance.csv)
-# For Stance & Purchase Intention (Step 5c), run the Jupyter Notebook:
-# models/sentiment_gpt4o_model/text_analytics.ipynb
-# This notebook uses the GPT-4o API for predictions, producing comments_with_sentiment.csv.
-
-# 6 – Run causal Difference-in-Differences analysis (Planned - Phase 6)
-# spacy project run analyze # Step 6b (Defined in project.yml)
-# python scripts/analysis/did_results.py ... # Or run script directly
-```
-
----
-
 ## Data Collection Methodology
 
 ### Phase 1 – Manual Extraction
