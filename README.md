@@ -2,7 +2,7 @@
 
 ## Project Goal
 This repository accompanies the study **"DEI Rollbacks, Brand Authenticity, and Consumer Reaction on Social Media"** (target journal: _Journal of the Academy of Marketing Science_).
-We analyze **~33,000 public Facebook comments** (collected Jan-Mar 2025) posted during a ±30‑day window around four companies' DEI decisions to quantify (planned):
+We analyze **~33,000 public Facebook comments** (collected Jan-Mar 2025) posted during a ±30‑day window around four companies' DEI decisions to quantify:
 
 1. **Relevance** – whether a comment addresses DEI.
 2. **Stance** – pro‑DEI, anti‑DEI, or neutral.
@@ -14,7 +14,7 @@ The planned pipeline will then **causally estimate shifts in boycott‑ and buy�
 
 ## Compliance & Ethics Summary
 See `/docs/ethics.md` for Meta/Facebook TOS compliance and and privacy safeguards.
-_Key points_: human‑initiated collection (Phase 1 complete), public comments only, no PII stored post-processing (planned Phase 2a).
+_Key points_: human‑initiated collection (Phase 1 complete), public comments only, no PII stored post-processing.
 
 ---
 
