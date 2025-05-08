@@ -1,0 +1,214 @@
+title: "DEI Rollbacks, Brand Authenticity, and Consumer Reaction on Social Media"
+description: "End-to-end pipeline for analyzing Facebook comments related to corporate DEI decisions."
+
+# --- Variables ---
+vars:
+  # Data Paths
+  raw_data_dir: "data/raw" # Assumes structure like data/raw/Company/Phase/*.json
+  derived_data_dir: "data/derived"
+  annotate_data_dir: "data/annotate"
+  results_dir: "results"
+  # corpus_dir: "data/corpus" # Output directory for .spacy files - Re-evaluate need
+  # Input/Output Files
+  combined_csv: "${vars.derived_data_dir}/combined_comments.csv"
+  graphed_csv: "${vars.derived_data_dir}/graphed_comments.csv"
+  cleaned_threaded_csv: "${vars.derived_data_dir}/cleaned_threaded_comments.csv" # Output of clean_comments.py
+  relevance_sample_csv: "${vars.annotate_data_dir}/sample/relevance_sample.csv"
+  sentiment_sample_csv: "${vars.annotate_data_dir}/sample/sentiment_sample.csv"
+  relevance_annotations_csv: "${vars.annotate_data_dir}/complete/combined_relevance_annotations.csv"
+  sentiment_annotations_csv: "${vars.annotate_data_dir}/complete/combined_sentiment_annotations.csv" # Gold labels for sentiment evaluation
+  comments_with_relevance_csv: "${vars.derived_data_dir}/comments_with_relevance.csv" # Output of relevance model
+  comments_with_sentiment_csv: "${vars.derived_data_dir}/comments_with_sentiment.csv" # Final output with GPT-4o sentiment
+
+  # Models & Artifacts
+  model_artifacts_dir: "${vars.results_dir}/model_artifacts"
+  relevance_model_path: "${vars.model_artifacts_dir}/relevance_setfit_model" # Assuming SetFit model is saved here
+  # stance_pi_model_path: "${vars.model_artifacts_dir}/stance_pi_deberta_lora" # Superseded by GPT-4o notebook
+  # ideology_model_path: "${vars.model_artifacts_dir}/ideology_setfit" # Ideology task removed
+
+  # Analysis Outputs
+  tables_dir: "${vars.results_dir}/tables"
+  figures_dir: "${vars.results_dir}/figures"
+  # Settings
+  seed: 42
+  # test_size: 0.15 # Handled by sampling scripts or within training scripts if needed
+  # dev_size: 0.15 # Train size will be 1 - test_size - dev_size
+
+# --- Commands ---
+# Note: Scripts for combine_raw, annotate, train_*, predict, analyze are placeholders
+commands:
+  - name: "combine_raw_csvs"
+    help: "Combine individual raw CSVs, assign has_DEI and before_DEI flags."
+    script: "scripts/preprocess/combine_company_csv.py"
+    deps:
+      - "scripts/preprocess/combine_company_csv.py"
+      - "${vars.raw_data_dir}"
+    outputs:
+      - "${vars.combined_csv}"
+
+  - name: "preprocess_graph"
+    help: "Add graph features (root_id, depth, etc.) to combined comments."
+    script: "scripts/preprocess/graph_features.py"
+    deps:
+      - "${vars.combined_csv}"
+      - "scripts/preprocess/graph_features.py"
+    outputs:
+      - "${vars.graphed_csv}"
+    args:
+      - "${vars.combined_csv}" # input arg
+      - "${vars.graphed_csv}" # output arg
+
+  - name: "clean_and_thread_comments"
+    help: "Clean comment text and potentially add thread structure (full_text)."
+    script: "scripts/preprocess/clean_comments.py" # Also handles full_text or separate script needed?
+    deps:
+      - "${vars.graphed_csv}"
+      - "scripts/preprocess/clean_comments.py"
+    outputs:
+      - "${vars.cleaned_threaded_csv}"
+    args:
+      - "${vars.graphed_csv}" # src arg
+      - "${vars.cleaned_threaded_csv}" # out arg
+
+  - name: "sample_for_annotation"
+    help: "Create samples for relevance and sentiment annotation."
+    # This could be two separate commands or one script that does both
+    script: "echo 'Run scripts/annotate/sample_for_relevance.py and scripts/annotate/sample_for_sentiment.py'"
+    deps:
+      - "${vars.cleaned_threaded_csv}"
+      - "scripts/annotate/sample_for_relevance.py"
+      - "scripts/annotate/sample_for_sentiment.py"
+    outputs:
+      - "${vars.relevance_sample_csv}"
+      - "${vars.sentiment_sample_csv}"
+
+  - name: "annotate"
+    help: "Manual annotation step using Label Studio. Outputs completed annotation files."
+    run: "echo 'TODO: Perform annotation in Label Studio using config files in data/annotate/instructions/ and ANNOTATION_README.md. Export combined_relevance_annotations.csv and combined_sentiment_annotations.csv to data/annotate/complete/'"
+    deps:
+      - "${vars.relevance_sample_csv}"
+      - "${vars.sentiment_sample_csv}"
+      - "data/annotate/instructions/ANNOTATION_README.md"
+      - "data/annotate/instructions/relevance_labeling_config.xml"
+      - "data/annotate/instructions/sentiment_labeling_config.xml"
+    outputs_no_cache: # Annotation is manual
+      - "${vars.relevance_annotations_csv}"
+      - "${vars.sentiment_annotations_csv}"
+
+  - name: "train_relevance"
+    help: "Train SetFit model for Relevance classification."
+    script: "scripts/model/train_relevance_model.py"
+    deps:
+      - "${vars.cleaned_threaded_csv}" # Or the sampled CSVs if preferred by script
+      - "${vars.relevance_annotations_csv}" # Gold labels for relevance
+      - "scripts/model/train_relevance_model.py"
+    outputs:
+      - "${vars.relevance_model_path}"
+    args: # Example, adjust to actual script
+      - "--input_data" 
+      - "${vars.cleaned_threaded_csv}" # or a sampled file
+      - "--annotations_file"
+      - "${vars.relevance_annotations_csv}"
+      - "--output_model_dir"
+      - "${vars.relevance_model_path}"
+      - "--seed"
+      - "${vars.seed}"
+
+  - name: "apply_relevance_model"
+    help: "Apply trained SetFit relevance model to the full dataset."
+    script: "scripts/model/apply_relevance_model.py"
+    deps:
+      - "${vars.cleaned_threaded_csv}"
+      - "${vars.relevance_model_path}"
+      - "scripts/model/apply_relevance_model.py"
+    outputs:
+      - "${vars.comments_with_relevance_csv}"
+    args: # Example, adjust to actual script
+      - "--input_data"
+      - "${vars.cleaned_threaded_csv}"
+      - "--model_path"
+      - "${vars.relevance_model_path}"
+      - "--output_file"
+      - "${vars.comments_with_relevance_csv}"
+
+  - name: "run_gpt4o_sentiment_classification"
+    help: "Run GPT-4o sentiment classification notebook. Evaluates on 1k sample, then predicts on full dataset."
+    # Notebook execution is typically manual or via a wrapper script.
+    run: "echo 'MANUAL STEP: Run Jupyter notebook models/sentiment_gpt4o_model/text_analytics.ipynb. Ensure OPENAI_API_KEY is set.'"
+    deps:
+      - "${vars.comments_with_relevance_csv}"
+      - "${vars.sentiment_annotations_csv}" # For the evaluation part of the notebook
+      - "models/sentiment_gpt4o_model/text_analytics.ipynb"
+    outputs_no_cache: # API calls and notebook execution
+      - "${vars.comments_with_sentiment_csv}"
+      - "models/sentiment_gpt4o_model/dev_1000_with_gpt4o_preds_full.csv" # Evaluation output
+
+  - name: "analyze_causal_effects"
+    help: "Run Triple-Difference causal analysis."
+    script: "scripts/analysis/did_results.py" # Assumed script name
+    deps:
+      - "${vars.comments_with_sentiment_csv}"
+      - "scripts/analysis/did_results.py"
+    outputs:
+      - "${vars.tables_dir}" # Indicate directory output
+      - "${vars.figures_dir}" # Indicate directory output
+    args: # Example, adjust to actual script
+      - "--input_data"
+      - "${vars.comments_with_sentiment_csv}"
+      - "--output_tables"
+      - "${vars.tables_dir}"
+      - "--output_figures"
+      - "${vars.figures_dir}"
+    # Placeholder run command if script not ready
+    # run: "echo 'Placeholder: Implement and run scripts/analysis/did_results.py'"
+
+  - name: "test"
+    help: "Run unit tests."
+    run: "pytest tests/" # Assumes tests are in tests/ directory
+
+# --- Workflows ---
+workflows:
+  preprocess_base:
+    - "combine_raw_csvs"
+    - "preprocess_graph"
+    - "clean_and_thread_comments"
+  
+  get_relevance_predictions:
+    - "sample_for_annotation" # Generates samples needed for annotation
+    # Manual annotation step occurs here using outputs from 'sample_for_annotation'
+    # The 'annotate' command is a placeholder for this manual process and its outputs
+    # are then used by 'train_relevance'.
+    - "train_relevance"
+    - "apply_relevance_model"
+
+  get_sentiment_predictions:
+    # Assumes 'get_relevance_predictions' has been run and 'comments_with_relevance.csv' exists,
+    # and 'sentiment_annotations_csv' exists from manual annotation.
+    - "run_gpt4o_sentiment_classification"
+
+  full_pipeline_to_sentiment_data:
+    - "preprocess_base"
+    - "get_relevance_predictions" # Includes sampling, implies annotation, training, application
+    - "get_sentiment_predictions"
+
+  analyze_results:
+    - "analyze_causal_effects"
+
+  # Example of a full workflow excluding manual annotation as a direct step
+  # Annotation is a manual process that uses outputs of 'sample_for_annotation'
+  # and produces inputs for 'train_relevance' and 'run_gpt4o_sentiment_classification'.
+  all:
+    - "full_pipeline_to_sentiment_data"
+    - "analyze_results" # If analysis is ready
+    - "test"
+
+# --- Assets --- (Optional: For linking external data via URL/checksum)
+assets: []
+
+# --- Registered Functions --- (Optional: For custom Python functions)
+# Example:
+# functions:
+#   custom_combine:
+#     script: "scripts/custom_functions.py"
+#     path: "custom_combine_function"
+
