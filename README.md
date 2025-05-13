@@ -8,7 +8,7 @@ We analyze **~33,000 public Facebook comments** (collected Jan-Mar 2025) posted 
 2. **Stance** – pro‑DEI, anti‑DEI, or neutral.
 3. **Purchase intent** – buy, boycott, or neutral intentions.
 
-The planned pipeline will then **causally estimate shifts in boycott‑ and buy‑rates** via a Triple‑Difference (DDD) design moderated by brand authenticity.
+The project focused on data processing, annotation, and predictive modeling of these reactions.
 
 ---
 
@@ -25,64 +25,61 @@ root/
 │  LICENSE
 │
 ├─data/
-│   ├─raw/                  ← Raw JSON data (local only, **not** committed)
+│   ├─raw/                  
 │   │  └─<Company>/<Phase>/
 │   │     YYYYMMDD_HHMM.json
-│   │     comments-csv/       # Output of process_comments_json.py (Step 2a)
-│   ├─derived/              ← Processed data outputs
-│   │    combined_comments.csv     # Output of combine_company_csv.py (Step 2b)
-│   │    graphed_comments.csv      # Output of graph_features.py (Step 2c)
-│   │    cleaned_threaded_comments.csv # (Phase 3 Output)
-│   │    comments_with_relevance.csv # (Phase 4 Output)
-│   │    comments_with_sentiment.csv # (Phase 5 Output - GPT-4o predictions)
-│   └─annotate/             ← Annotation-related files
-│      ├─sample/            # Data samples for annotation
+│   │     comments-csv/       
+│   ├─derived/             
+│   │    combined_comments.csv
+│   │    graphed_comments.csv
+│   │    cleaned_threaded_comments.csv
+│   │    comments_with_relevance.csv
+│   │    comments_with_sentiment.csv
+│   └─annotate/             
+│      ├─sample/
 │      │  relevance_sample.csv
 │      │  sentiment_sample.csv
-│      ├─complete/          # Completed annotations from Label Studio
+│      ├─complete/
 │      │  combined_relevance_annotations.csv
 │      │  combined_sentiment_annotations.csv
-│      ├─instructions/      # Annotation guidelines & Label Studio configs
+│      ├─instructions/
 │      │  ANNOTATION_README.md
 │      │  relevance_labeling_config.xml
 │      │  sentiment_labeling_config.xml
-│      └─ls_data/           # Label Studio's internal data storage (if used directly)
+│      └─ls_data/
 │
-├─docs/                     ← Documentation (Data Statement, Ethics, Methodology)
+├─docs/
 │   ethics.md
 │   data_statement.md
 │   methodology.md
 │
 ├─scripts/
-│   ├─extract/              ← Data collection script
-│   │  comment_extractor.js # (Used in Phase 1)
-│   │  process_comments_json.py # (Step 2a) Parses raw JSON
-│   ├─preprocess/           ← Data cleaning & feature scripts
-│   │  combine_company_csv.py # (Step 2b) Combines raw CSVs, adds flags
-│   │  graph_features.py     # (Step 2c) Adds thread graph features
-│   │  clean_comments.py       # (Phase 3a script)
-│   ├─annotate/             ← Annotation setup & guidelines
-│   │  sample_for_relevance.py # Script to sample data for relevance annotation
-│   │  sample_for_sentiment.py # Script to sample data for sentiment annotation
-│   │  # Annotation guidelines are in data/annotate/instructions/ANNOTATION_README.md
-│   ├─model/                ← Model training & helper scripts
-│   │  train_relevance_model.py # (Phase 4c script for Relevance - SetFit)
-│   │  apply_relevance_model.py # (Phase 4d script for Relevance - SetFit)
-│   └─analysis/             ← (Planned) Causal analysis scripts
-│      did_results.py          # (Planned) DDD analysis script
+│   ├─extract/
+│   │  comment_extractor.js
+│   │  process_comments_json.py
+│   ├─preprocess/
+│   │  combine_company_csv.py
+│   │  graph_features.py
+│   │  clean_comments.py
+│   ├─annotate/
+│   │  sample_for_relevance.py
+│   │  sample_for_sentiment.py
+│   ├─model/
+│   │  train_relevance_model.py
+│   │  apply_relevance_model.py
+│   │  causal_analysis.ipynb
+│   └─visualize/
+│   │  EDA_analysis.py
+│   │  plot_post_graph.py
 │
-├─notebooks/                ← (Planned) Exploratory Data Analysis & Diagnostics
-│   EDA_threads.ipynb        # (Planned)
-│   Diagnostics_bias.ipynb   # (Planned)
-│
-├─tests/                    ← Unit tests
+├─tests/
 │   test_graph_features.py
-│   test_process_pipeline.py # Includes tests for cleaning & conversion
+│   test_process_pipeline.py
 │
-└─results/                  ← Outputs: model checkpoints, figures, tables
-    model_artifacts/         # (Planned)
-    figures/                 # (Planned)
-    tables/                  # (Planned)
+└─results/
+    figures/
+    tables/
+    visualizations/
 ```
 
 ---
@@ -95,7 +92,7 @@ root/
 3. Save the JSON as `YYYYMMDD_HHMM.json` in `/data/raw/<Company>/<Phase>/`.
 
 ### Phase 2 – JSON Processing
-1.  **Step 2a:** `scripts/preprocess/process_comments_json.py` parses raw JSON files, extracts key fields, cleans them, parses timestamps, adds metadata (stripping PII), and saves individual CSV files to `data/raw/<Company>/<Phase>/comments-csv/`.
+1.  **Step 2a:** `scripts/extract/process_comments_json.py` parses raw JSON files, extracts key fields, cleans them, parses timestamps, adds metadata (stripping PII), and saves individual CSV files to `data/raw/<Company>/<Phase>/comments-csv/`.
 2.  **Step 2b:** `scripts/preprocess/combine_company_csv.py` (run via `project.yml` command `combine_raw_csvs`) combines the individual CSVs, adds `company_name`, assigns `has_DEI`/`before_DEI` flags, deduplicates, and saves to `data/derived/combined_comments.csv`.
 3.  **Step 2c:** `scripts/preprocess/graph_features.py` (run via `project.yml` command `preprocess_graph`) reads `combined_comments.csv`, calculates conversational thread features (root ID, depth, sibling count, time since root), and saves the enriched data to `data/derived/graphed_comments.csv`.
 
@@ -144,16 +141,6 @@ root/
 
 ---
 
-## Causal Analysis (Phase 6)
-
-Difference-in-Differences (DiD) on weekly rates using Python (`statsmodels`/`linearmodels`):
-```text
-# Specification (example):
-rate ~ Rollback * Post + PBA + controls + C(brand) + C(week)
-```
-
----
-
 ## Citation
 ```bibtex
 @misc{estuar2025dei,
@@ -161,7 +148,7 @@ rate ~ Rollback * Post + PBA + controls + C(brand) + C(week)
   title        = {DEI Rollbacks, Brand Authenticity, and Consumer Reaction on Social Media},
   howpublished = {GitHub repository, \url{https://github.com/destuar/Facebook-TextAnalytics-Project}},
   year         = {2025},
-  note         = {Working paper, target: Journal of the Academy of Marketing Science. Phase 2 (Preprocessing) in progress.}
+  note         = {Working paper, target: Journal of the Academy of Marketing Science. Phase 5 (Modeling) complete.}
 }
 ```
 ---

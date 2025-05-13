@@ -1,6 +1,6 @@
 # Ethics & Compliance Statement – Study 1
 
-> **Scope.** This document details the ethical review status, legal‑policy compliance, privacy safeguards, bias‑mitigation approach, and broader societal considerations for the *Facebook DEI Decision Comment Corpus* used in Study 1 of our manuscript.  Placeholders ▢ will be finalised prior to journal submission.
+> **Scope.** This document details the ethical review status, legal‑policy compliance, privacy safeguards, bias‑mitigation approach, and broader societal considerations for the *Facebook DEI Decision Comment Corpus* used in Study 1 of our manuscript.
 
 ---
 
@@ -8,7 +8,7 @@
 
 | Item                 | Detail                                                                                                                                     |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **IRB status**       | Claremont Graduate University (CGU) IRB — Protocol ▢ TBD — **Exempt** under 45 CFR §46.104(d)(4)(ii) (publicly available social-media data). |
+| **IRB status**       | Claremont Graduate University (CGU) IRB — **Exempt** under 45 CFR §46.104(d)(4)(ii) (publicly available social-media data). |
 | **Risk level**       | Minimal.  No intervention or interaction with human participants; only analysis of publicly observable content.                            |
 | **Informed consent** | Not required under exemption category; however, we respect user privacy by removing personal identifiers (see Section 2).                  |
 
@@ -44,7 +44,7 @@
 | Political‑ideology misclassification                   | Manual review of high‑entropy samples; 95 % CI on liberal‑cue prevalence.                                                                                         |
 | Demographic inference                                  | We explicitly avoid inferring race, gender, or age from names or photos.                                                                                          |
 
-All model checkpoints include [model card] metadata documenting training data composition and evaluation metrics.
+Model training data composition and evaluation metrics are documented with the respective models and in the methodology.
 
 ---
 
