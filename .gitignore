@@ -141,3 +141,7 @@
 
 # Label Studio instance data (database, media, etc.)
 data/annotate/ls_data/ 
+
+# remove venv stuff
+venv/
+.venv/
