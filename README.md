@@ -1,4 +1,4 @@
-# Facebook Comment Text-Analytics Project – README ![status](https://img.shields.io/badge/status-Phase5_Complete-green) ![target](https://img.shields.io/badge/target-JAMS-blue)
+# JAMS SI Study 1 – README ![status](https://img.shields.io/badge/status-Phase5_Complete-green) ![target](https://img.shields.io/badge/target-JAMS-blue)
 
 ## Project Goal
 This repository accompanies the study **"DEI Rollbacks, Brand Authenticity, and Consumer Reaction on Social Media"** (target journal: _Journal of the Academy of Marketing Science_).
