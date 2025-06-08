@@ -8,7 +8,6 @@
 
 | Item                 | Detail                                                                                                                                     |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| **IRB status**       | Claremont Graduate University (CGU) IRB — **Exempt** under 45 CFR §46.104(d)(4)(ii) (publicly available social-media data). |
 | **Risk level**       | Minimal.  No intervention or interaction with human participants; only analysis of publicly observable content.                            |
 | **Informed consent** | Not required under exemption category; however, we respect user privacy by removing personal identifiers (see Section 2).                  |
 
