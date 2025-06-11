@@ -1,0 +1,7 @@
+,,is_boycott,is_boycott,is_boycott,is_buy,is_buy,is_buy
+,,mean,std,count,mean,std,count
+company_name,Treated_Company_Flag,,,,,,
+Costco,0,0.0283,0.1659,1695,0.0248,0.1555,1695
+Delta,0,0.0648,0.2466,247,0.004,0.0636,247
+Google,1,0.0322,0.1767,993,0.001,0.0317,993
+Target,1,0.0054,0.0737,184,0.0326,0.1781,184
